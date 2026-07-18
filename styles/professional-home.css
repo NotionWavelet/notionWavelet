@@ -1700,3 +1700,207 @@ select:focus-visible {
   aspect-ratio: 1365 / 768;
   object-fit: cover;
 }
+
+/*********************************
+  Conversion form
+*********************************/
+.nw-download-form {
+  display: grid;
+  gap: 18px;
+}
+
+.nw-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px 14px;
+}
+
+.nw-form-field {
+  min-width: 0;
+}
+
+.nw-download-form label:not(.nw-consent) {
+  display: block;
+  margin: 0 0 8px;
+  color: #34435b;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.nw-optional {
+  color: #8592a6;
+  font-weight: 550;
+}
+
+.nw-download-input-group {
+  position: relative;
+}
+
+.nw-download-input-group > i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  z-index: 1;
+  color: #7b8ba4;
+  font-size: 14px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.nw-download-input-group input {
+  width: 100%;
+  height: 50px;
+  padding: 0 14px 0 42px;
+  color: #172033;
+  background: #f8faff;
+  border: 1px solid #dfe6f0;
+  border-radius: 12px;
+  font: 600 13px Inter, sans-serif;
+  outline: none;
+  transition:
+    background .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease;
+}
+
+.nw-download-input-group input::placeholder {
+  color: #9aa6b8;
+  font-weight: 500;
+}
+
+.nw-download-input-group input:hover {
+  border-color: #cbd7e7;
+}
+
+.nw-download-input-group input:focus {
+  background: #fff;
+  border-color: #4f88f4;
+  box-shadow: 0 0 0 4px rgba(37,99,235,.11);
+}
+
+.nw-form-field.has-error .nw-download-input-group input {
+  border-color: #dc5a64;
+  box-shadow: 0 0 0 4px rgba(220,38,38,.08);
+}
+
+.nw-form-field.has-error .nw-download-input-group > i {
+  color: #c83e49;
+}
+
+.nw-field-error {
+  min-height: 15px;
+  margin: 5px 2px 0;
+  display: block;
+  color: #bd3440;
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 650;
+}
+
+.nw-form-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.nw-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  color: #607087;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.nw-consent input {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  margin: 1px 0 0;
+  accent-color: #1265f4;
+}
+
+.nw-consent span {
+  display: block;
+}
+
+.nw-consent.has-error span {
+  color: #bd3440;
+}
+
+.nw-field-error--consent {
+  margin-top: -14px;
+}
+
+.nw-form-status {
+  display: none;
+  padding: 12px 14px;
+  border-radius: 11px;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 650;
+}
+
+.nw-form-status.is-visible {
+  display: block;
+}
+
+.nw-form-status.is-error {
+  color: #a92934;
+  background: #fff1f2;
+  border: 1px solid #ffd5da;
+}
+
+.nw-form-status.is-success {
+  color: #137333;
+  background: #eefaf2;
+  border: 1px solid #ccebd5;
+}
+
+.nw-download-form button {
+  position: relative;
+}
+
+.nw-download-form button[disabled] {
+  cursor: wait;
+  opacity: .82;
+  transform: none;
+}
+
+.nw-submit-spinner {
+  display: none;
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgba(255,255,255,.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: nw-spin .75s linear infinite;
+}
+
+.nw-download-form.is-submitting .nw-submit-arrow {
+  display: none;
+}
+
+.nw-download-form.is-submitting .nw-submit-spinner {
+  display: inline-block;
+}
+
+@keyframes nw-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 575.98px) {
+  .nw-form-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .nw-download-input-group input {
+    height: 52px;
+    font-size: 16px;
+  }
+}
