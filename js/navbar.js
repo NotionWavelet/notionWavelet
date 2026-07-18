@@ -1,131 +1,60 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const navbarContainer = document.querySelector("#navbar_container");
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('#navbar_container');
+  if (!container) return;
 
-    if (!navbarContainer) {
-        return;
-    }
+  container.innerHTML = `
+    <div class="nw-nav__inner">
+      <a class="nw-brand" href="index.html" aria-label="Notion Wavelet, inicio">
+        <img src="images/logo.png" alt="" width="42" height="42">
+        <span class="nw-brand__copy">
+          <strong>Notion Wavelet</strong>
+          <small>Software para talleres</small>
+        </span>
+      </a>
 
-    navbarContainer.innerHTML = `
-        <div class="nw-navbar">
-            <div class="nw-navbar__container">
+      <button class="nw-menu-toggle" type="button" aria-expanded="false" aria-controls="nw-main-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
 
-                <a class="nw-navbar__brand" href="index.html" aria-label="Ir al inicio">
-                    <span class="nw-navbar__logo">
-                        <img
-                            src="images/logo.png"
-                            alt="Logotipo de Notion Wavelet"
-                            width="38"
-                            height="38"
-                        >
-                    </span>
+      <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#features-section">Funciones</a>
+        <a href="#demo-section">Demostración</a>
+        <a href="#benefits-section">Ventajas</a>
+        <a href="contact.html">Contacto</a>
+        <a class="nw-nav-cta" href="#download-section">Probar gratis <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>`;
 
-                    <span class="nw-navbar__brand-text">
-                        <strong>Notion Wavelet</strong>
-                        <small>Software para talleres</small>
-                    </span>
-                </a>
+  const header = document.querySelector('.header');
+  const toggle = container.querySelector('.nw-menu-toggle');
+  const nav = container.querySelector('.nw-main-nav');
 
-                <button
-                    class="nw-navbar__toggle"
-                    type="button"
-                    aria-label="Abrir menú de navegación"
-                    aria-expanded="false"
-                    aria-controls="main-navigation"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+  function closeMenu() {
+    nav.classList.remove('is-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
 
-                <nav
-                    id="main-navigation"
-                    class="nw-navbar__navigation"
-                    aria-label="Navegación principal"
-                >
-                    <a href="index.html" data-page="index.html">Inicio</a>
-                    <a href="index.html#features-section">Funciones</a>
-                    <a href="index.html#demo-section">Demostración</a>
-                    <a href="index.html#benefits-section">Ventajas</a>
-                    <a href="contact.html" data-page="contact.html">Contacto</a>
+  toggle.addEventListener('click', function () {
+    const open = nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+  });
 
-                    <a
-                        class="nw-navbar__cta"
-                        href="index.html#download-section"
-                    >
-                        Probar gratis
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                </nav>
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 
-            </div>
-        </div>
-    `;
+  document.addEventListener('click', function (event) {
+    if (!container.contains(event.target)) closeMenu();
+  });
 
-    const header = document.querySelector(".header");
-    const toggleButton = navbarContainer.querySelector(".nw-navbar__toggle");
-    const navigation = navbarContainer.querySelector(".nw-navbar__navigation");
-    const navigationLinks = navigation.querySelectorAll("a");
-    const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
+  window.addEventListener('scroll', function () {
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 12);
+  }, { passive: true });
 
-    function updateHeaderOnScroll() {
-        if (!header) {
-            return;
-        }
-
-        header.classList.toggle("header--scrolled", window.scrollY > 10);
-    }
-
-    function closeMobileMenu() {
-        navigation.classList.remove("nw-navbar__navigation--open");
-        toggleButton.classList.remove("nw-navbar__toggle--active");
-        toggleButton.setAttribute("aria-expanded", "false");
-        document.body.classList.remove("navigation-open");
-    }
-
-    toggleButton.addEventListener("click", function () {
-        const isOpen = navigation.classList.toggle(
-            "nw-navbar__navigation--open"
-        );
-
-        toggleButton.classList.toggle("nw-navbar__toggle--active", isOpen);
-        toggleButton.setAttribute("aria-expanded", String(isOpen));
-        document.body.classList.toggle("navigation-open", isOpen);
-    });
-
-    navigationLinks.forEach(function (link) {
-        const page = link.getAttribute("data-page");
-
-        if (page === currentPage) {
-            link.classList.add("nw-navbar__link--active");
-        }
-
-        link.addEventListener("click", closeMobileMenu);
-    });
-
-    document.addEventListener("click", function (event) {
-        const clickedInsideNavbar = navbarContainer.contains(event.target);
-
-        if (!clickedInsideNavbar) {
-            closeMobileMenu();
-        }
-    });
-
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-            closeMobileMenu();
-        }
-    });
-
-    window.addEventListener("scroll", updateHeaderOnScroll, {
-        passive: true
-    });
-
-    window.addEventListener("resize", function () {
-        if (window.innerWidth >= 992) {
-            closeMobileMenu();
-        }
-    });
-
-    updateHeaderOnScroll();
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 992) closeMenu();
+  });
 });
