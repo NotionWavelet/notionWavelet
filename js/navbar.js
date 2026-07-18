@@ -1,22 +1,35 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-    // Contenido de la barra de navegación adaptado para el taller
     var navbarContent = `
-    <div class="header_inner header_inner-expand-sm header_inner-custom d-flex flex-row align-items-center justify-content-start">
-			<nav class="main_nav">
-				<ul>
-					<li><img src="images/logo.png" alt="Notion Wavelet Logo" width="30"><a href="index.html">Noción de Ondícula</a></li>
-					<li><a href="#demo-section">Video Demo</a></li>
-					<li><a href="contact.html">Contacto</a></li>
-				</ul>
-			</nav>
-		</div>
+    <div class="header_inner d-flex flex-row align-items-center justify-content-start">
+        <nav class="main_nav">
+            <ul>
+                <li class="brand"><img src="images/logo.png" alt="Logo" width="30"><a href="index.html">Noción de Ondícula</a></li>
+
+                <!-- Mega Menú -->
+                <li class="has-mega"><a href="#">Software <i class="fa fa-chevron-down"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-row">
+                            <div class="mega-col">
+                                <h4>Gestión</h4>
+                                <a href="#facturacion">Facturación</a>
+                                <a href="#ordenes">Órdenes de Trabajo</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Compliance</h4>
+                                <a href="#factura-e">Factura Electrónica</a>
+                                <a href="#auditoria">Auditoría</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#demo-section">Video Demo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
     `;
 
-    // Selecciona el elemento donde quieres incluir la barra de navegación
     var navbarContainer = document.querySelector("#navbar_container");
-
-    // Inserta el contenido de la barra de navegación en el contenedor
     if (navbarContainer) {
         navbarContainer.innerHTML = navbarContent;
     }
