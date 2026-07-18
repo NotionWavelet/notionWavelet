@@ -175,15 +175,3 @@
 	width: 30px;
 	height: 30px;
 }
-
-/* Estilos extra para el Mega Menú */
-.has-mega { position: static !important; }
-.mega-menu {
-    position: absolute; left: 0; width: 100%; top: 70px;
-    background: #fff; padding: 30px; display: none;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-top: 1px solid #eee;
-}
-.has-mega:hover .mega-menu { display: block; }
-.mega-row { display: flex; gap: 50px; max-width: 1000px; margin: auto; }
-.mega-col h4 { font-size: 0.8rem; color: #999; text-transform: uppercase; margin-bottom: 10px; }
-.mega-col a { display: block; padding: 5px 0; color: #333 !important; font-weight: 500; }
