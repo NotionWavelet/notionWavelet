@@ -1904,3 +1904,240 @@ select:focus-visible {
     font-size: 16px;
   }
 }
+
+/*********************************
+  FAQ section
+*********************************/
+.nw-faq-section {
+  position: relative;
+  overflow: hidden;
+  padding: 118px 0;
+  background:
+    radial-gradient(circle at 90% 18%, rgba(43,111,238,.08), transparent 25%),
+    #f7f9fd;
+  border-top: 1px solid #edf1f7;
+  border-bottom: 1px solid #e9eef6;
+}
+
+.nw-faq-heading {
+  max-width: 720px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.nw-faq-heading h2 {
+  margin: 14px 0 18px;
+  color: #071633;
+  font-size: clamp(34px, 4.5vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+
+.nw-faq-heading p {
+  margin: 0;
+  color: #69778d;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.nw-faq-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, .65fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.nw-faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.nw-faq-item {
+  background: #fff;
+  border: 1px solid #e0e7f1;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(27,52,91,.045);
+  transition:
+    border-color .22s ease,
+    box-shadow .22s ease,
+    transform .22s ease;
+}
+
+.nw-faq-item:hover {
+  border-color: #cad8ec;
+  box-shadow: 0 13px 32px rgba(27,52,91,.075);
+  transform: translateY(-1px);
+}
+
+.nw-faq-item[open] {
+  border-color: #bfd2f2;
+  box-shadow: 0 15px 38px rgba(25,73,151,.09);
+}
+
+.nw-faq-item summary {
+  min-height: 72px;
+  padding: 19px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #15233b;
+  cursor: pointer;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.nw-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.nw-faq-item summary i {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  display: grid;
+  place-items: center;
+  color: #1761dd;
+  background: #edf4ff;
+  border-radius: 9px;
+  font-size: 11px;
+  transition: transform .22s ease, background .22s ease;
+}
+
+.nw-faq-item[open] summary i {
+  color: #fff;
+  background: #1761dd;
+  transform: rotate(45deg);
+}
+
+.nw-faq-answer {
+  padding: 0 62px 22px 22px;
+}
+
+.nw-faq-answer p {
+  margin: 0;
+  color: #68778d;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.nw-faq-card {
+  position: sticky;
+  top: 112px;
+  padding: 34px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(113,165,255,.24), transparent 32%),
+    linear-gradient(145deg, #071b3d, #0b2e66);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 22px;
+  box-shadow: 0 26px 60px rgba(7,27,61,.2);
+}
+
+.nw-faq-card__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 27px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(135deg, #2f85ff, #1261e5);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 15px;
+  box-shadow: 0 14px 30px rgba(18,97,229,.28);
+  font-size: 20px;
+}
+
+.nw-faq-card__eyebrow {
+  color: #8db8ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.nw-faq-card h3 {
+  margin: 12px 0 15px;
+  color: #fff;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -.035em;
+}
+
+.nw-faq-card p {
+  margin: 0 0 25px;
+  color: #aebdd3;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.nw-faq-card .nw-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.nw-faq-card small {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #8fa4c3;
+  font-size: 10px;
+}
+
+.nw-faq-card small i {
+  color: #69a3ff;
+}
+
+.nw-consent a {
+  color: #1761dd;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.nw-consent a:hover {
+  color: #0a48b7;
+}
+
+@media (max-width: 991.98px) {
+  .nw-faq-section {
+    padding: 96px 0;
+  }
+
+  .nw-faq-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .nw-faq-card {
+    position: static;
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .nw-faq-section {
+    padding: 78px 0;
+  }
+
+  .nw-faq-heading {
+    margin-bottom: 42px;
+    text-align: left;
+  }
+
+  .nw-faq-item summary {
+    min-height: 66px;
+    padding: 17px;
+    font-size: 13px;
+  }
+
+  .nw-faq-answer {
+    padding: 0 17px 18px;
+  }
+
+  .nw-faq-card {
+    padding: 27px;
+  }
+}
