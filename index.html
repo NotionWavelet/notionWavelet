@@ -7,7 +7,14 @@
 <meta name="description" content="Software de gestión y facturación para talleres mecánicos">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- SEO SCHEMA (Para que Google reconozca tu software) -->
+<!-- Meta tags para redes sociales -->
+<meta property="og:title" content="Notion Wavelet | Software de Gestión para Talleres">
+<meta property="og:description" content="Software de escritorio profesional para la gestión integral de talleres mecánicos.">
+<meta property="og:image" content="images/logo-social.jpg">
+<meta property="og:url" content="https://notionwavelet.com">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- SEO SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,7 +70,6 @@
 		<div class="gallery_image" style="background-image:url(images/gallery.jpg)"></div>
 		<div class="gallery_slider_container">
 			<div class="owl-carousel owl-theme gallery_slider">
-				<!-- Añadido loading="lazy" a todas las imágenes -->
 				<div class="owl-item gallery_item"><a class="colorbox" href="images/gallery_1.jpg"><img src="images/gallery_1.jpg" alt="Pantalla" loading="lazy"></a></div>
 				<div class="owl-item gallery_item"><a class="colorbox" href="images/gallery_2.jpg"><img src="images/gallery_2.jpg" alt="Facturación" loading="lazy"></a></div>
 				<div class="owl-item gallery_item"><a class="colorbox" href="images/gallery_3.jpg"><img src="images/gallery_3.jpg" alt="Stock" loading="lazy"></a></div>
@@ -97,11 +103,33 @@
 		</div>
 	</div>
 
+    <!-- Sección Ventajas Competitivas -->
+    <section class="py-5" style="background: #ffffff; border-top: 1px solid #eee;">
+        <div class="container text-center">
+            <h3 class="mb-5 font-weight-bold">¿Por qué elegir Notion Wavelet?</h3>
+            <div class="row">
+                <div class="col-md-4"><i class="fa fa-money fa-2x text-dark mb-3"></i><h5>Pago Único</h5><p>Sin mensualidades ni sorpresas.</p></div>
+                <div class="col-md-4"><i class="fa fa-lock fa-2x text-dark mb-3"></i><h5>Privacidad Total</h5><p>Datos 100% bajo tu control en tu PC.</p></div>
+                <div class="col-md-4"><i class="fa fa-wrench fa-2x text-dark mb-3"></i><h5>Soporte Especializado</h5><p>Diseñado para talleres mecánicos.</p></div>
+            </div>
+        </div>
+    </section>
+
 	<div id="download-section" class="container text-center" style="padding-top: 80px; padding-bottom: 100px;">
 		<div class="row justify-content-center">
 			<div class="col-md-8 col-lg-6">
 				<h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 15px;">Prueba la versión de escritorio</h2>
-				<form action="#" method="POST"><div class="input-group mb-3"><input type="email" class="form-control" placeholder="Tu correo" required><div class="input-group-append"><button class="btn btn-dark" type="submit">Enviar instalador</button></div></div></form>
+				<form action="https://formspree.io/f/mojgddly" method="POST">
+                    <div class="input-group mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Tu correo" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-dark" type="submit">Enviar instalador</button>
+                        </div>
+                    </div>
+                </form>
+                <p style="font-size: 0.85rem; color: #999;">
+                    <i class="fa fa-shield"></i> Descarga segura • Compatible con Windows 10/11 • Instalación rápida
+                </p>
 			</div>
 		</div>
 	</div>
