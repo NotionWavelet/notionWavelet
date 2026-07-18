@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="styles/notionwavelet.css">
   <link rel="stylesheet" href="styles/notionwavelet_responsive.css">
   <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/professional-home.css?v=9">
+  <link rel="stylesheet" href="styles/professional-home.css?v=10">
 </head>
 <body>
 <div class="super_container">
@@ -435,12 +435,111 @@
     </section>
   </main>
 
-  <footer class="footer"><div id="footer_container"></div></footer>
+  <footer class="nw-footer">
+    <div class="nw-shell">
+      <div class="nw-footer__top">
+        <div class="nw-footer__brand">
+          <a class="nw-footer__logo" href="#inicio" aria-label="Volver al inicio">
+            <span class="nw-footer__logo-mark"><i class="fa fa-wrench"></i></span>
+            <span>
+              <strong>Notion Wavelet</strong>
+              <small>Software para talleres</small>
+            </span>
+          </a>
+          <p>Gestiona clientes, vehículos, reparaciones, recambios y facturación desde una aplicación clara, rápida y sin cuotas mensuales.</p>
+          <div class="nw-footer__platform">
+            <i class="fa fa-windows"></i>
+            <span>
+              <strong>Aplicación de escritorio</strong>
+              <small>Compatible con Windows 10 y 11</small>
+            </span>
+          </div>
+        </div>
+
+        <div class="nw-footer__links">
+          <div class="nw-footer__column">
+            <strong>Producto</strong>
+            <a href="#features-section">Funciones</a>
+            <a href="#demo-section">Demostración</a>
+            <a href="#product-section">Capturas</a>
+            <a href="#download-section">Solicitar prueba</a>
+          </div>
+
+          <div class="nw-footer__column">
+            <strong>Ventajas</strong>
+            <a href="#benefits-section">Pago único</a>
+            <a href="#benefits-section">Privacidad total</a>
+            <a href="#benefits-section">Soporte especializado</a>
+          </div>
+
+          <div class="nw-footer__column">
+            <strong>Ayuda</strong>
+            <a href="#download-section">Contacto</a>
+            <a href="#download-section">Solicitar información</a>
+            <span>Datos bajo tu control</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nw-footer__bottom">
+        <p>© <span id="nw-current-year">2026</span> Notion Wavelet. Todos los derechos reservados.</p>
+        <div class="nw-footer__badges">
+          <span><i class="fa fa-lock"></i> Conexión segura</span>
+          <span><i class="fa fa-check-circle"></i> Sin suscripciones</span>
+        </div>
+        <a class="nw-footer__back" href="#inicio" aria-label="Volver arriba">
+          Volver arriba <i class="fa fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="js/custom.js"></script>
-<script src="js/footer.js" defer></script>
 <script src="js/navbar.js" defer></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var year = document.getElementById("nw-current-year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  var animatedElements = document.querySelectorAll(
+    ".nw-features-heading, .nw-feature-card, .nw-demo-copy, .nw-demo-card, " +
+    ".nw-product-heading, .nw-product-row, .nw-benefits-heading, .nw-benefit-card, " +
+    ".nw-download-copy, .nw-download-form-card, .nw-footer__top, .nw-footer__bottom"
+  );
+
+  if (!("IntersectionObserver" in window) ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    animatedElements.forEach(function (element) {
+      element.classList.add("nw-reveal", "is-visible");
+    });
+    return;
+  }
+
+  animatedElements.forEach(function (element, index) {
+    element.classList.add("nw-reveal");
+    element.style.setProperty("--nw-reveal-delay", (index % 3) * 70 + "ms");
+  });
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px"
+  });
+
+  animatedElements.forEach(function (element) {
+    observer.observe(element);
+  });
+});
+</script>
+
 </body>
 </html>
