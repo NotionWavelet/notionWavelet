@@ -1,260 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Notion Wavelet - Software de Gestión para Talleres</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Software de gestión y facturación para talleres mecánicos">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Meta tags para redes sociales -->
-<meta property="og:title" content="Notion Wavelet | Software de Gestión para Talleres">
-<meta property="og:description" content="Software de escritorio profesional para la gestión integral de talleres mecánicos.">
-<meta property="og:image" content="images/logo-social.jpg">
-<meta property="og:url" content="https://notionwavelet.com">
-<meta name="twitter:card" content="summary_large_image">
-
-<!-- SEO SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Notion Wavelet",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Windows",
-  "description": "Software de gestión, facturación y control de stock para talleres mecánicos."
-}
-</script>
-
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="plugins/malihu-custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="styles/notionwavelet.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="styles/notionwavelet_responsive.css">
-<link rel="stylesheet" type="text/css" href="styles/footer.css">
-<link rel="stylesheet" type="text/css" href="styles/navbar.css">
+  <title>Notion Wavelet - Software de Gestión para Talleres</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Software profesional para gestionar clientes, vehículos, reparaciones, recambios y facturación de talleres mecánicos.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Notion Wavelet | Software de Gestión para Talleres">
+  <meta property="og:description" content="Gestiona tu taller desde un único programa, sin mensualidades y con tus datos bajo control.">
+  <meta property="og:image" content="images/logo-social.jpg">
+  <meta property="og:url" content="https://notionwavelet.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Notion Wavelet","applicationCategory":"BusinessApplication","operatingSystem":"Windows","description":"Software de gestión, facturación y control de stock para talleres mecánicos."}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/bootstrap4/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+  <link rel="stylesheet" href="styles/notionwavelet.css">
+  <link rel="stylesheet" href="styles/notionwavelet_responsive.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/professional-home.css">
 </head>
 <body>
-
 <div class="super_container">
+  <header class="header"><div id="navbar_container"></div></header>
 
-	<header class="header">
-		<div id="navbar_container"></div>
-	</header>
-
-	<div class="container" style="margin-top: 130px; margin-bottom: 60px;">
-		<div class="row align-items-center">
-			<div class="col-lg-6">
-				<div class="section_title" style="margin-bottom: 20px;">
-					<h1 style="font-size: 2.5rem; font-weight: 700; line-height: 1.2;">El software de escritorio definitivo para tu taller mecánico</h1>
-				</div>
-				<p style="font-size: 1.1rem; color: #6c757d; margin-bottom: 30px;">
-					Optimiza las reparaciones, controla el stock de recambios en tiempo real y emite facturas y presupuestos de forma rápida y legal.
-				</p>
-				<div class="button border_button" style="margin-right: 15px; display: inline-block;">
-					<a href="#demo-section" style="padding: 10px 35px;">Ver Video Demo</a>
-				</div>
-				<div class="button cart_button" style="display: inline-block; background: #1b1b1b;">
-					<a href="#download-section" style="color: #ffffff; padding: 10px 35px;">Probar Gratis</a>
-				</div>
-			</div>
-			<div class="col-lg-6 mt-4 mt-lg-0 text-center">
-				<img src="images/gallery_1.jpg" alt="Software de Taller" class="img-fluid rounded shadow-lg" loading="lazy" style="max-height: 400px; border-radius: 8px;">
-			</div>
-		</div>
-	</div>
-
-	<div class="gallery">
-		<div class="gallery_image" style="background-image:url(images/gallery.jpg)"></div>
-		<div class="gallery_slider_container">
-			<div class="owl-carousel owl-theme gallery_slider">
-				<div class="owl-item gallery_item"><a class="colorbox" href="images/gallery_1.jpg"><img src="images/gallery_1.jpg" alt="Pantalla" loading="lazy"></a></div>
-				<div class="owl-item gallery_item"><a class="colorbox" href="images/gallery_2.jpg"><img src="images/gallery_2.jpg" alt="Facturación" loading="lazy"></a></div>
-				<div class="owl-item gallery_item"><a class="colorbox" href="images/gallery_3.jpg"><img src="images/gallery_3.jpg" alt="Stock" loading="lazy"></a></div>
-				<div class="owl-item gallery_item"><a class="colorbox" href="images/gallery_4.jpg"><img src="images/gallery_4.jpg" alt="Órdenes" loading="lazy"></a></div>
-				<div class="owl-item gallery_item"><a class="colorbox" href="images/gallery_5.jpg"><img src="images/gallery_5.jpg" alt="Presupuestos" loading="lazy"></a></div>
-				<div class="owl-item gallery_item"><a class="colorbox" href="images/gallery_6.jpg"><img src="images/gallery_6.jpg" alt="Historial" loading="lazy"></a></div>
-			</div>
-		</div>
-	</div>
-
-	<div id="demo-section" class="container text-center" style="padding-top: 80px; padding-bottom: 80px;">
-		<div class="row">
-			<div class="col-12 max-w-3xl mx-auto">
-				<h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 15px;">Descubre el programa en 1 minuto</h2>
-				<div class="embed-responsive embed-responsive-16by9 mx-auto shadow-lg" style="max-width: 800px; border-radius: 8px;">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<section id="features-section" class="features-section">
-
-		<div class="container">
-
-			<div class="features-heading">
-				<span class="features-eyebrow">Todo en un solo lugar</span>
-
-				<h2>Las herramientas que necesita tu taller</h2>
-
-				<p>
-					Gestiona clientes, vehículos, reparaciones, facturas y recambios
-					desde una única aplicación sencilla y organizada.
-				</p>
-			</div>
-
-			<div class="features-grid">
-
-				<article class="feature-card">
-					<div class="feature-icon">
-						<i class="fa fa-users" aria-hidden="true"></i>
-					</div>
-
-					<h3>Clientes y vehículos</h3>
-
-					<p>
-						Consulta los datos de cada cliente y el historial completo
-						de sus vehículos en cuestión de segundos.
-					</p>
-
-					<span class="feature-detail">
-						<i class="fa fa-check" aria-hidden="true"></i>
-						Historial siempre disponible
-					</span>
-				</article>
-
-				<article class="feature-card">
-					<div class="feature-icon">
-						<i class="fa fa-wrench" aria-hidden="true"></i>
-					</div>
-
-					<h3>Órdenes de trabajo</h3>
-
-					<p>
-						Organiza cada reparación, controla su estado y guarda todas
-						las operaciones realizadas en el vehículo.
-					</p>
-
-					<span class="feature-detail">
-						<i class="fa fa-check" aria-hidden="true"></i>
-						Seguimiento de reparaciones
-					</span>
-				</article>
-
-				<article class="feature-card">
-					<div class="feature-icon">
-						<i class="fa fa-file-text-o" aria-hidden="true"></i>
-					</div>
-
-					<h3>Presupuestos y facturas</h3>
-
-					<p>
-						Crea presupuestos, albaranes y facturas profesionales
-						sin repetir datos ni perder tiempo.
-					</p>
-
-					<span class="feature-detail">
-						<i class="fa fa-check" aria-hidden="true"></i>
-						Documentos listos para enviar
-					</span>
-				</article>
-
-				<article class="feature-card">
-					<div class="feature-icon">
-						<i class="fa fa-cubes" aria-hidden="true"></i>
-					</div>
-
-					<h3>Stock y recambios</h3>
-
-					<p>
-						Controla las piezas disponibles, registra entradas y evita
-						quedarte sin los recambios que más utilizas.
-					</p>
-
-					<span class="feature-detail">
-						<i class="fa fa-check" aria-hidden="true"></i>
-						Inventario bajo control
-					</span>
-				</article>
-
-				<article class="feature-card">
-					<div class="feature-icon">
-						<i class="fa fa-bar-chart" aria-hidden="true"></i>
-					</div>
-
-					<h3>Informes del negocio</h3>
-
-					<p>
-						Consulta ingresos, trabajos realizados y facturas pendientes
-						para conocer mejor el estado de tu taller.
-					</p>
-
-					<span class="feature-detail">
-						<i class="fa fa-check" aria-hidden="true"></i>
-						Decisiones con información
-					</span>
-				</article>
-
-				<article class="feature-card feature-card-highlighted">
-					<div class="feature-icon">
-						<i class="fa fa-shield" aria-hidden="true"></i>
-					</div>
-
-					<h3>Tus datos bajo control</h3>
-
-					<p>
-						Trabaja desde tu propio equipo y mantén la información
-						de tu negocio bajo tu control.
-					</p>
-
-					<span class="feature-detail">
-						<i class="fa fa-check" aria-hidden="true"></i>
-						Compatible con Windows
-					</span>
-				</article>
-
-			</div>
-
-		</div>
-
-	</section>
-
-    <!-- Sección Ventajas Competitivas -->
-<section id="benefits-section" class="py-5" style="background: #ffffff; border-top: 1px solid #eee;">
-	        <div class="container text-center">
-            <h3 class="mb-5 font-weight-bold">¿Por qué elegir Notion Wavelet?</h3>
-            <div class="row">
-                <div class="col-md-4"><i class="fa fa-money fa-2x text-dark mb-3"></i><h5>Pago Único</h5><p>Sin mensualidades ni sorpresas.</p></div>
-                <div class="col-md-4"><i class="fa fa-lock fa-2x text-dark mb-3"></i><h5>Privacidad Total</h5><p>Datos 100% bajo tu control en tu PC.</p></div>
-                <div class="col-md-4"><i class="fa fa-wrench fa-2x text-dark mb-3"></i><h5>Soporte Especializado</h5><p>Diseñado para talleres mecánicos.</p></div>
-            </div>
+  <main id="inicio">
+    <section class="nw-hero">
+      <div class="nw-shell nw-hero__grid">
+        <div class="nw-hero__copy">
+          <span class="nw-kicker"><i class="fa fa-wrench"></i> Software para talleres mecánicos</span>
+          <h1>Gestiona tu taller desde <span>un único programa</span></h1>
+          <p class="nw-hero__lead">Controla clientes, vehículos, reparaciones, recambios, presupuestos y facturación de forma rápida, sencilla y profesional.</p>
+          <div class="nw-hero__actions">
+            <a class="nw-btn nw-btn--primary" href="#download-section"><i class="fa fa-windows"></i> Probar gratis <span>→</span></a>
+            <a class="nw-btn nw-btn--secondary" href="#demo-section"><i class="fa fa-play"></i> Ver vídeo (1 min)</a>
+          </div>
+          <div class="nw-trust"><span>Pago único</span><span>Datos 100% tuyos</span><span>Soporte especializado</span></div>
         </div>
+        <div class="nw-hero__visual" aria-label="Vista conceptual de Notion Wavelet">
+          <div class="nw-laptop">
+            <div class="nw-laptop__camera"></div>
+            <div class="nw-laptop__screen">
+              <div class="nw-app-topbar">
+                <div class="nw-app-mark"><i class="fa fa-wrench"></i></div>
+                <nav><span class="active">Taller</span><span>Clientes</span><span>Informes</span><span>Cuentas</span></nav>
+                <div class="nw-app-user">NW</div>
+              </div>
+              <div class="nw-app-tabs"><span class="active">Taller</span><span>Operaciones</span><span>Materiales</span><span>Marcas</span></div>
+              <div class="nw-app-body">
+                <div class="nw-app-actions"><button><i class="fa fa-file-text-o"></i> Presupuesto</button><button><i class="fa fa-truck"></i> Albarán</button><button><i class="fa fa-file"></i> Facturar</button></div>
+                <div class="nw-app-form">
+                  <div class="nw-field nw-field--short"><small>Orden</small><span></span></div>
+                  <div class="nw-field"><small>Vehículo</small><span></span></div>
+                  <div class="nw-field"><small>Cliente</small><span></span></div>
+                  <aside><small>Km</small><span></span><small>Fecha</small><span></span></aside>
+                </div>
+                <div class="nw-work-tabs"><span class="active"><i class="fa fa-wrench"></i> Orden de reparación</span><span>Presupuesto</span><span>Trabajos</span><span>Histórico</span></div>
+                <div class="nw-app-table">
+                  <div><strong>Referencia</strong><strong>Descripción</strong></div>
+                  <div><span>Buscar referencia...</span><span>Descripción del artículo o trabajo...</span></div>
+                  <div class="nw-table-empty"><i class="fa fa-check-circle-o"></i><b>Tu taller, organizado</b><small>Órdenes, materiales y facturación en un solo lugar</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="nw-laptop__base"><span></span></div>
+          </div>
+          <div class="nw-float nw-float--one"><i class="fa fa-file-text-o"></i> Facturación en segundos</div>
+          <div class="nw-float nw-float--two"><i class="fa fa-check"></i> Todo bajo control</div>
+        </div>
+      </div>
     </section>
 
-		<div id="download-section" class="container text-center" style="padding: 80px 0;">
-	    <h2 class="font-weight-bold mb-3">Prueba la versión de escritorio</h2>
-	    <p class="mb-4">Introduce tu correo y recibe el instalador en segundos.</p>
+    <section id="features-section" class="nw-features-section">
+      <div class="nw-shell">
+        <div class="nw-features-heading">
+          <span class="nw-section-kicker">Todo en un solo lugar</span>
+          <h2>Las herramientas que necesita tu taller</h2>
+          <p>Gestiona clientes, vehículos, reparaciones, facturas y recambios desde una única aplicación sencilla y organizada.</p>
+        </div>
 
-	    <form action="https://formspree.io/f/mojgddly" method="POST" style="max-width: 500px; margin: auto;">
-	        <div class="input-group mb-3">
-	            <input type="email" name="email" class="form-control" placeholder="Tu correo electrónico" required>
-	            <div class="input-group-append">
-	                <button class="btn btn-dark" type="submit" style="background: #1b1b1b; color: white;">Enviar instalador</button>
-	            </div>
-	        </div>
-	    </form>
+        <div class="nw-features-grid">
+          <article class="nw-feature-card">
+            <span class="nw-feature-card__icon"><i class="fa fa-users"></i></span>
+            <h3>Clientes y vehículos</h3>
+            <p>Consulta los datos de cada cliente y el historial completo de sus vehículos en cuestión de segundos.</p>
+            <span class="nw-feature-card__detail"><i class="fa fa-check"></i> Historial siempre disponible</span>
+          </article>
 
-	    <p style="font-size: 0.8rem; color: #999; margin-top: 15px;">
-	        <i class="fa fa-shield"></i> Descarga segura • Compatible con Windows 10/11
-	    </p>
-	</div>
+          <article class="nw-feature-card">
+            <span class="nw-feature-card__icon"><i class="fa fa-wrench"></i></span>
+            <h3>Órdenes de trabajo</h3>
+            <p>Organiza cada reparación, controla su estado y guarda todas las operaciones realizadas en el vehículo.</p>
+            <span class="nw-feature-card__detail"><i class="fa fa-check"></i> Seguimiento de reparaciones</span>
+          </article>
 
-	<footer class="footer"><div id="footer_container"></div></footer>
+          <article class="nw-feature-card">
+            <span class="nw-feature-card__icon"><i class="fa fa-file-text-o"></i></span>
+            <h3>Presupuestos y facturas</h3>
+            <p>Crea presupuestos, albaranes y facturas profesionales sin repetir datos ni perder tiempo.</p>
+            <span class="nw-feature-card__detail"><i class="fa fa-check"></i> Documentos listos para enviar</span>
+          </article>
+
+          <article class="nw-feature-card">
+            <span class="nw-feature-card__icon"><i class="fa fa-cubes"></i></span>
+            <h3>Stock y recambios</h3>
+            <p>Controla las piezas disponibles, registra entradas y evita quedarte sin los recambios que más utilizas.</p>
+            <span class="nw-feature-card__detail"><i class="fa fa-check"></i> Inventario bajo control</span>
+          </article>
+
+          <article class="nw-feature-card">
+            <span class="nw-feature-card__icon"><i class="fa fa-bar-chart"></i></span>
+            <h3>Informes del negocio</h3>
+            <p>Consulta ingresos, trabajos realizados y facturas pendientes para conocer mejor el estado de tu taller.</p>
+            <span class="nw-feature-card__detail"><i class="fa fa-check"></i> Decisiones con información</span>
+          </article>
+
+          <article class="nw-feature-card nw-feature-card--highlighted">
+            <span class="nw-feature-card__icon"><i class="fa fa-shield"></i></span>
+            <h3>Tus datos bajo control</h3>
+            <p>Trabaja desde tu propio equipo y mantén la información de tu negocio bajo tu control.</p>
+            <span class="nw-feature-card__detail"><i class="fa fa-check"></i> Compatible con Windows</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo-section" class="container text-center" style="padding-top:100px;padding-bottom:80px;">
+      <h2 style="font-size:2.2rem;font-weight:800;margin-bottom:15px;">Descubre el programa en 1 minuto</h2>
+      <p style="color:#697386;margin-bottom:30px;">Una vista rápida de cómo Notion Wavelet simplifica el trabajo diario de tu taller.</p>
+      <div class="embed-responsive embed-responsive-16by9 mx-auto shadow-lg" style="max-width:850px;border-radius:18px;overflow:hidden;">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Demostración de Notion Wavelet" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="benefits-section" class="py-5" style="background:#f7f9fd;border-top:1px solid #edf1f7;">
+      <div class="container text-center">
+        <h2 class="mb-5 font-weight-bold">Diseñado para trabajar sin complicaciones</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4"><i class="fa fa-money fa-2x text-primary mb-3"></i><h5>Pago único</h5><p>Sin mensualidades ni costes inesperados.</p></div>
+          <div class="col-md-4 mb-4"><i class="fa fa-lock fa-2x text-primary mb-3"></i><h5>Privacidad total</h5><p>Tus datos permanecen bajo tu control.</p></div>
+          <div class="col-md-4 mb-4"><i class="fa fa-headphones fa-2x text-primary mb-3"></i><h5>Soporte especializado</h5><p>Ayuda cercana cuando la necesites.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download-section" class="container text-center" style="padding:90px 15px;">
+      <h2 class="font-weight-bold mb-3">Prueba Notion Wavelet en tu taller</h2>
+      <p class="mb-4" style="color:#697386;">Introduce tu correo y recibe la información de acceso.</p>
+      <form action="https://formspree.io/f/mojgddly" method="POST" style="max-width:540px;margin:auto;">
+        <div class="input-group mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Tu correo electrónico" required style="min-height:52px;border-radius:12px 0 0 12px;">
+          <div class="input-group-append"><button class="btn btn-primary" type="submit" style="padding:0 24px;border-radius:0 12px 12px 0;">Solicitar prueba</button></div>
+        </div>
+      </form>
+      <p style="font-size:.82rem;color:#8a96a9;margin-top:15px;"><i class="fa fa-shield"></i> Descarga segura · Compatible con Windows 10/11</p>
+    </section>
+  </main>
+
+  <footer class="footer"><div id="footer_container"></div></footer>
 </div>
-
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="js/custom.js"></script>
