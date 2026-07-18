@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Contenido del footer actualizado
     var footerContent = `
     <div class="container">
         <div class="row">
@@ -12,18 +11,16 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li><a href="https://www.pinterest.es/notionwavelet/"><img src="images/pinterest.png" alt="" width="35"></a></li>
                     </ul>
                 </div>
-                <div class="copyright">
-                    &copy; 2026 Noción de Ondícula. Todos los derechos reservados.
+                <div class="copyright" style="margin-top: 15px; font-size: 0.9rem; color: #6c757d;">
+                    &copy; 2026 Noción de Ondícula. Todos los derechos reservados. <br>
+                    <a href="legal.html" style="color: #BAC4CF; text-decoration: underline; margin-top: 5px; display: inline-block;">Aviso Legal y Privacidad</a>
                 </div>
             </div>
         </div>
     </div>
     `;
 
-    // Selecciona el elemento donde quieres incluir el footer
     var footerContainer = document.querySelector("#footer_container");
-
-    // Inserta el contenido del footer en el contenedor
     if (footerContainer) {
         footerContainer.innerHTML = footerContent;
     }
