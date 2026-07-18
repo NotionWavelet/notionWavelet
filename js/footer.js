@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Contenido del footer
+    // Contenido del footer actualizado
     var footerContent = `
     <div class="container">
         <div class="row">
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     </ul>
                 </div>
                 <div class="copyright">
-                    &copy 2024 All rights reserved
+                    &copy; 2026 Noción de Ondícula. Todos los derechos reservados.
                 </div>
             </div>
         </div>
