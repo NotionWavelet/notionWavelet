@@ -52,7 +52,7 @@
   <link rel="stylesheet" href="styles/notionwavelet.css">
   <link rel="stylesheet" href="styles/notionwavelet_responsive.css">
   <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/professional-home.css?v=11">
+  <link rel="stylesheet" href="styles/professional-home.css?v=12">
   <noscript><style>.nw-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
@@ -445,19 +445,130 @@
               </div>
             </div>
 
-            <form action="https://formspree.io/f/mojgddly" method="POST" class="nw-download-form">
-              <label for="trial-email">Correo electrónico</label>
-              <div class="nw-download-input-group">
-                <i class="fa fa-envelope-o"></i>
-                <input id="trial-email" type="email" name="email" placeholder="nombre@tutaller.com" autocomplete="email" required>
+            <form
+              action="https://formspree.io/f/mojgddly"
+              method="POST"
+              class="nw-download-form"
+              id="trial-form"
+              novalidate
+            >
+              <input type="hidden" name="_subject" value="Nueva solicitud de prueba de Notion Wavelet">
+              <input type="hidden" name="_language" value="es">
+              <input type="hidden" name="origen" value="Landing principal">
+
+              <div class="nw-form-grid">
+                <div class="nw-form-field">
+                  <label for="trial-name">Nombre y apellidos</label>
+                  <div class="nw-download-input-group">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    <input
+                      id="trial-name"
+                      type="text"
+                      name="nombre"
+                      placeholder="Tu nombre"
+                      autocomplete="name"
+                      minlength="2"
+                      maxlength="80"
+                      aria-describedby="trial-name-error"
+                      required
+                    >
+                  </div>
+                  <small class="nw-field-error" id="trial-name-error"></small>
+                </div>
+
+                <div class="nw-form-field">
+                  <label for="trial-workshop">Nombre del taller</label>
+                  <div class="nw-download-input-group">
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                    <input
+                      id="trial-workshop"
+                      type="text"
+                      name="taller"
+                      placeholder="Nombre de tu taller"
+                      autocomplete="organization"
+                      minlength="2"
+                      maxlength="100"
+                      aria-describedby="trial-workshop-error"
+                      required
+                    >
+                  </div>
+                  <small class="nw-field-error" id="trial-workshop-error"></small>
+                </div>
+
+                <div class="nw-form-field">
+                  <label for="trial-email">Correo electrónico</label>
+                  <div class="nw-download-input-group">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <input
+                      id="trial-email"
+                      type="email"
+                      name="email"
+                      placeholder="nombre@tutaller.com"
+                      autocomplete="email"
+                      maxlength="120"
+                      inputmode="email"
+                      aria-describedby="trial-email-error"
+                      required
+                    >
+                  </div>
+                  <small class="nw-field-error" id="trial-email-error"></small>
+                </div>
+
+                <div class="nw-form-field">
+                  <label for="trial-phone">Teléfono <span class="nw-optional">(opcional)</span></label>
+                  <div class="nw-download-input-group">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <input
+                      id="trial-phone"
+                      type="tel"
+                      name="telefono"
+                      placeholder="600 000 000"
+                      autocomplete="tel"
+                      maxlength="30"
+                      inputmode="tel"
+                      aria-describedby="trial-phone-error"
+                    >
+                  </div>
+                  <small class="nw-field-error" id="trial-phone-error"></small>
+                </div>
               </div>
-              <button type="submit">
-                Solicitar prueba
-                <span>→</span>
+
+              <div class="nw-form-honeypot" aria-hidden="true">
+                <label for="trial-company-web">No rellenar este campo</label>
+                <input
+                  id="trial-company-web"
+                  type="text"
+                  name="_gotcha"
+                  tabindex="-1"
+                  autocomplete="off"
+                >
+              </div>
+
+              <label class="nw-consent" for="trial-consent">
+                <input
+                  id="trial-consent"
+                  type="checkbox"
+                  name="privacidad_aceptada"
+                  value="Sí"
+                  aria-describedby="trial-consent-error"
+                  required
+                >
+                <span>
+                  He leído y acepto el tratamiento de mis datos para recibir información sobre la prueba.
+                </span>
+              </label>
+              <small class="nw-field-error nw-field-error--consent" id="trial-consent-error"></small>
+
+              <div class="nw-form-status" id="trial-form-status" role="status" aria-live="polite"></div>
+
+              <button type="submit" id="trial-submit">
+                <span class="nw-submit-label">Solicitar prueba</span>
+                <span class="nw-submit-arrow" aria-hidden="true">→</span>
+                <span class="nw-submit-spinner" aria-hidden="true"></span>
               </button>
             </form>
 
-            <p class="nw-download-privacy"><i class="fa fa-shield"></i> Usaremos tu correo únicamente para enviarte información sobre la prueba.</p>
+            <p class="nw-download-privacy"><i class="fa fa-shield"></i> Tus datos se usarán únicamente para gestionar tu solicitud. No enviamos publicidad no solicitada.</p>
           </div>
         </div>
 
@@ -533,6 +644,7 @@
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js" defer></script>
 <script src="js/custom.js" defer></script>
 <script src="js/navbar.js" defer></script>
+<script src="js/formulario.js?v=1" defer></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
