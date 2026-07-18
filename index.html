@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="styles/notionwavelet.css">
   <link rel="stylesheet" href="styles/notionwavelet_responsive.css">
   <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/professional-home.css?v=7">
+  <link rel="stylesheet" href="styles/professional-home.css?v=8">
 </head>
 <body>
 <div class="super_container">
@@ -208,16 +208,52 @@
       </div>
     </section>
 
-    <section id="download-section" class="container text-center" style="padding:90px 15px;">
-      <h2 class="font-weight-bold mb-3">Prueba Notion Wavelet en tu taller</h2>
-      <p class="mb-4" style="color:#697386;">Introduce tu correo y recibe la información de acceso.</p>
-      <form action="https://formspree.io/f/mojgddly" method="POST" style="max-width:540px;margin:auto;">
-        <div class="input-group mb-3">
-          <input type="email" name="email" class="form-control" placeholder="Tu correo electrónico" required style="min-height:52px;border-radius:12px 0 0 12px;">
-          <div class="input-group-append"><button class="btn btn-primary" type="submit" style="padding:0 24px;border-radius:0 12px 12px 0;">Solicitar prueba</button></div>
+    <section id="download-section" class="nw-download-section">
+      <div class="nw-shell">
+        <div class="nw-download-panel">
+          <div class="nw-download-copy">
+            <span class="nw-download-kicker"><i class="fa fa-windows"></i> Prueba para Windows</span>
+            <h2>Empieza a gestionar tu taller de forma más sencilla</h2>
+            <p>Déjanos tu correo y te enviaremos la información necesaria para probar Notion Wavelet en tu negocio.</p>
+
+            <div class="nw-download-benefits">
+              <span><i class="fa fa-check"></i> Compatible con Windows 10 y 11</span>
+              <span><i class="fa fa-check"></i> Instalación rápida y sencilla</span>
+              <span><i class="fa fa-check"></i> Sin cuotas mensuales</span>
+            </div>
+          </div>
+
+          <div class="nw-download-form-card">
+            <div class="nw-download-form-heading">
+              <span class="nw-download-form-icon"><i class="fa fa-envelope-o"></i></span>
+              <div>
+                <strong>Solicita una prueba</strong>
+                <span>Recibe los datos de acceso por correo.</span>
+              </div>
+            </div>
+
+            <form action="https://formspree.io/f/mojgddly" method="POST" class="nw-download-form">
+              <label for="trial-email">Correo electrónico</label>
+              <div class="nw-download-input-group">
+                <i class="fa fa-envelope-o"></i>
+                <input id="trial-email" type="email" name="email" placeholder="nombre@tutaller.com" autocomplete="email" required>
+              </div>
+              <button type="submit">
+                Solicitar prueba
+                <span>→</span>
+              </button>
+            </form>
+
+            <p class="nw-download-privacy"><i class="fa fa-shield"></i> Usaremos tu correo únicamente para enviarte información sobre la prueba.</p>
+          </div>
         </div>
-      </form>
-      <p style="font-size:.82rem;color:#8a96a9;margin-top:15px;"><i class="fa fa-shield"></i> Descarga segura · Compatible con Windows 10/11</p>
+
+        <div class="nw-download-trust">
+          <span><i class="fa fa-lock"></i> Tus datos protegidos</span>
+          <span><i class="fa fa-clock-o"></i> Respuesta rápida</span>
+          <span><i class="fa fa-headphones"></i> Soporte especializado</span>
+        </div>
+      </div>
     </section>
   </main>
 
