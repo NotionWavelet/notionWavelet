@@ -16,55 +16,32 @@
     }
     </script>
 
-    <!-- Estilos y Animaciones -->
+    <!-- ESTILOS ORIGINALES (NO BORRAR ESTAS RUTAS) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="styles/notionwavelet.css">
     <link rel="stylesheet" type="text/css" href="styles/navbar.css">
-    <style>
-        :root { --blue-pro: #0056b3; }
-        .hero { padding: 180px 0 100px; background: #f8fafc; }
-        .card-pro { padding: 30px; border: 1px solid #e2e8f0; border-radius: 12px; background: white; }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
 </head>
 <body>
 
-<header class="header"><div id="navbar_container"></div></header>
-
 <div class="super_container">
+    <!-- LA CABECERA (Asegúrate que el archivo js/navbar.js esté en tu carpeta js/) -->
+    <header class="header"><div id="navbar_container"></div></header>
+
     <!-- HERO -->
     <section class="hero text-center" data-aos="fade-up">
-        <h1>Gestiona tu taller como un profesional</h1>
-        <p class="lead">Software de escritorio: facturación, órdenes y stock.</p>
+        <div class="container">
+            <h1>Gestiona tu taller como un profesional</h1>
+            <p class="lead">Software de escritorio: facturación, órdenes y stock.</p>
+        </div>
     </section>
 
-    <!-- 3 MÓDULOS -->
-    <section class="py-5" data-aos="fade-up">
-        <div class="container"><div class="row">
-            <div class="col-md-4"><div class="card-pro"><h5>Facturación</h5></div></div>
-            <div class="col-md-4"><div class="card-pro"><h5>Órdenes</h5></div></div>
-            <div class="col-md-4"><div class="card-pro"><h5>Recambios</h5></div></div>
-        </div></div>
-    </section>
-
-    <!-- SECCIÓN SEGURIDAD Y TESTIMONIOS -->
-    <section class="py-5" data-aos="fade-up" style="background: #f8fafc;">
-        <div class="container"><div class="row">
-            <div class="col-md-6">
-                <h4><i class="fas fa-shield-alt text-primary"></i> Privacidad 100% Local</h4>
-                <p>Tus datos nunca salen de tu taller. Sin cuotas de servidor.</p>
-            </div>
-            <div class="col-md-6">
-                <h4><i class="fas fa-quote-left text-primary"></i> Lo que dicen los clientes</h4>
-                <p>"La eficiencia del taller ha subido un 50%."</p>
-            </div>
-        </div></div>
-    </section>
-
-    <!-- CARRUSEL CON LAZY LOADING -->
+    <!-- SECCIÓN CARRUSEL (Con botones controlados) -->
     <section class="py-5" data-aos="fade-up">
         <div class="container">
-            <div class="owl-carousel gallery_slider">
+            <div class="owl-carousel gallery_slider owl-theme">
                 <div class="item"><img src="images/gallery_1.jpg" loading="lazy"></div>
                 <div class="item"><img src="images/gallery_2.jpg" loading="lazy"></div>
                 <div class="item"><img src="images/gallery_3.jpg" loading="lazy"></div>
@@ -74,15 +51,30 @@
             </div>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="footer"><div id="footer_container"></div></footer>
 </div>
 
-<!-- SCRIPTS (Ordenados al final para no ralentizar) -->
+<!-- SCRIPTS EN ORDEN -->
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/footer.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+
 <script>
-    AOS.init(); // Inicia animaciones
-    $('.gallery_slider').owlCarousel({loop:true, margin:20, items:3});
+    AOS.init();
+    $(document).ready(function(){
+        // Carrusel limpio: 'nav: false' elimina los botones prev/next si no los quieres
+        $('.gallery_slider').owlCarousel({
+            loop:true,
+            margin:20,
+            items:3,
+            nav: false,
+            dots: true
+        });
+    });
 </script>
 </body>
 </html>
