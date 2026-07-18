@@ -22,69 +22,74 @@
 		<div id="navbar_container"></div>
 	</header>
 
-	<!-- Contact Form & Info -->
+	<!-- Contact Form -->
 	<div class="contact" style="padding-top: 140px; padding-bottom: 60px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="review_form_container">
 						<div class="review_form_title" style="font-size: 2rem; font-weight: 700; margin-bottom: 10px;">Soporte Técnico</div>
-						<p style="color: #6c757d; margin-bottom: 30px;">¿Tienes dudas sobre la instalación, la licencia o el funcionamiento del programa? Escríbenos directamente.</p>
-						<div class="review_form_content">
-							<form id="contact_form" class="review_form">
-								<div class="d-flex flex-column gap-3">
-									<input type="text" id="from_name" class="review_form_input mb-3" placeholder="Nombre completo" required="required" style="width:100%;">
-									<input type="email" id="reply_to" class="review_form_input mb-3" placeholder="Correo electrónico del taller" required="required" style="width:100%;">
-									<input type="text" id="subject" class="review_form_input mb-3" placeholder="Asunto" style="width:100%;">
-								</div>
-								<textarea id="message" class="review_form_text" placeholder="Escribe aquí tu consulta..." required="required" style="margin-top: 10px;"></textarea>
-								<button type="submit" class="review_form_button" style="margin-top: 20px;">Enviar consulta</button>
-							</form>
-						</div>
+						<p style="color: #6c757d; margin-bottom: 30px;">Escríbenos directamente y te responderemos lo antes posible.</p>
+						<form id="contact_form" class="review_form">
+							<div class="d-flex flex-column gap-3">
+								<input type="text" id="from_name" class="review_form_input mb-3" placeholder="Nombre completo" required style="width:100%;">
+								<input type="email" id="reply_to" class="review_form_input mb-3" placeholder="Correo electrónico" required style="width:100%;">
+								<input type="text" id="subject" class="review_form_input mb-3" placeholder="Asunto" required style="width:100%;">
+							</div>
+							<textarea id="message" class="review_form_text" placeholder="Escribe aquí tu consulta..." required style="margin-top: 10px;"></textarea>
+							<button type="submit" id="btn_submit" class="review_form_button" style="margin-top: 20px;">Enviar consulta</button>
+						</form>
 					</div>
 				</div>
 
-				<!-- Bloque de Preguntas Frecuentes (FAQs) -->
+				<!-- FAQs -->
 				<div class="col-lg-6 mt-5 mt-lg-0">
 					<div class="review_form_title" style="font-size: 2rem; font-weight: 700; margin-bottom: 25px;">Preguntas Frecuentes</div>
 					<div class="mb-4">
-						<h5 style="font-weight: 700; color: #1b1b1b;">¿Cuáles son los requisitos del sistema?</h5>
-						<p style="font-size: 0.95rem; color: #6c757d; line-height: 1.5;">Windows 10/11 de 64 bits. No requiere conexión permanente.</p>
+						<h5 style="font-weight: 700; color: #1b1b1b;">¿Requisitos del sistema?</h5>
+						<p>Windows 10/11 de 64 bits. No requiere conexión permanente.</p>
 					</div>
 					<div class="mb-4">
 						<h5 style="font-weight: 700; color: #1b1b1b;">¿Cómo recibiré el instalador?</h5>
-						<p style="font-size: 0.95rem; color: #6c757d; line-height: 1.5;">Por correo electrónico con un enlace seguro tras completar el registro.</p>
+						<p>Por correo electrónico tras completar el registro.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<footer class="footer">
-		<div id="footer_container"></div>
-	</footer>
-
+	<footer class="footer"><div id="footer_container"></div></footer>
 </div>
 
 <script src="js/navbar.js" defer></script>
 <script src="js/footer.js" defer></script>
 
-<!-- Script EmailJS Gratuito -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script type="text/javascript">
-    (function(){
-        emailjs.init("ydk720-8RlvPOol8Y");
-    })();
+<!-- EmailJS Optimizado -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function(){ emailjs.init("ydk720-8RlvPOol8Y"); })();
 
     document.getElementById('contact_form').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        emailjs.sendForm('service_312yuv8', 'template_l0o2xu9', this)
+        const btn = document.getElementById('btn_submit');
+        btn.textContent = 'Enviando...';
+
+        const templateParams = {
+            from_name: document.getElementById('from_name').value,
+            reply_to: document.getElementById('reply_to').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+
+        emailjs.send('service_312yuv8', 'template_l0o2xu9', templateParams)
             .then(function() {
-                alert('Mensaje enviado con éxito.');
+                alert('¡Mensaje enviado correctamente!');
                 document.getElementById('contact_form').reset();
+                btn.textContent = 'Enviar consulta';
             }, function(error) {
-                alert('Error al enviar el mensaje.');
+                alert('Error al enviar. Revisa tu panel de EmailJS.');
+                btn.textContent = 'Enviar consulta';
             });
     });
 </script>
