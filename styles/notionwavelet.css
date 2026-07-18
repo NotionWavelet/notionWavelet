@@ -254,4 +254,42 @@ section
 	.section_title h1 {
 		font-size: 2rem !important;
 	}
+
+
+	/* --- Mejora Visual Profesional --- */
+
+/* Efecto levitación suave en tarjetas de software */
+.product {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #e1e4e8;
+}
+
+.product:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.05);
+    transform: translateY(-8px);
+    border-color: #BAC4CF;
+}
+
+/* Tipografía de títulos más elegante */
+.section_title {
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #1b1b1b;
+}
+
+/* Mejora de botones para parecer interfaz de app */
+.button {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 6px;
+}
+
+.button:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Ajuste de contenedores para darle aire a la web (espaciado profesional) */
+.contact, .products {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
 }
