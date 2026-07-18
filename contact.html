@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Contacto</title>
+<title>Contacto y Soporte - Noción de Ondícula</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Software de gestión y facturación para talleres mecánicos">
+<meta name="description" content="Soporte técnico y contacto para el software de gestión de talleres">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -12,56 +12,64 @@
 <link rel="stylesheet" type="text/css" href="styles/footer.css">
 <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 <link rel="stylesheet" type="text/css" href="styles/navbar.css">
-
 </head>
 <body>
 
 <div class="super_container">
 
 	<!-- Header -->
-
 	<header class="header">
-
 		<div id="navbar_container"></div>
-
 	</header>
 
-
-
-	<!-- Contact Form -->
-
-	<div class="contact">
+	<!-- Contact Form & Info -->
+	<div class="contact" style="padding-top: 140px; padding-bottom: 60px;">
 		<div class="container">
 			<div class="row">
-				<div class="col">
+				<div class="col-lg-6">
 					<div class="review_form_container">
-						<div class="review_form_title">Contacta con el equipo</div>
+						<div class="review_form_title" style="font-size: 2rem; font-weight: 700; margin-bottom: 10px;">Soporte Técnico</div>
+						<p style="color: #6c757d; margin-bottom: 30px;">¿Tienes dudas sobre la instalación, la licencia o el funcionamiento del programa? Escríbenos directamente.</p>
 						<div class="review_form_content">
 							<form id="review_form" class="review_form" action="https://formspree.io/f/mojgddly" method="POST">
-								<div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
-									<input type="text" id="nombre" name="name" class="review_form_input" placeholder="Nombre" required="required">
-									<input type="email" id="email" name="email" class="review_form_input" placeholder="E-mail" required="required">
-									<input type="text" id="asunto" name="subject" class="review_form_input" placeholder="Asunto">
+								<div class="d-flex flex-column gap-3">
+									<input type="text" id="nombre" name="name" class="review_form_input mb-3" placeholder="Nombre completo" required="required" style="width:100%;">
+									<input type="email" id="email" name="email" class="review_form_input mb-3" placeholder="Correo electrónico del taller" required="required" style="width:100%;">
+									<input type="text" id="asunto" name="subject" class="review_form_input mb-3" placeholder="¿Con qué tienes problemas? (Instalación, Facturas...)" style="width:100%;">
 								</div>
-								<textarea id="mensaje" name="message" class="review_form_text" placeholder="Mensaje" required="required"></textarea>
-								<button type="submit" id="enviar_mensaje" class="review_form_button">Enviar mensaje</button>
+								<textarea id="mensaje" name="message" class="review_form_text" placeholder="Escribe aquí tu consulta en detalle..." required="required" style="margin-top: 10px;"></textarea>
+								<button type="submit" id="enviar_mensaje" class="review_form_button" style="margin-top: 20px;">Enviar consulta</button>
 							</form>
-
 						</div>
+					</div>
+				</div>
+
+				<!-- Bloque de Preguntas Frecuentes (FAQs) -->
+				<div class="col-lg-6 mt-5 mt-lg-0">
+					<div class="review_form_title" style="font-size: 2rem; font-weight: 700; margin-bottom: 25px;">Preguntas Frecuentes</div>
+
+					<div class="mb-4">
+						<h5 style="font-weight: 700; color: #1b1b1b;">¿Cuáles son los requisitos del sistema?</h5>
+						<p style="font-size: 0.95rem; color: #6c757d; line-height: 1.5;">El software está optimizado para sistemas operativos Windows 10 y Windows 11 de 64 bits. No requiere conexión permanente a internet para funcionar.</p>
+					</div>
+
+					<div class="mb-4">
+						<h5 style="font-weight: 700; color: #1b1b1b;">¿Cómo recibiré el instalador?</h5>
+						<p style="font-size: 0.95rem; color: #6c757d; line-height: 1.5;">Al introducir tu correo en la página de descarga, te enviaremos un enlace seguro con el archivo ejecutable (.exe) y una guía rápida en PDF.</p>
+					</div>
+
+					<div class="mb-4">
+						<h5 style="font-weight: 700; color: #1b1b1b;">¿Mis datos están seguros de forma local?</h5>
+						<p style="font-size: 0.95rem; color: #6c757d; line-height: 1.5;">Sí. Al ser una aplicación de escritorio, toda la base de datos de tus clientes, recambios y facturas se guarda cifrada de forma local en tu propio ordenador.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-
-
 	<!-- Footer -->
-
-		<footer class="footer">
-
+	<footer class="footer">
 		<div id="footer_container"></div>
-
 	</footer>
 
 </div>
@@ -71,10 +79,10 @@
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-    emailjs.init("ydk720-8RlvPOol8Y"); // Tu User ID de EmailJS
+    emailjs.init("ydk720-8RlvPOol8Y");
 
     document.getElementById('review_form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Evita el envío predeterminado del formulario
+        event.preventDefault();
 
         var nombre = document.getElementById('nombre').value;
         var email = document.getElementById('email').value;
@@ -90,15 +98,13 @@
 
         emailjs.send('service_312yuv8', 'template_l0o2xu9', templateParams)
             .then(function(response) {
-                alert('Mensaje enviado correctamente');
-                document.getElementById('review_form').reset(); // Limpia el formulario al enviar
+                alert('Mensaje de soporte enviado correctamente.');
+                document.getElementById('review_form').reset();
             }, function(error) {
-                console.error('Error al enviar el mensaje:', error);
+                console.error('Error:', error);
                 alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
             });
     });
 </script>
-
-
 </body>
 </html>
