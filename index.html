@@ -10,75 +10,77 @@
     <link rel="stylesheet" type="text/css" href="styles/notionwavelet.css">
     <link rel="stylesheet" type="text/css" href="styles/navbar.css">
     <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <style>
+        :root { --blue-pro: #0056b3; }
+        .alert-bar { background: #003366; color: white; padding: 10px; text-align: center; font-size: 0.85rem; }
+        .accordion .card { border: none; border-bottom: 1px solid #eee; }
+        .testimonial-card { padding: 30px; background: #fff; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    </style>
 </head>
 <body>
 
 <div class="super_container">
+    <!-- Banner de Novedades -->
+    <div class="alert-bar">🚀 <b>Nueva actualización v2.0:</b> Gestión de inventario mejorada y backups automáticos. <a href="#" style="color:white; text-decoration:underline;">Leer notas</a></div>
+
     <header class="header"><div id="navbar_container"></div></header>
 
-    <!-- HERO SECTION: Minimalista y al grano -->
-    <section class="container" style="padding: 160px 0 100px;">
+    <!-- HERO -->
+    <section class="container" style="padding: 120px 0 80px;">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h1 style="font-size: 3.5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 20px;">Tu taller bajo control.</h1>
-                <p style="font-size: 1.3rem; color: #666; margin-bottom: 40px; line-height: 1.6;">El software de escritorio que elimina el caos. Facturación, stock y órdenes de trabajo en una sola aplicación robusta.</p>
+                <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px;">El motor de tu taller.</h1>
+                <p style="font-size: 1.25rem; color: #555; margin-bottom: 40px;">Software de escritorio profesional para la gestión integral de talleres mecánicos. Potencia y seguridad en una sola interfaz.</p>
                 <div class="d-flex gap-3">
-                    <a href="#download-section" class="btn btn-dark btn-lg" style="padding: 15px 35px; border-radius: 8px; font-weight: 600;">Probar Gratis</a>
-                    <a href="#demo-section" class="btn btn-outline-dark btn-lg" style="padding: 15px 35px; border-radius: 8px; font-weight: 600;">Ver Demo</a>
+                    <a href="#download-section" class="btn btn-primary btn-lg" style="background:#0056b3; border:none; padding:15px 30px;">Descargar Instalador</a>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <img src="images/gallery_1.jpg" class="img-fluid" style="border-radius: 12px; box-shadow: 0 40px 80px rgba(0,0,0,0.1);">
-            </div>
+            <div class="col-lg-6"><img src="images/gallery_1.jpg" class="img-fluid rounded shadow-lg"></div>
         </div>
     </section>
 
-    <!-- 3 COLUMNAS: Valor estratégico -->
-    <section style="padding: 100px 0; background: #fff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <i class="fa fa-lock" style="font-size: 2rem; color: #000; margin-bottom: 20px;"></i>
-                    <h3>Privacidad Local</h3>
-                    <p>Tus datos se quedan en tu ordenador. Cero dependencia de la nube.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fa fa-tachometer" style="font-size: 2rem; color: #000; margin-bottom: 20px;"></i>
-                    <h3>Facturación Veloz</h3>
-                    <p>Convierte horas de gestión en segundos de trabajo administrativo.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fa fa-cogs" style="font-size: 2rem; color: #000; margin-bottom: 20px;"></i>
-                    <h3>Stock Inteligente</h3>
-                    <p>Control total de recambios, proveedores y rotación de piezas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CARRUSEL: La interfaz real -->
-    <section style="padding: 100px 0; background: #f9f9f9;">
+    <!-- CASOS DE USO -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
         <div class="container text-center">
-            <h2 style="font-weight: 800; margin-bottom: 50px;">Software diseñado para el foso</h2>
-            <div class="owl-carousel owl-theme gallery_slider">
-                <div class="owl-item"><img src="images/gallery_1.jpg" style="border-radius: 8px;"></div>
-                <div class="owl-item"><img src="images/gallery_2.jpg" style="border-radius: 8px;"></div>
-                <div class="owl-item"><img src="images/gallery_3.jpg" style="border-radius: 8px;"></div>
+            <h2 class="mb-5 font-weight-bold">¿Cómo optimiza tu día a día?</h2>
+            <div class="row">
+                <div class="col-md-4"><h4>Recepción Ágil</h4><p>Registra vehículos en 10s.</p></div>
+                <div class="col-md-4"><h4>Facturación Automática</h4><p>Cierra reparaciones al instante.</p></div>
+                <div class="col-md-4"><h4>Control de Stock</h4><p>Gestiona piezas sin errores.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- FORMULARIO FINAL: Estilo limpio y profesional -->
-    <section id="download-section" style="padding: 100px 0;">
+    <!-- TESTIMONIOS (Social Proof) -->
+    <section style="padding: 80px 0;">
         <div class="container">
-            <div class="card border-0 shadow" style="max-width: 700px; margin: auto; padding: 60px; border-radius: 20px;">
-                <h2 class="text-center font-weight-bold">¿Listo para modernizar tu taller?</h2>
-                <p class="text-center text-muted mb-4">Descarga el instalador de Windows y empieza hoy.</p>
-                <form action="https://formspree.io/f/mojgddly" method="POST">
-                    <input type="email" name="email" class="form-control mb-3" placeholder="Correo electrónico del taller" required style="height: 60px; border-radius: 10px;">
-                    <button type="submit" class="btn btn-dark btn-block btn-lg" style="height: 60px; border-radius: 10px;">Solicitar acceso gratuito</button>
-                </form>
+            <h2 class="text-center mb-5 font-weight-bold">Confianza en el sector</h2>
+            <div class="row">
+                <div class="col-md-6"><div class="testimonial-card">"Desde que uso Noción de Ondícula, mi facturación es un 50% más rápida." <br><br><b>- Taller Hermanos García, Madrid</b></div></div>
+                <div class="col-md-6"><div class="testimonial-card">"La seguridad de tener los datos en mi PC no tiene precio." <br><br><b>- Mecánica Rápida V8, Valencia</b></div></div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACORDEÓN -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center mb-5 font-weight-bold">Preguntas frecuentes</h2>
+            <div class="accordion" id="faq">
+                <div class="card"><div class="card-header" id="h1"><button class="btn btn-link" data-toggle="collapse" data-target="#c1">¿Necesito internet para usarlo?</button></div><div id="c1" class="collapse" data-parent="#faq"><div class="card-body">No, es 100% offline.</div></div></div>
+                <div class="card"><div class="card-header" id="h2"><button class="btn btn-link" data-toggle="collapse" data-target="#c2">¿Es pago único?</button></div><div id="c2" class="collapse" data-parent="#faq"><div class="card-body">Sí, licencia de por vida.</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO FINAL -->
+    <section id="download-section" style="padding: 100px 0;">
+        <div class="card shadow-lg" style="max-width: 600px; margin: auto; padding: 40px; border-radius: 20px;">
+            <h2 class="text-center mb-4">Comienza hoy</h2>
+            <form action="https://formspree.io/f/mojgddly" method="POST">
+                <input type="email" name="email" class="form-control mb-3" placeholder="Tu correo" required style="height: 50px;">
+                <button type="submit" class="btn btn-primary btn-block btn-lg" style="background:#0056b3;">Solicitar acceso</button>
+            </form>
         </div>
     </section>
 
@@ -86,8 +88,7 @@
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="js/custom.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
 <script src="js/footer.js" defer></script>
 <script src="js/navbar.js" defer></script>
 </body>
