@@ -1,71 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Noción de Ondícula | Software Profesional</title>
+    <title>Noción de Ondícula | Gestión de Taller Profesional</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="styles/notionwavelet.css">
+    <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
     <style>
-        :root { --navy: #0a192f; --accent: #3b82f6; }
-        body { font-family: 'Inter', sans-serif; color: #374151; line-height: 1.6; }
-        h1, h2 { color: var(--navy); font-weight: 800; }
-        .hero { padding: 120px 0; background: #f9fafb; }
-        .btn-primary { background: var(--accent); border: none; padding: 12px 30px; border-radius: 8px; font-weight: 600; }
-        .card-feature { border: none; padding: 30px; transition: 0.3s; }
-        .card-feature:hover { transform: translateY(-10px); }
-        .navbar-custom { background: white; border-bottom: 1px solid #e5e7eb; padding: 15px 0; }
+        :root { --blue-pro: #0056b3; }
+        .alert-bar { background: #003366; color: white; padding: 10px; text-align: center; font-size: 0.85rem; }
+        .accordion .card { border: none; border-bottom: 1px solid #eee; }
+        .testimonial-card { padding: 30px; background: #fff; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
-        <div class="container"><a class="navbar-brand font-weight-bold" href="#">Noción de Ondícula</a></div>
-    </nav>
+<div class="super_container">
+    <!-- Banner de Novedades -->
+    <div class="alert-bar">🚀 <b>Nueva actualización v2.0:</b> Gestión de inventario mejorada y backups automáticos. <a href="#" style="color:white; text-decoration:underline;">Leer notas</a></div>
+
+    <header class="header"><div id="navbar_container"></div></header>
 
     <!-- HERO -->
-    <section class="hero">
-        <div class="container text-center">
-            <h1 class="display-4 mb-4">Software para talleres que buscan la excelencia.</h1>
-            <p class="lead mb-5 text-muted">La herramienta definitiva de escritorio para facturar, gestionar stock y organizar reparaciones. Sin complicaciones, sin mensualidades.</p>
-            <a href="#download" class="btn btn-primary btn-lg">Descargar versión 2026</a>
+    <section class="container" style="padding: 120px 0 80px;">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px;">El motor de tu taller.</h1>
+                <p style="font-size: 1.25rem; color: #555; margin-bottom: 40px;">Software de escritorio profesional para la gestión integral de talleres mecánicos. Potencia y seguridad en una sola interfaz.</p>
+                <div class="d-flex gap-3">
+                    <a href="#download-section" class="btn btn-primary btn-lg" style="background:#0056b3; border:none; padding:15px 30px;">Descargar Instalador</a>
+                </div>
+            </div>
+            <div class="col-lg-6"><img src="images/gallery_1.jpg" class="img-fluid rounded shadow-lg"></div>
         </div>
     </section>
 
-    <!-- 3 PILARES (ESTILO MODERNO) -->
-    <section class="py-5">
-        <div class="container">
+    <!-- CASOS DE USO -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container text-center">
+            <h2 class="mb-5 font-weight-bold">¿Cómo optimiza tu día a día?</h2>
             <div class="row">
-                <div class="col-md-4 card-feature text-center">
-                    <i class="fas fa-shield-alt fa-2x mb-3 text-primary"></i>
-                    <h5>Seguridad Local</h5>
-                    <p class="text-muted">Tus datos nunca salen de tu ordenador. Máxima privacidad.</p>
-                </div>
-                <div class="col-md-4 card-feature text-center">
-                    <i class="fas fa-bolt fa-2x mb-3 text-primary"></i>
-                    <h5>Flujo Ágil</h5>
-                    <p class="text-muted">Interfaz diseñada para no perder tiempo en menús infinitos.</p>
-                </div>
-                <div class="col-md-4 card-feature text-center">
-                    <i class="fas fa-chart-line fa-2x mb-3 text-primary"></i>
-                    <h5>Control Total</h5>
-                    <p class="text-muted">Stock, clientes e historial en una sola vista centralizada.</p>
-                </div>
+                <div class="col-md-4"><h4>Recepción Ágil</h4><p>Registra vehículos en 10s.</p></div>
+                <div class="col-md-4"><h4>Facturación Automática</h4><p>Cierra reparaciones al instante.</p></div>
+                <div class="col-md-4"><h4>Control de Stock</h4><p>Gestiona piezas sin errores.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- FORMULARIO LIMPIO -->
-    <section id="download" class="py-5" style="background: var(--navy); color: white;">
-        <div class="container text-center" style="max-width: 600px;">
-            <h2 class="text-white mb-4">Empieza hoy mismo</h2>
+    <!-- TESTIMONIOS (Social Proof) -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <h2 class="text-center mb-5 font-weight-bold">Confianza en el sector</h2>
+            <div class="row">
+                <div class="col-md-6"><div class="testimonial-card">"Desde que uso Noción de Ondícula, mi facturación es un 50% más rápida." <br><br><b>- Taller Hermanos García, Madrid</b></div></div>
+                <div class="col-md-6"><div class="testimonial-card">"La seguridad de tener los datos en mi PC no tiene precio." <br><br><b>- Mecánica Rápida V8, Valencia</b></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACORDEÓN -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center mb-5 font-weight-bold">Preguntas frecuentes</h2>
+            <div class="accordion" id="faq">
+                <div class="card"><div class="card-header" id="h1"><button class="btn btn-link" data-toggle="collapse" data-target="#c1">¿Necesito internet para usarlo?</button></div><div id="c1" class="collapse" data-parent="#faq"><div class="card-body">No, es 100% offline.</div></div></div>
+                <div class="card"><div class="card-header" id="h2"><button class="btn btn-link" data-toggle="collapse" data-target="#c2">¿Es pago único?</button></div><div id="c2" class="collapse" data-parent="#faq"><div class="card-body">Sí, licencia de por vida.</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO FINAL -->
+    <section id="download-section" style="padding: 100px 0;">
+        <div class="card shadow-lg" style="max-width: 600px; margin: auto; padding: 40px; border-radius: 20px;">
+            <h2 class="text-center mb-4">Comienza hoy</h2>
             <form action="https://formspree.io/f/mojgddly" method="POST">
-                <input type="email" name="email" class="form-control mb-3" placeholder="Correo electrónico del taller" required style="height: 50px;">
-                <button type="submit" class="btn btn-primary btn-block btn-lg">Recibir instalador</button>
+                <input type="email" name="email" class="form-control mb-3" placeholder="Tu correo" required style="height: 50px;">
+                <button type="submit" class="btn btn-primary btn-block btn-lg" style="background:#0056b3;">Solicitar acceso</button>
             </form>
         </div>
     </section>
 
+    <footer class="footer"><div id="footer_container"></div></footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="js/footer.js" defer></script>
+<script src="js/navbar.js" defer></script>
 </body>
 </html>
