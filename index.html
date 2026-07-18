@@ -52,7 +52,7 @@
   <link rel="stylesheet" href="styles/notionwavelet.css">
   <link rel="stylesheet" href="styles/notionwavelet_responsive.css">
   <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/professional-home.css?v=12">
+  <link rel="stylesheet" href="styles/professional-home.css?v=13">
   <noscript><style>.nw-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
@@ -421,6 +421,93 @@
       </div>
     </section>
 
+
+    <section id="faq-section" class="nw-faq-section">
+      <div class="nw-shell">
+        <div class="nw-faq-heading nw-reveal">
+          <span class="nw-section-kicker">Preguntas frecuentes</span>
+          <h2>Todo lo que necesitas saber antes de empezar</h2>
+          <p>Resolvemos las dudas más habituales sobre instalación, funcionamiento, datos y soporte.</p>
+        </div>
+
+        <div class="nw-faq-layout">
+          <div class="nw-faq-list">
+            <details class="nw-faq-item nw-reveal">
+              <summary>
+                <span>¿Notion Wavelet funciona sin conexión a internet?</span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </summary>
+              <div class="nw-faq-answer">
+                <p>Sí. La aplicación está pensada para trabajar desde tu ordenador. Solo necesitarás conexión para determinadas gestiones, actualizaciones o comunicaciones con soporte.</p>
+              </div>
+            </details>
+
+            <details class="nw-faq-item nw-reveal">
+              <summary>
+                <span>¿Es una suscripción mensual?</span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </summary>
+              <div class="nw-faq-answer">
+                <p>No. La propuesta de Notion Wavelet se basa en un pago único, sin cuotas mensuales obligatorias por utilizar el programa.</p>
+              </div>
+            </details>
+
+            <details class="nw-faq-item nw-reveal">
+              <summary>
+                <span>¿Dónde se guardan los datos del taller?</span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </summary>
+              <div class="nw-faq-answer">
+                <p>Los datos permanecen bajo el control del taller. Antes de contratar, te explicaremos la configuración disponible, las copias de seguridad recomendadas y el procedimiento de recuperación.</p>
+              </div>
+            </details>
+
+            <details class="nw-faq-item nw-reveal">
+              <summary>
+                <span>¿Es compatible con Windows 10 y Windows 11?</span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </summary>
+              <div class="nw-faq-answer">
+                <p>Sí. La aplicación está diseñada para equipos con Windows 10 y Windows 11. Revisaremos contigo los requisitos del ordenador antes de la instalación.</p>
+              </div>
+            </details>
+
+            <details class="nw-faq-item nw-reveal">
+              <summary>
+                <span>¿Incluye ayuda para ponerlo en marcha?</span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </summary>
+              <div class="nw-faq-answer">
+                <p>Sí. Te acompañamos en los primeros pasos para que puedas configurar el taller, crear clientes, registrar vehículos y empezar a trabajar con órdenes y facturas.</p>
+              </div>
+            </details>
+
+            <details class="nw-faq-item nw-reveal">
+              <summary>
+                <span>¿Puedo solicitar una demostración antes de decidir?</span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </summary>
+              <div class="nw-faq-answer">
+                <p>Sí. Completa el formulario y te enviaremos la información necesaria para conocer el programa y valorar si encaja con la forma de trabajar de tu taller.</p>
+              </div>
+            </details>
+          </div>
+
+          <aside class="nw-faq-card nw-reveal">
+            <span class="nw-faq-card__icon"><i class="fa fa-comments-o"></i></span>
+            <span class="nw-faq-card__eyebrow">¿Tienes otra duda?</span>
+            <h3>Cuéntanos cómo trabaja tu taller</h3>
+            <p>Te ayudaremos a comprobar si Notion Wavelet cubre tus necesidades antes de que tomes una decisión.</p>
+            <a class="nw-btn nw-btn--primary" href="#download-section">
+              Solicitar información <i class="fa fa-arrow-right"></i>
+            </a>
+            <small><i class="fa fa-check-circle"></i> Sin compromiso</small>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+
     <section id="download-section" class="nw-download-section">
       <div class="nw-shell">
         <div class="nw-download-panel">
@@ -554,7 +641,7 @@
                   required
                 >
                 <span>
-                  He leído y acepto el tratamiento de mis datos para recibir información sobre la prueba.
+                  He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a> y el tratamiento de mis datos para gestionar la solicitud.
                 </span>
               </label>
               <small class="nw-field-error nw-field-error--consent" id="trial-consent-error"></small>
@@ -608,6 +695,7 @@
             <a href="#features-section">Funciones</a>
             <a href="#demo-section">Demostración</a>
             <a href="#product-section">Capturas</a>
+            <a href="#faq-section">Preguntas frecuentes</a>
             <a href="#download-section">Solicitar prueba</a>
           </div>
 
@@ -621,8 +709,8 @@
           <div class="nw-footer__column">
             <strong>Ayuda</strong>
             <a href="#download-section">Contacto</a>
-            <a href="#download-section">Solicitar información</a>
-            <span>Datos bajo tu control</span>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="aviso-legal.html">Aviso legal</a>
           </div>
         </div>
       </div>
@@ -654,6 +742,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var animatedElements = document.querySelectorAll(
     ".nw-features-heading, .nw-feature-card, .nw-demo-copy, .nw-demo-card, " +
     ".nw-product-heading, .nw-product-row, .nw-benefits-heading, .nw-benefit-card, " +
+    ".nw-faq-heading, .nw-faq-item, .nw-faq-card, " +
     ".nw-download-copy, .nw-download-form-card, .nw-footer__top, .nw-footer__bottom"
   );
 
