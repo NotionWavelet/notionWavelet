@@ -1,44 +1,103 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<title>Contacto y Soporte - Noción de Ondícula</title>
+<title>Contacto</title>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Wish shop project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/contact.css">
 <link rel="stylesheet" type="text/css" href="styles/footer.css">
+<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+
 </head>
 <body>
 
 <div class="super_container">
-    <header class="header"><div id="navbar_container"></div></header>
 
-    <div class="contact" style="padding-top: 140px; padding-bottom: 60px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="review_form_container">
-                        <div class="review_form_title" style="font-size: 2rem; font-weight: 700; margin-bottom: 10px;">Soporte Técnico</div>
-                        <!-- CAMBIO CLAVE: action directo a tu Formspree -->
-                        <form action="https://formspree.io/f/mojgddly" method="POST" class="review_form">
-                            <div class="d-flex flex-column gap-3">
-                                <input type="text" name="nombre" class="review_form_input mb-3" placeholder="Nombre completo" required style="width:100%;">
-                                <input type="email" name="email" class="review_form_input mb-3" placeholder="Correo electrónico" required style="width:100%;">
-                                <input type="text" name="asunto" class="review_form_input mb-3" placeholder="Asunto" required style="width:100%;">
-                            </div>
-                            <textarea name="mensaje" class="review_form_text" placeholder="Escribe aquí tu consulta..." required style="margin-top: 10px;"></textarea>
-                            <button type="submit" class="review_form_button" style="margin-top: 20px;">Enviar consulta</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="footer"><div id="footer_container"></div></footer>
+	<!-- Header -->
+
+	<header class="header">
+
+		<div id="navbar_container"></div>
+
+	</header>
+
+
+
+	<!-- Contact Form -->
+
+	<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="review_form_container">
+						<div class="review_form_title">Contacta con el equipo</div>
+						<div class="review_form_content">
+							<form id="review_form" class="review_form">
+                                <div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+                                    <input type="text" id="nombre" class="review_form_input" placeholder="Nombre" required="required">
+                                    <input type="email" id="email" class="review_form_input" placeholder="E-mail" required="required">
+                                    <input type="text" id="asunto" class="review_form_input" placeholder="Asunto">
+                                </div>
+                                <textarea id="mensaje" class="review_form_text" name="review_form_text" placeholder="Mensaje"></textarea>
+                                <button type="button" id="enviar_mensaje" class="review_form_button">Enviar mensaje</button>
+                            </form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Footer -->
+
+		<footer class="footer">
+
+		<div id="footer_container"></div>
+
+	</footer>
+
 </div>
 
 <script src="js/navbar.js" defer></script>
 <script src="js/footer.js" defer></script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    emailjs.init("ydk720-8RlvPOol8Y"); // Reemplaza "tu_user_id" con tu User ID de EmailJS
+
+    document.getElementById('enviar_mensaje').addEventListener('click', function(event) {
+        event.preventDefault(); // Evita el envío predeterminado del formulario
+
+        var nombre = document.getElementById('nombre').value;
+        var email = document.getElementById('email').value;
+        var asunto = document.getElementById('asunto').value;
+        var mensaje = document.getElementById('mensaje').value;
+
+        var templateParams = {
+            nombre: nombre,
+            email: email,
+            asunto: asunto,
+            mensaje: mensaje
+        };
+
+        emailjs.send('service_312yuv8', 'template_l0o2xu9', templateParams)
+            .then(function(response) {
+                alert('Mensaje enviado correctamente');
+            }, function(error) {
+                console.error('Error al enviar el mensaje:', error);
+                alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+            });
+    });
+</script>
+
+
 </body>
 </html>
