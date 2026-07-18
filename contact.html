@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <title>Contacto</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Wish shop project">
+<meta name="description" content="Software de gestión y facturación para talleres mecánicos">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -37,15 +37,15 @@
 					<div class="review_form_container">
 						<div class="review_form_title">Contacta con el equipo</div>
 						<div class="review_form_content">
-							<form id="review_form" class="review_form">
-                                <div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
-                                    <input type="text" id="nombre" class="review_form_input" placeholder="Nombre" required="required">
-                                    <input type="email" id="email" class="review_form_input" placeholder="E-mail" required="required">
-                                    <input type="text" id="asunto" class="review_form_input" placeholder="Asunto">
-                                </div>
-                                <textarea id="mensaje" class="review_form_text" name="review_form_text" placeholder="Mensaje"></textarea>
-                                <button type="button" id="enviar_mensaje" class="review_form_button">Enviar mensaje</button>
-                            </form>
+							<form id="review_form" class="review_form" action="https://formspree.io/f/mojgddly" method="POST">
+								<div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+									<input type="text" id="nombre" name="name" class="review_form_input" placeholder="Nombre" required="required">
+									<input type="email" id="email" name="email" class="review_form_input" placeholder="E-mail" required="required">
+									<input type="text" id="asunto" name="subject" class="review_form_input" placeholder="Asunto">
+								</div>
+								<textarea id="mensaje" name="message" class="review_form_text" placeholder="Mensaje" required="required"></textarea>
+								<button type="submit" id="enviar_mensaje" class="review_form_button">Enviar mensaje</button>
+							</form>
 
 						</div>
 					</div>
@@ -71,9 +71,9 @@
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-    emailjs.init("ydk720-8RlvPOol8Y"); // Reemplaza "tu_user_id" con tu User ID de EmailJS
+    emailjs.init("ydk720-8RlvPOol8Y"); // Tu User ID de EmailJS
 
-    document.getElementById('enviar_mensaje').addEventListener('click', function(event) {
+    document.getElementById('review_form').addEventListener('submit', function(event) {
         event.preventDefault(); // Evita el envío predeterminado del formulario
 
         var nombre = document.getElementById('nombre').value;
@@ -91,6 +91,7 @@
         emailjs.send('service_312yuv8', 'template_l0o2xu9', templateParams)
             .then(function(response) {
                 alert('Mensaje enviado correctamente');
+                document.getElementById('review_form').reset(); // Limpia el formulario al enviar
             }, function(error) {
                 console.error('Error al enviar el mensaje:', error);
                 alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
