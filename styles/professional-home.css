@@ -1654,3 +1654,49 @@ img { max-width: 100%; display: block; }
     transform: none;
   }
 }
+
+/*********************************
+  Accessibility and SEO polish
+*********************************/
+.nw-skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 9999;
+  padding: 12px 16px;
+  color: #fff;
+  background: #071633;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  font-size: 13px;
+  font-weight: 750;
+  transform: translateY(-160%);
+  transition: transform .18s ease;
+}
+
+.nw-skip-link:focus {
+  color: #fff;
+  transform: translateY(0);
+}
+
+.nw-anchor-target {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(18,101,244,.42);
+  outline-offset: 3px;
+}
+
+.nw-window__image img {
+  aspect-ratio: 1365 / 768;
+  object-fit: cover;
+}
