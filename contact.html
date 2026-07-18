@@ -31,14 +31,14 @@
 						<div class="review_form_title" style="font-size: 2rem; font-weight: 700; margin-bottom: 10px;">Soporte Técnico</div>
 						<p style="color: #6c757d; margin-bottom: 30px;">¿Tienes dudas sobre la instalación, la licencia o el funcionamiento del programa? Escríbenos directamente.</p>
 						<div class="review_form_content">
-							<!-- Formulario conectado a Formspree de forma nativa sin scripts propensos a fallar -->
-							<form id="review_form" class="review_form" action="https://formspree.io/f/mojgddly" method="POST">
+							<!-- Formulario controlado por JavaScript gratuito -->
+							<form id="review_form" class="review_form">
 								<div class="d-flex flex-column gap-3">
-									<input type="text" name="name" class="review_form_input mb-3" placeholder="Nombre completo" required="required" style="width:100%;">
-									<input type="email" name="email" class="review_form_input mb-3" placeholder="Correo electrónico del taller" required="required" style="width:100%;">
-									<input type="text" name="subject" class="review_form_input mb-3" placeholder="¿Con qué tienes problemas? (Instalación, Facturas...)" style="width:100%;">
+									<input type="text" id="nombre" class="review_form_input mb-3" placeholder="Nombre completo" required="required" style="width:100%;">
+									<input type="email" id="email" class="review_form_input mb-3" placeholder="Correo electrónico del taller" required="required" style="width:100%;">
+									<input type="text" id="asunto" class="review_form_input mb-3" placeholder="¿Con qué tienes problemas? (Instalación, Facturas...)" style="width:100%;">
 								</div>
-								<textarea name="message" class="review_form_text" placeholder="Escribe aquí tu consulta en detalle..." required="required" style="margin-top: 10px;"></textarea>
+								<textarea id="mensaje" class="review_form_text" placeholder="Escribe aquí tu consulta en detalle..." required="required" style="margin-top: 10px;"></textarea>
 								<button type="submit" class="review_form_button" style="margin-top: 20px;">Enviar consulta</button>
 							</form>
 						</div>
@@ -77,6 +77,33 @@
 
 <script src="js/navbar.js" defer></script>
 <script src="js/footer.js" defer></script>
+
+<!-- Script de EmailJS actualizado y optimizado para evitar bloqueos -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    emailjs.init("ydk720-8RlvPOol8Y"); // Tu clave pública gratuita
+
+    document.getElementById('review_form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita la recarga de página
+
+        // Mapeo exacto de los inputs a los nombres que lee tu plantilla de EmailJS
+        var templateParams = {
+            from_name: document.getElementById('nombre').value,
+            reply_to: document.getElementById('email').value,
+            subject: document.getElementById('asunto').value,
+            message: document.getElementById('mensaje').value
+        };
+
+        emailjs.send('service_312yuv8', 'template_l0o2xu9', templateParams)
+            .then(function(response) {
+                alert('¡Mensaje enviado correctamente con tu JS gratis!');
+                document.getElementById('review_form').reset();
+            }, function(error) {
+                console.error('Fallo de EmailJS:', error);
+                alert('Error al enviar el mensaje por JS. Asegúrate de no haber superado el límite mensual gratuito en tu panel de EmailJS.');
+            });
+    });
+</script>
 
 </body>
 </html>
