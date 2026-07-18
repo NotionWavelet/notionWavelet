@@ -21,8 +21,6 @@
 
 	<header class="header">
 		<div id="navbar_container"></div>
-
-
 	</header>
 
 
@@ -32,6 +30,13 @@
 	<div class="product">
 		<div class="container">
 
+			<div class="row">
+				<div class="col">
+					<div class="current_page">
+
+					</div>
+				</div>
+			</div>
 			<div class="row product_row">
 
 				<!-- Product Image -->
@@ -49,7 +54,7 @@
 				<!-- Product Content -->
 				<div class="col-lg-5">
 					<div class="product_content">
-						<div class="product_name">Pomodoro</div>
+						<div class="product_name">Pomodoro Timer</div>
 						<div class="product_price">0.00 €</div>
 
 						<!-- Extra -->
@@ -185,107 +190,13 @@
 <script src="js/navbar.js" defer></script>
 <script src="js/custom.js"></script>
 <script src="js/footer.js" defer></script>
+		<!-- Deslizar imagen-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/product_custom.js"></script>
 
+<!-- Reseñas-->
 
-<script>
-
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("review_form");
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        // Obtener los valores del formulario
-        const username = document.getElementById("username_input").value;
-        const message = document.getElementById("message_input").value;
-        const stars = document.getElementById("stars_input").value;
-
-        // Array de imágenes de perfil
-        const profileImages = ["perfil1.png", "perfil2.png", "perfil3.png"];
-
-        // Obtener un índice aleatorio para seleccionar una imagen de perfil
-        const randomIndex = Math.floor(Math.random() * profileImages.length);
-        const profileImage = profileImages[randomIndex];
-
-        // Crear el objeto de la reseña
-        const review = {
-            username: username,
-            message: message,
-            stars: stars,
-            profileImage: profileImage,
-            date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
-        };
-
-        // Obtener las reseñas almacenadas en el almacenamiento local o inicializarlas si no existen
-        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
-        // Agregar la nueva reseña a las reseñas existentes
-        reviews.push(review);
-
-        // Almacenar las reseñas actualizadas en el almacenamiento local
-        localStorage.setItem("reviews", JSON.stringify(reviews));
-
-        // Actualizar la lista de reseñas en la página
-        updateReviews(reviews);
-
-        // Limpiar el formulario después de enviar
-        form.reset();
-    });
-
-    // Función para actualizar la lista de reseñas en la página
-    function updateReviews(reviews) {
-        const reviewsContainer = document.querySelector(".reviews_container ul");
-        reviewsContainer.innerHTML = ""; // Limpiar la lista de reseñas
-
-        // Iterar sobre cada reseña y agregarla a la lista de reseñas
-        reviews.forEach(function(review) {
-            const reviewElement = document.createElement("li");
-            reviewElement.classList.add("review", "clearfix");
-
-            reviewElement.innerHTML = `
-                <div class="review_image"><img src="images/${review.profileImage}" alt=""></div>
-                <div class="review_content">
-                    <div class="review_name"><a href="#">${review.username}</a></div>
-                    <div class="review_date">${review.date}</div>
-                    <div class="rating review_rating" data-rating="${review.stars}">
-                        ${getStarsHTML(review.stars)}
-                    </div>
-                    <div class="review_text">
-                        <p>${review.message}</p>
-                    </div>
-                </div>
-            `;
-
-            reviewsContainer.appendChild(reviewElement);
-        });
-    }
-
-
-		// Función para obtener el HTML de las estrellas según el número de estrellas
-function getStarsHTML(stars) {
-    let starsHTML = '';
-    for (let i = 1; i <= 5; i++) {
-        if (i <= stars) {
-            starsHTML += '<i class="fa fa-star"></i>'; // Amarillo
-        } else {
-            starsHTML += '<i class="fa fa-star-o"></i>'; // Gris
-        }
-    }
-    return starsHTML;
-}
-
-
-
-
-    // Al cargar la página, obtener las reseñas almacenadas en el almacenamiento local y mostrarlas en la lista de reseñas
-    const storedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
-    updateReviews(storedReviews);
-});
-
-
-</script>
-
-
+<script src="js/reviews.js"></script>
 
 
 </body>
