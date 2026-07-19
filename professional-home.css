@@ -3312,3 +3312,649 @@ section[class*="nw-"] {
     gap: 36px;
   }
 }
+
+/* ==========================================================
+   NOTION WAVELET — DESIGN SYSTEM PREMIUM FINAL
+   Bloque consolidado: colores, superficies, tarjetas, iconos,
+   botones, fondos, microinteracciones y responsive.
+   ========================================================== */
+
+:root {
+  --nw-blue: #1b67f2;
+  --nw-blue-dark: #0d4fd1;
+  --nw-blue-deep: #083ca8;
+  --nw-blue-soft: #eaf2ff;
+
+  --nw-navy: #0b1733;
+  --nw-title: #101d36;
+  --nw-text: #5d6c86;
+  --nw-muted: #73819a;
+
+  --nw-white: #ffffff;
+  --nw-surface: #ffffff;
+  --nw-surface-alt: #f7f9fc;
+  --nw-surface-blue: #f3f7ff;
+  --nw-line: #dfe7f3;
+
+  --nw-radius-sm: 14px;
+  --nw-radius-md: 20px;
+  --nw-radius-lg: 28px;
+  --nw-radius-xl: 34px;
+
+  --nw-shadow-sm:
+    0 8px 20px rgba(15, 35, 70, .055);
+
+  --nw-shadow-md:
+    0 18px 42px rgba(15, 35, 70, .085);
+
+  --nw-shadow-lg:
+    0 30px 68px rgba(15, 35, 70, .14);
+
+  --nw-ease:
+    cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* Base y accesibilidad */
+
+body {
+  color: var(--nw-navy);
+  background: var(--nw-white);
+}
+
+::selection {
+  color: #fff;
+  background: var(--nw-blue);
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(27, 103, 242, .22);
+  outline-offset: 3px;
+}
+
+
+/* Fondos y ritmo visual */
+
+.nw-features-section {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(27, 103, 242, .085), transparent 29%),
+    var(--nw-surface-alt);
+}
+
+.nw-benefits-section {
+  background: var(--nw-white);
+}
+
+.nw-demo-section {
+  background:
+    radial-gradient(circle at 92% 18%, rgba(27, 103, 242, .07), transparent 30%),
+    var(--nw-surface-blue);
+}
+
+.nw-products-section,
+.nw-pricing-section,
+.nw-faq-section {
+  background: var(--nw-white);
+}
+
+.nw-products-section:nth-of-type(even),
+.nw-pricing-section:nth-of-type(even),
+.nw-faq-section:nth-of-type(even) {
+  background: var(--nw-surface-alt);
+}
+
+
+/* Encabezados de sección */
+
+.nw-features-heading,
+.nw-benefits-heading,
+.nw-section-heading,
+.nw-section-header {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.nw-section-kicker,
+.nw-section-label,
+.nw-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  color: var(--nw-blue-dark);
+  background: rgba(234, 242, 255, .88);
+  border: 1px solid rgba(27, 103, 242, .15);
+  border-radius: 999px;
+  box-shadow:
+    0 8px 22px rgba(27, 78, 160, .055),
+    inset 0 1px 0 rgba(255, 255, 255, .95);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .095em;
+  text-transform: uppercase;
+}
+
+.nw-features-heading h2,
+.nw-benefits-heading h2,
+.nw-section-heading h2,
+.nw-section-title,
+.nw-demo-copy h2 {
+  color: var(--nw-title);
+  text-wrap: balance;
+}
+
+.nw-features-heading p,
+.nw-benefits-heading p,
+.nw-section-heading p,
+.nw-section-subtitle,
+.nw-demo-lead {
+  color: var(--nw-text);
+  text-wrap: balance;
+}
+
+
+/* Sistema de tarjetas */
+
+.nw-feature-card,
+.nw-benefit-card,
+.nw-product-card,
+.nw-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.99), rgba(251,253,255,.98));
+  border: 1px solid rgba(204, 216, 235, .72);
+  border-radius: var(--nw-radius-lg);
+  box-shadow:
+    var(--nw-shadow-sm),
+    inset 0 1px 0 rgba(255,255,255,.96);
+  transition:
+    transform .34s var(--nw-ease),
+    box-shadow .34s var(--nw-ease),
+    border-color .34s ease,
+    background .34s ease;
+}
+
+.nw-feature-card::after,
+.nw-benefit-card::after,
+.nw-product-card::after,
+.nw-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 220px;
+  height: 220px;
+  top: -125px;
+  right: -115px;
+  border-radius: 50%;
+  opacity: 0;
+  background: rgba(27, 103, 242, .10);
+  filter: blur(4px);
+  transition: opacity .34s ease, transform .5s var(--nw-ease);
+  pointer-events: none;
+}
+
+.nw-feature-card:hover,
+.nw-benefit-card:hover,
+.nw-product-card:hover,
+.nw-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(61, 126, 238, .38);
+  background:
+    linear-gradient(180deg, #ffffff, #fbfdff);
+  box-shadow:
+    var(--nw-shadow-lg),
+    inset 0 1px 0 rgba(255,255,255,.98);
+}
+
+.nw-feature-card:hover::after,
+.nw-benefit-card:hover::after,
+.nw-product-card:hover::after,
+.nw-card:hover::after {
+  opacity: 1;
+  transform: scale(1.18);
+}
+
+.nw-feature-card--highlighted {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(27, 103, 242, .12), transparent 38%),
+    linear-gradient(145deg, #f7faff, #ffffff 70%);
+  border-color: rgba(27, 103, 242, .24);
+}
+
+
+/* Iconografía unificada */
+
+.nw-feature-card__icon,
+.nw-benefit-card__icon,
+.nw-product-card__icon,
+.nw-demo-point > span,
+.nw-download-form-icon,
+.nw-feature-icon {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  display: grid;
+  place-items: center;
+  color: var(--nw-blue);
+  background:
+    linear-gradient(180deg, #f6f9ff 0%, #e8f1ff 100%);
+  border: 1px solid rgba(116, 158, 226, .28);
+  border-radius: 19px;
+  box-shadow:
+    0 12px 24px rgba(36, 86, 171, .09),
+    inset 0 1px 0 rgba(255,255,255,.96);
+  transition:
+    transform .34s var(--nw-ease),
+    box-shadow .34s var(--nw-ease),
+    color .25s ease;
+}
+
+.nw-feature-card__icon i,
+.nw-benefit-card__icon i,
+.nw-product-card__icon i,
+.nw-demo-point > span i,
+.nw-download-form-icon i,
+.nw-feature-icon i {
+  font-size: 22px;
+  color: var(--nw-blue);
+}
+
+.nw-feature-card:hover .nw-feature-card__icon,
+.nw-benefit-card:hover .nw-benefit-card__icon,
+.nw-product-card:hover .nw-product-card__icon {
+  transform: translateY(-4px) scale(1.035);
+  box-shadow:
+    0 18px 34px rgba(36, 86, 171, .15),
+    inset 0 1px 0 rgba(255,255,255,.98);
+}
+
+
+/* Texto interior de tarjetas */
+
+.nw-feature-card h3,
+.nw-benefit-card h3,
+.nw-product-card h3,
+.nw-card h3 {
+  color: var(--nw-title);
+}
+
+.nw-feature-card p,
+.nw-benefit-card p,
+.nw-product-card p,
+.nw-card p {
+  color: var(--nw-text);
+}
+
+.nw-feature-card__detail,
+.nw-feature-card__footer,
+.nw-benefit-card__footer,
+.nw-card__footer {
+  color: #34445f;
+  font-weight: 700;
+}
+
+.nw-feature-card__detail i,
+.nw-feature-card__footer i,
+.nw-benefit-card__footer i,
+.nw-card__footer i {
+  color: #149447;
+  background: #eaf8ef;
+  box-shadow: 0 6px 12px rgba(20, 148, 71, .10);
+}
+
+
+/* Botones globales */
+
+.nw-btn,
+.nw-main-nav .nw-nav-cta,
+.nw-download-form button,
+.nw-demo-cta {
+  position: relative;
+  overflow: hidden;
+  min-height: 58px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 750;
+  letter-spacing: -.01em;
+  transition:
+    transform .28s var(--nw-ease),
+    box-shadow .28s var(--nw-ease),
+    border-color .25s ease,
+    background .25s ease,
+    color .25s ease;
+}
+
+.nw-btn--primary,
+.nw-main-nav .nw-nav-cta,
+.nw-download-form button {
+  color: #fff;
+  background:
+    linear-gradient(135deg, #2c7fff 0%, var(--nw-blue) 48%, var(--nw-blue-dark) 100%);
+  border-color: rgba(255,255,255,.17);
+  box-shadow:
+    0 16px 32px rgba(20, 84, 205, .27),
+    inset 0 1px 0 rgba(255,255,255,.24);
+}
+
+.nw-btn--primary::before,
+.nw-main-nav .nw-nav-cta::before,
+.nw-download-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 46%;
+  height: 100%;
+  opacity: .5;
+  transform: skewX(-18deg);
+  background:
+    linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent);
+  transition: left .58s ease;
+  pointer-events: none;
+}
+
+.nw-btn--primary:hover,
+.nw-main-nav .nw-nav-cta:hover,
+.nw-download-form button:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  background:
+    linear-gradient(135deg, #216fe9 0%, #135bdc 52%, var(--nw-blue-deep) 100%);
+  box-shadow:
+    0 22px 42px rgba(20, 84, 205, .34),
+    inset 0 1px 0 rgba(255,255,255,.27);
+}
+
+.nw-btn--primary:hover::before,
+.nw-main-nav .nw-nav-cta:hover::before,
+.nw-download-form button:hover::before {
+  left: 130%;
+}
+
+.nw-btn--secondary {
+  color: #172a49;
+  background: rgba(255,255,255,.88);
+  border-color: rgba(156, 177, 210, .48);
+  box-shadow:
+    0 11px 26px rgba(40, 70, 118, .075),
+    inset 0 1px 0 rgba(255,255,255,.95);
+  backdrop-filter: blur(12px);
+}
+
+.nw-btn--secondary:hover {
+  color: var(--nw-blue-dark);
+  background: #fff;
+  border-color: rgba(27, 103, 242, .43);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(40, 70, 118, .13);
+}
+
+.nw-btn:active,
+.nw-main-nav .nw-nav-cta:active,
+.nw-download-form button:active {
+  transform: translateY(-1px) scale(.985);
+}
+
+
+/* Navegación */
+
+.header {
+  background: rgba(255,255,255,.82);
+  border-bottom-color: rgba(222, 230, 243, .58);
+  backdrop-filter: blur(18px) saturate(150%);
+}
+
+.header.is-scrolled {
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 14px 38px rgba(22, 44, 82, .085);
+}
+
+.nw-main-nav > a:not(.nw-nav-cta) {
+  position: relative;
+}
+
+.nw-main-nav > a:not(.nw-nav-cta)::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  right: 13px;
+  bottom: 7px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--nw-blue);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .24s var(--nw-ease);
+}
+
+.nw-main-nav > a:not(.nw-nav-cta):hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Demo premium */
+
+.nw-demo-card,
+.nw-app-card {
+  border-radius: var(--nw-radius-lg);
+  border-color: rgba(204, 216, 235, .82);
+  box-shadow:
+    0 34px 78px rgba(15, 43, 87, .17),
+    inset 0 1px 0 rgba(255,255,255,.97);
+  transition:
+    transform .38s var(--nw-ease),
+    box-shadow .38s var(--nw-ease);
+}
+
+.nw-demo-card:hover,
+.nw-app-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 42px 92px rgba(15, 43, 87, .21),
+    inset 0 1px 0 rgba(255,255,255,.98);
+}
+
+
+/* Formularios */
+
+.nw-download-form-card {
+  border-radius: var(--nw-radius-lg);
+  box-shadow:
+    0 34px 82px rgba(0, 10, 34, .34),
+    inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+.nw-download-input-group input {
+  border-radius: var(--nw-radius-sm);
+  background: #f7f9fc;
+}
+
+.nw-download-input-group input:hover {
+  border-color: #c5d2e6;
+  background: #fbfcfe;
+}
+
+.nw-download-input-group input:focus {
+  border-color: #6fa0ff;
+  box-shadow: 0 0 0 4px rgba(27,103,242,.11);
+}
+
+
+/* Microanimaciones de entrada */
+
+@keyframes nwPremiumReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nw-features-heading,
+.nw-benefits-heading,
+.nw-demo-copy,
+.nw-download-copy {
+  animation: nwPremiumReveal .72s var(--nw-ease) both;
+}
+
+.nw-feature-card,
+.nw-benefit-card {
+  animation: nwPremiumReveal .72s var(--nw-ease) both;
+}
+
+.nw-feature-card:nth-child(2),
+.nw-benefit-card:nth-child(2) {
+  animation-delay: .06s;
+}
+
+.nw-feature-card:nth-child(3),
+.nw-benefit-card:nth-child(3) {
+  animation-delay: .12s;
+}
+
+.nw-feature-card:nth-child(4) {
+  animation-delay: .18s;
+}
+
+.nw-feature-card:nth-child(5) {
+  animation-delay: .24s;
+}
+
+.nw-feature-card:nth-child(6) {
+  animation-delay: .30s;
+}
+
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+  .nw-feature-card,
+  .nw-benefit-card,
+  .nw-product-card,
+  .nw-card {
+    border-radius: 24px;
+  }
+
+  .nw-feature-card__icon,
+  .nw-benefit-card__icon,
+  .nw-product-card__icon {
+    width: 58px;
+    height: 58px;
+    flex-basis: 58px;
+    border-radius: 17px;
+  }
+
+  .nw-demo-card,
+  .nw-app-card,
+  .nw-download-form-card {
+    border-radius: 24px;
+  }
+}
+
+
+/* Móvil */
+
+@media (max-width: 575.98px) {
+  .nw-features-heading,
+  .nw-benefits-heading,
+  .nw-section-heading,
+  .nw-section-header {
+    text-align: left;
+  }
+
+  .nw-section-kicker,
+  .nw-section-label,
+  .nw-eyebrow {
+    padding: 7px 11px;
+    font-size: 10px;
+  }
+
+  .nw-feature-card,
+  .nw-benefit-card,
+  .nw-product-card,
+  .nw-card {
+    border-radius: 20px;
+  }
+
+  .nw-feature-card:hover,
+  .nw-benefit-card:hover,
+  .nw-product-card:hover,
+  .nw-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .nw-feature-card__icon,
+  .nw-benefit-card__icon,
+  .nw-product-card__icon,
+  .nw-demo-point > span,
+  .nw-download-form-icon {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
+    border-radius: 15px;
+  }
+
+  .nw-feature-card__icon i,
+  .nw-benefit-card__icon i,
+  .nw-product-card__icon i,
+  .nw-demo-point > span i,
+  .nw-download-form-icon i {
+    font-size: 19px;
+  }
+
+  .nw-btn,
+  .nw-main-nav .nw-nav-cta,
+  .nw-download-form button,
+  .nw-demo-cta {
+    width: 100%;
+    min-height: 56px;
+    padding: 0 18px;
+    border-radius: 14px;
+  }
+
+  .nw-demo-card,
+  .nw-app-card,
+  .nw-download-form-card {
+    border-radius: 20px;
+  }
+}
+
+
+/* Respeto a usuarios con movimiento reducido */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
