@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const pageName = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const onHome = pageName === 'index.html' || pageName === '';
-  const homeHref = (anchor) => onHome ? anchor : `./index.html${anchor}`;
+  const homeHref = (anchor) => onHome ? anchor : `index.html${anchor}`;
 
   container.innerHTML = `
     <div class="nw-nav__inner">
-      <a class="nw-brand" href="index.html" aria-label="Notion Wavelet, inicio">
-        <img src="images/logo.png" alt="" width="42" height="42">
+      <a class="nw-brand" href="${onHome ? '#inicio' : 'index.html#inicio'}" aria-label="Notion Wavelet, inicio">
+        <img src="images/logo-wavelet.svg" alt="" width="44" height="44">
         <span class="nw-brand__copy">
           <strong>Notion Wavelet</strong>
           <small>Software para talleres</small>
