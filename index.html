@@ -54,7 +54,7 @@
   <link rel="stylesheet" href="styles/notionwavelet.css">
   <link rel="stylesheet" href="styles/notionwavelet_responsive.css">
   <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/professional-home.css?v=18">
+  <link rel="stylesheet" href="styles/professional-home.css?v=20">
   <noscript><style>.nw-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
@@ -81,7 +81,7 @@
             <div class="nw-laptop__camera"></div>
             <div class="nw-laptop__screen">
               <div class="nw-app-topbar">
-                <div class="nw-app-mark"><img src="images/logo-wavelet.svg" alt="" aria-hidden="true"></div>
+                <div class="nw-app-mark"><img src="images/logo-wavelet.svg?v=2" alt="" aria-hidden="true"></div>
                 <nav><span class="active">Taller</span><span>Clientes</span><span>Informes</span><span>Cuentas</span></nav>
                 <div class="nw-app-user">NW</div>
               </div>
@@ -424,9 +424,9 @@
     <section id="pricing-section" class="nw-pricing-section nw-pricing-section--premium">
       <div class="nw-shell">
         <div class="nw-pricing-heading">
-          <span class="nw-section-kicker">Una sola tarifa. Todo incluido.</span>
-          <h2>Todo lo que incluye tu suscripción</h2>
-          <p>Sin módulos adicionales ni niveles confusos. Una herramienta completa para el día a día de un taller pequeño.</p>
+          <span class="nw-section-kicker">Precio</span>
+          <h2>Sin letra pequeña</h2>
+          <p class="nw-pricing-terms"><i class="fa fa-check-circle"></i> Sin permanencia <span>·</span> Cancela cuando quieras <span>·</span> Facturación mensual</p>
         </div>
         <article class="nw-plan-showcase">
           <div class="nw-plan-summary">
@@ -434,8 +434,9 @@
             <h3>La gestión que necesitas, sin pagar por complejidad.</h3>
             <p>Para talleres independientes de 1 a 3 empleados, gestionados desde una única cuenta.</p>
             <div class="nw-price nw-price--light"><strong>29 €</strong><span>/mes + IVA</span></div>
+            <p class="nw-price-plain"><i class="fa fa-lock"></i> El precio que ves es el precio del plan. Sin módulos obligatorios ni costes ocultos.</p>
             <a class="nw-btn nw-btn--light" href="#download-section">Solicitar demostración <span>→</span></a>
-            <small><i class="fa fa-check-circle"></i> Sin permanencia. Cancela cuando quieras.</small>
+            <small><i class="fa fa-check-circle"></i> 14 días de prueba gratuita · sin tarjeta</small>
           </div>
           <div class="nw-plan-features">
             <div class="nw-plan-group"><span class="nw-plan-group__icon"><i class="fa fa-users"></i></span><div><h4>Gestión</h4><ul><li>1 usuario por taller</li><li>Clientes ilimitados</li><li>Vehículos ilimitados</li><li>Búsqueda por matrícula</li><li>Historial del vehículo</li><li>Registro de kilometraje</li></ul></div></div>
@@ -516,72 +517,57 @@
 
         <div class="nw-faq-layout">
           <div class="nw-faq-list">
-            <details class="nw-faq-item nw-reveal">
-              <summary>
-                <span>¿Notion Wavelet funciona sin conexión a internet?</span>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </summary>
-              <div class="nw-faq-answer">
-                <p>Sí. La aplicación está pensada para trabajar desde tu ordenador. Solo necesitarás conexión para determinadas gestiones, actualizaciones o comunicaciones con soporte.</p>
-              </div>
+            <details class="nw-faq-item nw-reveal" open>
+              <summary><span>¿Qué incluye la prueba gratuita?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>Incluye 14 días para conocer el Plan Taller Esencial, crear clientes y vehículos, preparar presupuestos, gestionar órdenes de reparación y probar la facturación. No pedimos tarjeta para empezar.</p></div>
             </details>
-
             <details class="nw-faq-item nw-reveal">
-              <summary>
-                <span>¿La licencia es para un solo usuario?</span>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </summary>
-              <div class="nw-faq-answer">
-                <p>Sí. Cada licencia está pensada para un único usuario por taller. Es ideal cuando una sola persona se ocupa de la recepción, los presupuestos, las órdenes y la facturación.</p>
-              </div>
+              <summary><span>¿Puedo cancelar en cualquier momento?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>Sí. La facturación es mensual y no existe permanencia. Puedes solicitar la cancelación cuando quieras, sin penalizaciones.</p></div>
             </details>
-
             <details class="nw-faq-item nw-reveal">
-              <summary>
-                <span>¿Qué aporta VeriFactu a mis facturas?</span>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </summary>
-              <div class="nw-faq-answer">
-                <p>La solución está planteada para reforzar la integridad, trazabilidad y conservación de los registros de facturación, además de facilitar la adaptación del taller a las nuevas obligaciones.</p>
-              </div>
+              <summary><span>¿Cuántos usuarios puedo añadir?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>El Plan Taller Esencial incluye un usuario por taller. Está diseñado para negocios de 1 a 3 empleados donde una persona gestiona recepción, presupuestos, órdenes y facturación.</p></div>
             </details>
-
             <details class="nw-faq-item nw-reveal">
-              <summary>
-                <span>¿Es compatible con Windows 10 y Windows 11?</span>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </summary>
-              <div class="nw-faq-answer">
-                <p>Sí. La aplicación está diseñada para equipos con Windows 10 y Windows 11. Revisaremos contigo los requisitos del ordenador antes de la instalación.</p>
-              </div>
+              <summary><span>¿Funciona en móvil o tablet?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>La aplicación de gestión principal está diseñada para ordenadores con Windows 10 y Windows 11. Actualmente el móvil o la tablet no sustituyen a la aplicación de escritorio.</p></div>
             </details>
-
             <details class="nw-faq-item nw-reveal">
-              <summary>
-                <span>¿Incluye ayuda para ponerlo en marcha?</span>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </summary>
-              <div class="nw-faq-answer">
-                <p>Sí. Te acompañamos en los primeros pasos para que puedas configurar el taller, crear clientes, registrar vehículos y empezar a trabajar con órdenes y facturas.</p>
-              </div>
+              <summary><span>¿Mis datos están seguros?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>Aplicamos medidas de protección, copias de seguridad y control de acceso. Tus datos se utilizan únicamente para prestar el servicio y atender tus solicitudes, conforme a la política de privacidad.</p></div>
             </details>
-
             <details class="nw-faq-item nw-reveal">
-              <summary>
-                <span>¿Hay permanencia o puedo cancelar?</span>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </summary>
-              <div class="nw-faq-answer">
-                <p>No hay permanencia. Puedes cancelar la suscripción cuando lo necesites. Antes de contratar, también puedes solicitar una demostración para comprobar si encaja con tu taller.</p>
-              </div>
+              <summary><span>¿Puedo cambiar de plan?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>No necesitas elegir entre varios niveles: ofrecemos un único Plan Taller Esencial con todas las funciones anunciadas. Así evitas módulos, extras y comparaciones confusas.</p></div>
+            </details>
+            <details class="nw-faq-item nw-reveal">
+              <summary><span>¿Necesito instalar algo?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>Sí, la aplicación se instala en tu ordenador Windows. Te ayudamos a comprobar los requisitos y a realizar la puesta en marcha.</p></div>
+            </details>
+            <details class="nw-faq-item nw-reveal">
+              <summary><span>¿Qué pasa con mis datos si cancelo?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>Tus datos siguen siendo tuyos. Antes de cerrar el servicio te ayudaremos a conservar o exportar la información disponible según las opciones de la aplicación y las obligaciones legales aplicables.</p></div>
+            </details>
+            <details class="nw-faq-item nw-reveal">
+              <summary><span>¿Hay soporte técnico?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>Sí. El plan incluye soporte en español y acompañamiento inicial para configurar el taller y resolver dudas de uso.</p></div>
+            </details>
+            <details class="nw-faq-item nw-reveal">
+              <summary><span>¿En qué países está disponible?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>La versión actual está orientada principalmente a talleres en España, especialmente por su enfoque de facturación y adaptación a VeriFactu.</p></div>
+            </details>
+            <details class="nw-faq-item nw-reveal">
+              <summary><span>¿Puedo importar presupuestos desde GT Estimate, Audatex o SErtec?</span><i class="fa fa-plus" aria-hidden="true"></i></summary>
+              <div class="nw-faq-answer"><p>Esta importación automática no forma parte actualmente del Plan Taller Esencial. No anunciamos funciones que todavía no estén disponibles; puedes consultarnos tu flujo de trabajo y valoraremos alternativas.</p></div>
             </details>
           </div>
 
           <aside class="nw-faq-card nw-reveal">
             <span class="nw-faq-card__icon"><i class="fa fa-comments-o"></i></span>
-            <span class="nw-faq-card__eyebrow">¿Tienes otra duda?</span>
+            <span class="nw-faq-card__eyebrow">Respuesta clara, antes de pagar</span>
             <h3>Cuéntanos cómo trabaja tu taller</h3>
-            <p>Te ayudaremos a comprobar si Notion Wavelet cubre tus necesidades antes de que tomes una decisión.</p>
+            <p>Revisamos contigo qué necesitas, qué incluye el plan y qué funciones no están disponibles. Sin promesas ambiguas.</p>
             <a class="nw-btn nw-btn--primary" href="#download-section">
               Solicitar información <i class="fa fa-arrow-right"></i>
             </a>
@@ -592,16 +578,38 @@
     </section>
 
 
+    <section class="nw-riskfree-section" aria-labelledby="riskfree-title">
+      <div class="nw-shell">
+        <div class="nw-riskfree-panel nw-reveal">
+          <div class="nw-riskfree-copy">
+            <span class="nw-riskfree-kicker"><i class="fa fa-shield"></i> PRUEBA SIN COMPROMISO</span>
+            <h2 id="riskfree-title">Sin compromiso. Sin riesgos.</h2>
+            <p>Prueba Notion Wavelet durante 14 días con las funciones del Plan Taller Esencial. Si no encaja con tu taller, no continúas y no pagas nada. Tus datos son tuyos y podrás solicitar su exportación.</p>
+            <div class="nw-riskfree-points">
+              <span><i class="fa fa-check"></i> Sin tarjeta de crédito</span>
+              <span><i class="fa fa-check"></i> Soporte en español</span>
+              <span><i class="fa fa-check"></i> Cancela cuando quieras</span>
+            </div>
+          </div>
+          <div class="nw-riskfree-action">
+            <span class="nw-riskfree-price"><strong>14 días</strong><small>de prueba gratuita</small></span>
+            <a class="nw-btn nw-btn--light" href="#download-section">Empezar gratis ahora <span>→</span></a>
+            <small>Sin tarjeta · Sin permanencia</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="download-section" class="nw-download-section">
       <div class="nw-shell">
         <div class="nw-download-panel">
           <div class="nw-download-copy">
             <span class="nw-download-kicker"><i class="fa fa-check-circle"></i> Empieza con VeriFactu</span>
             <h2>Prepara hoy la facturación de tu taller</h2>
-            <p>Déjanos tus datos y te enseñaremos cómo puede ayudarte el plan único de Notion Wavelet en el trabajo diario de tu taller.</p>
+            <p>Déjanos tus datos y te ayudaremos a activar una prueba gratuita de 14 días del Plan Taller Esencial.</p>
 
             <div class="nw-download-benefits">
-              <span><i class="fa fa-check"></i> Demostración gratuita y sin compromiso</span>
+              <span><i class="fa fa-check"></i> 14 días de prueba gratuita y sin compromiso</span>
               <span><i class="fa fa-check"></i> No necesitas tarjeta para probarlo</span>
               <span><i class="fa fa-check"></i> Plan completo por 29 €/mes + IVA</span>
             </div>
@@ -618,7 +626,7 @@
               <span class="nw-download-form-icon"><i class="fa fa-envelope-o"></i></span>
               <div>
                 <strong>Solicita una prueba</strong>
-                <span>Recibe información y acceso a la prueba.</span>
+                <span>Recibe acceso a la prueba gratuita de 14 días.</span>
               </div>
             </div>
 
@@ -645,7 +653,7 @@
                     <span class="nw-request-option__icon"><i class="fa fa-play" aria-hidden="true"></i></span>
                     <span class="nw-request-option__copy">
                       <strong>Probar primero</strong>
-                      <small>Demostración gratuita, sin tarjeta y sin compromiso.</small>
+                      <small>14 días gratis, sin tarjeta y sin compromiso.</small>
                     </span>
                     <span class="nw-request-option__check"><i class="fa fa-check" aria-hidden="true"></i></span>
                   </span>
@@ -824,7 +832,7 @@
       <div class="nw-footer__top">
         <div class="nw-footer__brand">
           <a class="nw-footer__logo" href="#inicio" aria-label="Volver al inicio">
-            <span class="nw-footer__logo-mark"><img src="images/logo-wavelet.svg" alt="" aria-hidden="true"></span>
+            <span class="nw-footer__logo-mark"><img src="images/logo-wavelet.svg?v=2" alt="" aria-hidden="true"></span>
             <span>
               <strong>Notion Wavelet</strong>
               <small>Software para talleres</small>
@@ -882,7 +890,7 @@
 <script src="js/jquery-3.2.1.min.js" defer></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js" defer></script>
 <script src="js/custom.js" defer></script>
-<script src="js/navbar.js?v=4" defer></script>
+<script src="js/navbar.js?v=5" defer></script>
 <script src="js/formulario.js?v=2" defer></script>
 
 <script>
