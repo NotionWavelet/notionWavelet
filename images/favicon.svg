@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 130" role="img" aria-labelledby="title desc">
   <title id="title">Notion Wavelet</title>
-  <desc id="desc">Tres curvas azules gruesas formando una onda</desc>
+  <desc id="desc">Tres líneas azules gruesas forman una onda ascendente</desc>
   <defs>
-    <linearGradient id="waveBlue" x1="20" y1="92" x2="138" y2="20" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0866e9"/>
-      <stop offset="1" stop-color="#20a4ff"/>
+    <linearGradient id="blue" x1="18" y1="96" x2="155" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#075bd8"/><stop offset="1" stop-color="#1e91ff"/>
     </linearGradient>
   </defs>
-  <path d="M18 68 C43 65 56 70 69 84 C79 95 90 98 100 89 C113 77 111 44 127 25" fill="none" stroke="url(#waveBlue)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M21 82 C42 78 55 83 67 94 C77 103 88 104 98 95 C113 82 113 47 136 24" fill="none" stroke="url(#waveBlue)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-  <path d="M28 58 C47 57 57 62 68 73 C76 81 84 84 92 78 C103 70 103 47 115 31" fill="none" stroke="url(#waveBlue)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
+  <path d="M18 78 C48 76 61 80 78 98 C91 112 105 112 117 97 C132 78 126 43 149 20" fill="none" stroke="url(#blue)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M25 62 C49 62 63 68 77 82 C88 93 98 96 108 88 C122 76 119 45 138 26" fill="none" stroke="url(#blue)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".86"/>
+  <path d="M22 93 C43 90 57 94 70 105 C82 116 94 117 106 107" fill="none" stroke="url(#blue)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
 </svg>
