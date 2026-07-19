@@ -2584,3 +2584,191 @@ header {
     animation: none;
   }
 }
+
+
+/* ==========================================================
+   PREMIUM CARDS V1
+   ========================================================== */
+
+/* Tarjeta */
+
+.nw-feature-card{
+    position:relative;
+    overflow:hidden;
+
+    border:1px solid rgba(208,220,239,.55);
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.98),
+            rgba(252,253,255,.98)
+        );
+
+    box-shadow:
+        0 12px 28px rgba(23,49,92,.05),
+        0 1px 2px rgba(23,49,92,.04);
+
+    transition:
+        transform .35s cubic-bezier(.22,1,.36,1),
+        box-shadow .35s cubic-bezier(.22,1,.36,1),
+        border-color .35s ease;
+}
+
+/* Halo */
+
+.nw-feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-80px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(58,126,255,.10),
+            transparent 62%
+        );
+
+    opacity:0;
+
+    transition:opacity .35s ease;
+
+    pointer-events:none;
+
+}
+
+/* Hover */
+
+.nw-feature-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(90,145,240,.40);
+
+    box-shadow:
+
+        0 30px 55px rgba(18,48,96,.11),
+
+        0 8px 18px rgba(18,48,96,.08);
+
+}
+
+.nw-feature-card:hover::before{
+
+    opacity:1;
+
+}
+
+/* Icono */
+
+.nw-feature-card__icon{
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:18px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #f4f8ff,
+            #e9f1ff
+        );
+
+    border:1px solid rgba(150,184,236,.35);
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.95),
+
+        0 10px 20px rgba(54,98,183,.08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.nw-feature-card:hover .nw-feature-card__icon{
+
+    transform:translateY(-3px) scale(1.04);
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.95),
+
+        0 18px 32px rgba(44,104,214,.15);
+
+}
+
+/* Icono azul */
+
+.nw-feature-card__icon i{
+
+    background:linear-gradient(
+        180deg,
+        #2f84ff,
+        #1359d8
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+/* Título */
+
+.nw-feature-card h3{
+
+    margin-top:30px;
+
+    margin-bottom:18px;
+
+    font-size:33px;
+
+    letter-spacing:-.03em;
+
+}
+
+/* Texto */
+
+.nw-feature-card p{
+
+    color:#60718f;
+
+    line-height:1.75;
+
+}
+
+/* Footer */
+
+.nw-feature-card__footer{
+
+    margin-top:34px;
+
+    padding-top:22px;
+
+    border-top:1px solid rgba(220,228,242,.75);
+
+}
+
+/* Check */
+
+.nw-feature-card__footer i{
+
+    background:#eaf8ef;
+
+    color:#15a94d;
+
+    box-shadow:
+
+        0 6px 12px rgba(38,176,92,.10);
+
+}
