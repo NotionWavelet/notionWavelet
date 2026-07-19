@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const container = document.querySelector('#navbar_container');
   if (!container) return;
 
+  const onHome = /(?:^|\/)index\.html$/.test(window.location.pathname) || window.location.pathname.endsWith('/');
+  const homeHref = (anchor) => onHome ? anchor : `index.html${anchor}`;
+
   container.innerHTML = `
     <div class="nw-nav__inner">
       <a class="nw-brand" href="index.html" aria-label="Notion Wavelet, inicio">
@@ -17,14 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
       </button>
 
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#ideal-section">Para quién es</a>
-        <a href="#features-section">Funciones</a>
-        <a href="#demo-section">Demostración</a>
-        <a href="#pricing-section">Precios</a>
-        <a href="#benefits-section">VeriFactu</a>
-        <a href="contact.html">Contacto</a>
-        <a class="nw-nav-cta" href="#download-section">Solicitar demo <span aria-hidden="true">→</span></a>
+        <a href="${homeHref('#inicio')}">Inicio</a>
+        <a href="${homeHref('#ideal-section')}">Para quién es</a>
+        <a href="${homeHref('#features-section')}">Funciones</a>
+        <a href="${homeHref('#demo-section')}">Demostración</a>
+        <a href="${homeHref('#pricing-section')}">Precios</a>
+        <a href="${homeHref('#benefits-section')}">VeriFactu</a>
+        <a href="contact.html"${onHome ? '' : ' aria-current="page"'}>Contacto</a>
+        <a class="nw-nav-cta" href="${onHome ? '#download-section' : '#review_form'}">Solicitar demo <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;
 
