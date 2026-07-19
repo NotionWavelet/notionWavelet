@@ -2141,3 +2141,28 @@ select:focus-visible {
     padding: 27px;
   }
 }
+
+/*********************************
+  VeriFactu monthly pricing
+*********************************/
+.nw-pricing-section{padding:110px 0;background:linear-gradient(180deg,#f8fafc 0%,#eef4ff 100%);border-top:1px solid #e7edf6;scroll-margin-top:95px}
+.nw-pricing-heading{max-width:760px;margin:0 auto 52px;text-align:center}
+.nw-pricing-heading h2{margin:0 0 16px;color:#0f172a;font-size:clamp(34px,4.5vw,52px);line-height:1.1;letter-spacing:-.045em;font-weight:800}
+.nw-pricing-heading p{max-width:660px;margin:0 auto;color:#64748b;font-size:17px;line-height:1.7}
+.nw-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+.nw-price-card{position:relative;padding:34px;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(15,23,42,.1);border-radius:24px;box-shadow:0 16px 40px rgba(15,23,42,.06)}
+.nw-price-card--featured{transform:translateY(-12px);border:2px solid #2563eb;box-shadow:0 24px 60px rgba(37,99,235,.17)}
+.nw-price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);padding:7px 15px;color:#fff;background:#2563eb;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.nw-price-card__name{color:#1d4ed8;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.nw-price-card__intro{min-height:48px;margin:12px 0 20px;color:#64748b;line-height:1.55}
+.nw-price{display:flex;align-items:flex-end;gap:8px;padding-bottom:24px;border-bottom:1px solid #e8edf4}
+.nw-price strong{color:#0f172a;font-size:44px;line-height:1;font-weight:800;letter-spacing:-.05em}
+.nw-price span{padding-bottom:5px;color:#64748b;font-size:13px}
+.nw-price-card ul{margin:26px 0 30px;padding:0;display:grid;gap:14px;list-style:none}
+.nw-price-card li{display:flex;gap:10px;color:#334155;font-size:14px;line-height:1.45}
+.nw-price-card li i{margin-top:3px;color:#16a34a}
+.nw-price-card .nw-btn{margin-top:auto;text-align:center;justify-content:center}
+.nw-pricing-note{margin:28px 0 0;text-align:center;color:#64748b;font-size:12px}
+.nw-pricing-note i{margin-right:5px;color:#2563eb}
+@media(max-width:991.98px){.nw-pricing-grid{grid-template-columns:1fr;max-width:620px;margin:auto}.nw-price-card--featured{transform:none}.nw-price-card__intro{min-height:auto}}
+@media(max-width:575.98px){.nw-pricing-section{padding:76px 0}.nw-pricing-heading{text-align:left;margin-bottom:34px}.nw-pricing-heading p{font-size:15px}.nw-price-card{padding:27px 23px}.nw-price strong{font-size:39px}}
