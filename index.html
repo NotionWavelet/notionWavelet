@@ -45,6 +45,19 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"¿Qué incluye la prueba gratuita?","acceptedAnswer":{"@type":"Answer","text":"Incluye 14 días para conocer el Plan Taller Esencial y probar clientes, vehículos, presupuestos, órdenes y facturación. No se solicita tarjeta para empezar."}},
+      {"@type":"Question","name":"¿Puedo cancelar en cualquier momento?","acceptedAnswer":{"@type":"Answer","text":"Sí. La facturación es mensual, no existe permanencia y puedes solicitar la cancelación sin penalización."}},
+      {"@type":"Question","name":"¿Cuántos usuarios puedo añadir?","acceptedAnswer":{"@type":"Answer","text":"El Plan Taller Esencial incluye un usuario por taller y está orientado a talleres de 1 a 3 empleados."}},
+      {"@type":"Question","name":"¿Necesito instalar algo?","acceptedAnswer":{"@type":"Answer","text":"Sí. La aplicación se instala en un ordenador con Windows 10 u 11 y se ofrece ayuda para la puesta en marcha."}},
+      {"@type":"Question","name":"¿Hay soporte técnico?","acceptedAnswer":{"@type":"Answer","text":"Sí. El plan incluye soporte en español y acompañamiento inicial."}}
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -54,7 +67,7 @@
   <link rel="stylesheet" href="styles/notionwavelet.css">
   <link rel="stylesheet" href="styles/notionwavelet_responsive.css">
   <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/professional-home.css?v=21">
+  <link rel="stylesheet" href="styles/professional-home.css?v=22">
   <noscript><style>.nw-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
@@ -902,6 +915,11 @@
     </section>
   </main>
 
+  <div class="nw-page-progress" aria-hidden="true"><span id="nw-page-progress-bar"></span></div>
+  <button class="nw-back-to-top" id="nw-back-to-top" type="button" aria-label="Volver al inicio">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
   <footer class="nw-footer">
     <div class="nw-shell">
       <div class="nw-footer__top">
@@ -968,7 +986,8 @@
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js" defer></script>
 <script src="js/custom.js" defer></script>
 <script src="js/navbar.js?v=6" defer></script>
-<script src="js/formulario.js?v=2" defer></script>
+<script src="js/formulario.js?v=3" defer></script>
+<script src="js/site-enhancements.js?v=1" defer></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
