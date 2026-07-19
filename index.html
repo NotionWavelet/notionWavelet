@@ -54,7 +54,7 @@
   <link rel="stylesheet" href="styles/notionwavelet.css">
   <link rel="stylesheet" href="styles/notionwavelet_responsive.css">
   <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/professional-home.css?v=15">
+  <link rel="stylesheet" href="styles/professional-home.css?v=18">
   <noscript><style>.nw-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
@@ -81,7 +81,7 @@
             <div class="nw-laptop__camera"></div>
             <div class="nw-laptop__screen">
               <div class="nw-app-topbar">
-                <div class="nw-app-mark"><i class="fa fa-wrench"></i></div>
+                <div class="nw-app-mark"><img src="images/logo-wavelet.svg" alt="" aria-hidden="true"></div>
                 <nav><span class="active">Taller</span><span>Clientes</span><span>Informes</span><span>Cuentas</span></nav>
                 <div class="nw-app-user">NW</div>
               </div>
@@ -634,14 +634,33 @@
               <input type="hidden" name="origen" value="Landing principal">
 
               <fieldset class="nw-request-type">
-                <legend>¿Qué quieres hacer?</legend>
-                <label class="is-selected">
+                <legend>
+                  <span>Elige cómo quieres empezar</span>
+                  <small>Puedes probar la aplicación sin facilitar datos de pago.</small>
+                </legend>
+
+                <label class="nw-request-option is-selected">
                   <input type="radio" name="tipo_solicitud" value="Solicitar demostración" checked>
-                  <span><i class="fa fa-play-circle-o"></i><strong>Probar primero</strong><small>Sin tarjeta y sin compromiso.</small></span>
+                  <span class="nw-request-option__card">
+                    <span class="nw-request-option__icon"><i class="fa fa-play" aria-hidden="true"></i></span>
+                    <span class="nw-request-option__copy">
+                      <strong>Probar primero</strong>
+                      <small>Demostración gratuita, sin tarjeta y sin compromiso.</small>
+                    </span>
+                    <span class="nw-request-option__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+                  </span>
                 </label>
-                <label>
+
+                <label class="nw-request-option">
                   <input type="radio" name="tipo_solicitud" value="Quiero contratar">
-                  <span><i class="fa fa-check-circle-o"></i><strong>Quiero contratar</strong><small>Mostrar datos de facturación.</small></span>
+                  <span class="nw-request-option__card">
+                    <span class="nw-request-option__icon"><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
+                    <span class="nw-request-option__copy">
+                      <strong>Quiero contratar</strong>
+                      <small>Completa después los datos fiscales para preparar el alta.</small>
+                    </span>
+                    <span class="nw-request-option__check"><i class="fa fa-check" aria-hidden="true"></i></span>
+                  </span>
                 </label>
               </fieldset>
 
@@ -805,7 +824,7 @@
       <div class="nw-footer__top">
         <div class="nw-footer__brand">
           <a class="nw-footer__logo" href="#inicio" aria-label="Volver al inicio">
-            <span class="nw-footer__logo-mark"><i class="fa fa-wrench"></i></span>
+            <span class="nw-footer__logo-mark"><img src="images/logo-wavelet.svg" alt="" aria-hidden="true"></span>
             <span>
               <strong>Notion Wavelet</strong>
               <small>Software para talleres</small>
@@ -863,8 +882,8 @@
 <script src="js/jquery-3.2.1.min.js" defer></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js" defer></script>
 <script src="js/custom.js" defer></script>
-<script src="js/navbar.js?v=3" defer></script>
-<script src="js/formulario.js?v=1" defer></script>
+<script src="js/navbar.js?v=4" defer></script>
+<script src="js/formulario.js?v=2" defer></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
