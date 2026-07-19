@@ -1,103 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<title>Contacto</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Wish shop project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/contact.css">
-<link rel="stylesheet" type="text/css" href="styles/footer.css">
-<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
-<link rel="stylesheet" type="text/css" href="styles/navbar.css">
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Notion Wavelet</title>
+  <meta name="description" content="Solicita una demostración de Notion Wavelet o resuelve tus dudas sobre el software de gestión y facturación VeriFactu para talleres pequeños.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/bootstrap4/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/professional-home.css?v=17">
+  <link rel="stylesheet" href="styles/contact.css?v=17">
+  <link rel="stylesheet" href="styles/footer.css">
 </head>
-<body>
+<body class="nw-contact-page">
+  <div class="super_container">
+    <header class="header">
+      <div id="navbar_container"></div>
+    </header>
 
-<div class="super_container">
+    <main>
+      <section class="nw-contact-hero" aria-labelledby="contact-title">
+        <div class="nw-contact-glow nw-contact-glow--one" aria-hidden="true"></div>
+        <div class="nw-contact-glow nw-contact-glow--two" aria-hidden="true"></div>
 
-	<!-- Header -->
+        <div class="nw-shell nw-contact-grid">
+          <div class="nw-contact-copy">
+            <span class="nw-contact-kicker">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              Contacta con el equipo
+            </span>
 
-	<header class="header">
+            <h1 id="contact-title">Estamos aquí para ayudarte.</h1>
+            <p>
+              Resuelve tus dudas, solicita una demostración gratuita o cuéntanos cómo funciona tu taller.
+              Te responderemos personalmente lo antes posible.
+            </p>
 
-		<div id="navbar_container"></div>
+            <div class="nw-contact-benefits" aria-label="Ventajas del contacto">
+              <article>
+                <span class="nw-contact-benefit-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                <div><strong>Respuesta rápida</strong><small>Normalmente en menos de 24 h</small></div>
+              </article>
+              <article>
+                <span class="nw-contact-benefit-icon"><i class="fa fa-comments-o" aria-hidden="true"></i></span>
+                <div><strong>Atención personalizada</strong><small>Sin respuestas automáticas</small></div>
+              </article>
+              <article>
+                <span class="nw-contact-benefit-icon"><i class="fa fa-shield" aria-hidden="true"></i></span>
+                <div><strong>Sin compromiso</strong><small>Demostración totalmente gratuita</small></div>
+              </article>
+            </div>
+          </div>
 
-	</header>
+          <div class="nw-contact-card">
+            <div class="nw-contact-card__header">
+              <span class="nw-contact-mail-icon" aria-hidden="true">
+                <i class="fa fa-envelope-o"></i>
+              </span>
+              <div>
+                <h2>Solicita una prueba</h2>
+                <p>Recibe información y acceso a una demostración.</p>
+              </div>
+            </div>
 
+            <form id="review_form" class="nw-contact-form" novalidate>
+              <div class="nw-contact-fields">
+                <label>
+                  <span>Nombre</span>
+                  <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required>
+                </label>
+                <label>
+                  <span>Correo electrónico</span>
+                  <input type="email" id="email" name="email" autocomplete="email" placeholder="nombre@taller.es" required>
+                </label>
+                <label>
+                  <span>Teléfono <small>(opcional)</small></span>
+                  <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="600 000 000">
+                </label>
+                <label>
+                  <span>Asunto</span>
+                  <select id="asunto" name="asunto" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Solicitar demostración">Solicitar demostración</option>
+                    <option value="Información sobre VeriFactu">Información sobre VeriFactu</option>
+                    <option value="Dudas sobre el plan">Dudas sobre el plan</option>
+                    <option value="Soporte">Soporte</option>
+                    <option value="Otra consulta">Otra consulta</option>
+                  </select>
+                </label>
+              </div>
 
+              <label class="nw-contact-message">
+                <span>¿En qué podemos ayudarte?</span>
+                <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntanos brevemente qué necesitas..." required></textarea>
+              </label>
 
-	<!-- Contact Form -->
+              <label class="nw-contact-consent">
+                <input type="checkbox" id="privacidad" required>
+                <span>He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</span>
+              </label>
 
-	<div class="contact">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="review_form_container">
-						<div class="review_form_title">Contacta con el equipo</div>
-						<div class="review_form_content">
-							<form id="review_form" class="review_form">
-                                <div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
-                                    <input type="text" id="nombre" class="review_form_input" placeholder="Nombre" required="required">
-                                    <input type="email" id="email" class="review_form_input" placeholder="E-mail" required="required">
-                                    <input type="text" id="asunto" class="review_form_input" placeholder="Asunto">
-                                </div>
-                                <textarea id="mensaje" class="review_form_text" name="review_form_text" placeholder="Mensaje"></textarea>
-                                <button type="button" id="enviar_mensaje" class="review_form_button">Enviar mensaje</button>
-                            </form>
+              <button type="submit" id="enviar_mensaje" class="nw-contact-submit">
+                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                <span>Enviar mensaje</span>
+              </button>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+              <p class="nw-contact-status" id="contact_status" role="status" aria-live="polite"></p>
 
+              <div class="nw-contact-security">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                Tus datos se utilizarán únicamente para responder a tu consulta.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
 
+      <section class="nw-contact-trust" aria-label="Protección de datos">
+        <div class="nw-shell nw-contact-trust__grid">
+          <article><i class="fa fa-shield"></i><div><strong>Privacidad protegida</strong><span>No compartimos tus datos con terceros.</span></div></article>
+          <article><i class="fa fa-lock"></i><div><strong>Uso exclusivo</strong><span>Solo responderemos a tu consulta.</span></div></article>
+          <article><i class="fa fa-ban"></i><div><strong>Sin spam</strong><span>No recibirás mensajes comerciales no solicitados.</span></div></article>
+          <article><i class="fa fa-check-circle-o"></i><div><strong>Conforme al RGPD</strong><span>Tratamiento acorde con la normativa vigente.</span></div></article>
+        </div>
+      </section>
+    </main>
 
-	<!-- Footer -->
+    <footer class="footer">
+      <div id="footer_container"></div>
+    </footer>
+  </div>
 
-		<footer class="footer">
+  <script src="js/navbar.js" defer></script>
+  <script src="js/footer.js" defer></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('review_form');
+      const button = document.getElementById('enviar_mensaje');
+      const status = document.getElementById('contact_status');
 
-		<div id="footer_container"></div>
+      if (window.emailjs) {
+        emailjs.init('ydk720-8RlvPOol8Y');
+      }
 
-	</footer>
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-</div>
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
 
-<script src="js/navbar.js" defer></script>
-<script src="js/footer.js" defer></script>
+        const originalText = button.innerHTML;
+        button.disabled = true;
+        button.innerHTML = '<i class="fa fa-spinner fa-spin" aria-hidden="true"></i><span>Enviando...</span>';
+        status.className = 'nw-contact-status';
+        status.textContent = '';
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    emailjs.init("ydk720-8RlvPOol8Y"); // Reemplaza "tu_user_id" con tu User ID de EmailJS
-
-    document.getElementById('enviar_mensaje').addEventListener('click', function(event) {
-        event.preventDefault(); // Evita el envío predeterminado del formulario
-
-        var nombre = document.getElementById('nombre').value;
-        var email = document.getElementById('email').value;
-        var asunto = document.getElementById('asunto').value;
-        var mensaje = document.getElementById('mensaje').value;
-
-        var templateParams = {
-            nombre: nombre,
-            email: email,
-            asunto: asunto,
-            mensaje: mensaje
+        const templateParams = {
+          nombre: document.getElementById('nombre').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          telefono: document.getElementById('telefono').value.trim(),
+          asunto: document.getElementById('asunto').value,
+          mensaje: document.getElementById('mensaje').value.trim()
         };
 
+        if (!window.emailjs) {
+          status.className = 'nw-contact-status is-error';
+          status.textContent = 'No se ha podido cargar el servicio de envío. Inténtalo de nuevo más tarde.';
+          button.disabled = false;
+          button.innerHTML = originalText;
+          return;
+        }
+
         emailjs.send('service_312yuv8', 'template_l0o2xu9', templateParams)
-            .then(function(response) {
-                alert('Mensaje enviado correctamente');
-            }, function(error) {
-                console.error('Error al enviar el mensaje:', error);
-                alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
-            });
+          .then(function () {
+            status.className = 'nw-contact-status is-success';
+            status.textContent = 'Mensaje enviado correctamente. Te responderemos lo antes posible.';
+            form.reset();
+          })
+          .catch(function (error) {
+            console.error('Error al enviar el mensaje:', error);
+            status.className = 'nw-contact-status is-error';
+            status.textContent = 'No se ha podido enviar el mensaje. Revisa los datos o inténtalo de nuevo.';
+          })
+          .finally(function () {
+            button.disabled = false;
+            button.innerHTML = originalText;
+          });
+      });
     });
-</script>
-
-
+  </script>
 </body>
 </html>
