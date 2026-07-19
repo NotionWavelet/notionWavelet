@@ -2772,3 +2772,336 @@ header {
         0 6px 12px rgba(38,176,92,.10);
 
 }
+
+
+/* ==========================================================
+   NOTION WAVELET — TYPOGRAPHY SYSTEM V1
+   ========================================================== */
+
+/* Texto general */
+
+body {
+  color: #14213b;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Títulos principales de sección */
+
+.nw-section-title,
+.nw-section-heading h2,
+.nw-section h2 {
+  max-width: 820px;
+  margin-bottom: 22px;
+
+  color: #091a36;
+
+  font-size: clamp(38px, 4.4vw, 60px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+
+  text-wrap: balance;
+}
+
+
+/* Texto introductorio de las secciones */
+
+.nw-section-subtitle,
+.nw-section-heading p,
+.nw-section > .nw-container > p {
+  max-width: 720px;
+
+  color: #5d6d88;
+
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+
+  text-wrap: balance;
+}
+
+
+/* Etiquetas superiores de sección */
+
+.nw-eyebrow,
+.nw-section-label,
+.nw-section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 18px;
+  padding: 8px 13px;
+
+  color: #175bcf;
+  background: rgba(237, 244, 255, 0.82);
+  border: 1px solid rgba(104, 151, 229, 0.22);
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  box-shadow:
+    0 7px 20px rgba(35, 83, 163, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+
+/* Títulos de tarjetas */
+
+.nw-feature-card h3,
+.nw-benefit-card h3,
+.nw-product-card h3,
+.nw-card h3 {
+  margin-top: 27px;
+  margin-bottom: 14px;
+
+  color: #111c32;
+
+  font-size: clamp(22px, 1.8vw, 27px);
+  font-weight: 750;
+  line-height: 1.18;
+  letter-spacing: -0.032em;
+
+  text-wrap: balance;
+}
+
+
+/* Texto de tarjetas */
+
+.nw-feature-card p,
+.nw-benefit-card p,
+.nw-product-card p,
+.nw-card p {
+  margin-bottom: 0;
+
+  color: #61718c;
+
+  font-size: 16px;
+  line-height: 1.72;
+  letter-spacing: -0.008em;
+}
+
+
+/* Texto destacado inferior de las tarjetas */
+
+.nw-feature-card__footer,
+.nw-benefit-card__footer,
+.nw-card__footer {
+  color: #35455f;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+
+/* Párrafos generales */
+
+.nw-section p,
+.nw-content p,
+.nw-copy p {
+  color: #5d6e89;
+  line-height: 1.75;
+}
+
+
+/* Enlaces */
+
+.nw-section a:not(.nw-btn),
+.nw-content a:not(.nw-btn) {
+  color: #1764dc;
+  font-weight: 650;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.nw-section a:not(.nw-btn):hover,
+.nw-content a:not(.nw-btn):hover {
+  color: #0b49b4;
+}
+
+
+/* Listas */
+
+.nw-section li,
+.nw-content li {
+  color: #53647f;
+  line-height: 1.7;
+}
+
+.nw-section li + li,
+.nw-content li + li {
+  margin-top: 9px;
+}
+
+
+/* Números, métricas y datos destacados */
+
+.nw-stat strong,
+.nw-metric strong,
+.nw-number {
+  display: block;
+
+  color: #0a1c3b;
+
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.nw-stat span,
+.nw-metric span {
+  display: block;
+  margin-top: 9px;
+
+  color: #65758e;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+
+/* FAQ */
+
+.nw-faq h3,
+.nw-faq__question,
+.nw-accordion-button {
+  color: #12203a;
+
+  font-size: clamp(18px, 1.5vw, 21px);
+  font-weight: 750;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.nw-faq p,
+.nw-faq__answer,
+.nw-accordion-body {
+  color: #60708a;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+
+/* Navegación */
+
+.nw-navbar a,
+.nw-nav a {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+}
+
+
+/* Footer */
+
+.nw-footer h3,
+.nw-footer h4 {
+  color: #10203d;
+
+  font-size: 15px;
+  font-weight: 750;
+  letter-spacing: -0.015em;
+}
+
+.nw-footer p,
+.nw-footer a {
+  color: #66758d;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 991.98px) {
+  .nw-section-title,
+  .nw-section-heading h2,
+  .nw-section h2 {
+    max-width: 700px;
+  }
+
+  .nw-section-subtitle,
+  .nw-section-heading p {
+    max-width: 650px;
+  }
+}
+
+
+/* ==========================================================
+   MÓVIL
+   ========================================================== */
+
+@media (max-width: 575.98px) {
+  body {
+    font-size: 15px;
+  }
+
+  .nw-section-title,
+  .nw-section-heading h2,
+  .nw-section h2 {
+    margin-bottom: 17px;
+
+    font-size: clamp(32px, 10vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  .nw-section-subtitle,
+  .nw-section-heading p,
+  .nw-section > .nw-container > p {
+    font-size: 15.5px;
+    line-height: 1.68;
+  }
+
+  .nw-eyebrow,
+  .nw-section-label,
+  .nw-section-kicker {
+    margin-bottom: 15px;
+    padding: 7px 11px;
+    font-size: 10px;
+  }
+
+  .nw-feature-card h3,
+  .nw-benefit-card h3,
+  .nw-product-card h3,
+  .nw-card h3 {
+    margin-top: 23px;
+    margin-bottom: 12px;
+
+    font-size: 22px;
+    line-height: 1.22;
+  }
+
+  .nw-feature-card p,
+  .nw-benefit-card p,
+  .nw-product-card p,
+  .nw-card p {
+    font-size: 15px;
+    line-height: 1.68;
+  }
+
+  .nw-feature-card__footer,
+  .nw-benefit-card__footer,
+  .nw-card__footer {
+    font-size: 13px;
+  }
+}
