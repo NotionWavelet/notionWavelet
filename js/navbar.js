@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const container = document.querySelector('#navbar_container');
   if (!container) return;
 
-  const onHome = /(?:^|\/)index\.html$/.test(window.location.pathname) || window.location.pathname.endsWith('/');
-  const homeHref = (anchor) => onHome ? anchor : `index.html${anchor}`;
+  const pageName = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const onHome = pageName === 'index.html' || pageName === '';
+  const homeHref = (anchor) => onHome ? anchor : `./index.html${anchor}`;
 
   container.innerHTML = `
     <div class="nw-nav__inner">
