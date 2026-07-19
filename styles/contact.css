@@ -302,3 +302,10 @@
   .nw-contact-card__header p { font-size: 13px; }
   .nw-contact-security { align-items: flex-start; text-align: left; }
 }
+
+/* Navegación siempre accesible sobre la cabecera de contacto */
+.nw-contact-page .header { position:fixed;inset:0 0 auto 0;z-index:10000;pointer-events:auto; }
+.nw-contact-page #navbar_container,
+.nw-contact-page .nw-nav__inner,
+.nw-contact-page .nw-main-nav,
+.nw-contact-page .nw-main-nav a { position:relative;z-index:10001;pointer-events:auto; }
