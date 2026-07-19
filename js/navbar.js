@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="#inicio">Inicio</a>
         <a href="#features-section">Funciones</a>
         <a href="#demo-section">Demostración</a>
-        <a href="#benefits-section">Ventajas</a>
+        <a href="#pricing-section">Precios</a>
+        <a href="#benefits-section">VeriFactu</a>
         <a href="contact.html">Contacto</a>
-        <a class="nw-nav-cta" href="#download-section">Probar gratis <span aria-hidden="true">→</span></a>
+        <a class="nw-nav-cta" href="#pricing-section">Ver planes <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;
 
