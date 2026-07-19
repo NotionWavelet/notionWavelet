@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   container.innerHTML = `
     <div class="nw-nav__inner">
       <a class="nw-brand" href="${onHome ? '#inicio' : 'index.html#inicio'}" aria-label="Notion Wavelet, inicio">
-        <img src="images/logo-wavelet.svg?v=3" alt="" width="44" height="44">
+        <img src="images/logo-wavelet.svg?v=4" alt="" width="44" height="44">
         <span class="nw-brand__copy">
           <strong>Notion Wavelet</strong>
           <small>Software para talleres</small>
@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
       </button>
 
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
-        <a href="${homeHref('#inicio')}">Inicio</a>
-        <a href="${homeHref('#ideal-section')}">Para quién es</a>
-        <a href="${homeHref('#features-section')}">Funciones</a>
-        <a href="${homeHref('#demo-section')}">Demostración</a>
-        <a href="${homeHref('#pricing-section')}">Precios</a>
-        <a href="${homeHref('#benefits-section')}">VeriFactu</a>
+        <a data-section="inicio" href="${homeHref('#inicio')}">Inicio</a>
+        <a data-section="ideal-section" href="${homeHref('#ideal-section')}">Para quién es</a>
+        <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
+        <a data-section="demo-section" href="${homeHref('#demo-section')}">Demostración</a>
+        <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precios</a>
+        <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
         <a href="contact.html"${onHome ? '' : ' aria-current="page"'}>Contacto</a>
-        <a class="nw-nav-cta" href="${onHome ? '#download-section' : '#review_form'}">Solicitar demo <span aria-hidden="true">→</span></a>
+        <a class="nw-nav-cta" href="${onHome ? '#download-section' : 'index.html#download-section'}">Solicitar demo <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;
 
