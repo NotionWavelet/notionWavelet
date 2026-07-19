@@ -39,6 +39,30 @@
     var consent = document.getElementById("trial-consent");
     var consentError = document.getElementById("trial-consent-error");
 
+    var requestTypeInputs = Array.prototype.slice.call(form.querySelectorAll('input[name="tipo_solicitud"]'));
+    var billingFields = document.getElementById("billing-fields");
+    var billingRequired = [
+      document.getElementById("billing-business-name"),
+      document.getElementById("billing-tax-id"),
+      document.getElementById("billing-address"),
+      document.getElementById("billing-postal"),
+      document.getElementById("billing-city")
+    ].filter(Boolean);
+
+    function updateRequestType() {
+      var selected = form.querySelector('input[name="tipo_solicitud"]:checked');
+      var contracting = selected && selected.value === "Quiero contratar";
+      if (billingFields) billingFields.hidden = !contracting;
+      billingRequired.forEach(function (input) { input.required = Boolean(contracting); });
+      requestTypeInputs.forEach(function (input) {
+        input.closest("label").classList.toggle("is-selected", input.checked);
+      });
+      submitLabel.textContent = contracting ? "Solicitar alta" : "Solicitar prueba";
+    }
+
+    requestTypeInputs.forEach(function (input) { input.addEventListener("change", updateRequestType); });
+    updateRequestType();
+
     function setFieldError(field, message) {
       var wrapper = field.input.closest(".nw-form-field");
       var error = document.getElementById(field.input.getAttribute("aria-describedby"));
@@ -106,7 +130,7 @@
       form.classList.toggle("is-submitting", submitting);
       submitButton.disabled = submitting;
       submitButton.setAttribute("aria-busy", submitting ? "true" : "false");
-      submitLabel.textContent = submitting ? "Enviando solicitud…" : "Solicitar prueba";
+      submitLabel.textContent = submitting ? "Enviando solicitud…" : ((form.querySelector('input[name="tipo_solicitud"]:checked') || {}).value === "Quiero contratar" ? "Solicitar alta" : "Solicitar prueba");
     }
 
     fields.forEach(function (field) {
@@ -136,6 +160,10 @@
         if (!validateField(field)) valid = false;
       });
       if (!validateConsent()) valid = false;
+
+      if (valid && !form.checkValidity()) {
+        valid = false;
+      }
 
       if (!valid) {
         showStatus("error", "Revisa los campos indicados antes de continuar.");
