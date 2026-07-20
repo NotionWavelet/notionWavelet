@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
       </button>
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
         <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
-        <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
-        <a data-section="product-section" href="${homeHref('#product-section')}">Programa</a>
+        <a data-section="workflow-section" href="${homeHref('#workflow-section')}">Cómo funciona</a>
+        <a data-section="migration-section" href="${homeHref('#migration-section')}">Migración</a>
         <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
         <a data-section="faq-section" href="${homeHref('#faq-section')}">FAQ</a>
         <a class="nw-nav-cta" href="${homeHref('#download-section')}">Probar gratis <span aria-hidden="true">→</span></a>
