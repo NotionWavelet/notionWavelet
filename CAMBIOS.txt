@@ -1,0 +1,22 @@
+MODIFICAR / SUSTITUIR
+- index.html
+- site.webmanifest
+- styles/design-system.css
+- styles/home.css
+- js/navbar.js
+- images/logo-wavelet-final.png
+- images/icon-192.png
+- images/icon-512.png
+- favicon.png
+
+CREAR
+- favicon.ico
+- favicon-16x16.png
+- favicon-32x32.png
+- apple-touch-icon.png
+
+ELIMINAR
+- Ningún archivo.
+
+IMPORTANTE
+index.html ya no carga styles/notionwavelet.css ni styles/notionwavelet_responsive.css en la portada. Los archivos pueden conservarse porque otras páginas podrían utilizarlos.
