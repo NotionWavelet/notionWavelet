@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   container.innerHTML = `
     <div class="nw-nav__inner">
       <a class="nw-brand" href="${href('#inicio')}" aria-label="Notion Wavelet, inicio">
-        <img src="images/logo-wavelet.svg" alt="" width="42" height="42">
+        <img src="images/logo-wavelet.png" alt="" width="42" height="42">
         <span class="nw-brand__copy"><strong>Notion Wavelet</strong><small>Software para talleres</small></span>
       </a>
       <button class="nw-menu-toggle" type="button" aria-expanded="false" aria-controls="nw-main-nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
