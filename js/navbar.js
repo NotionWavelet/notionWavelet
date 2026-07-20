@@ -22,11 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
         <a data-section="inicio" href="${homeHref('#inicio')}">Inicio</a>
-        <a data-section="ideal-section" href="${homeHref('#ideal-section')}">Para quién es</a>
-        <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
-        <a data-section="demo-section" href="${homeHref('#demo-section')}">Demostración</a>
-        <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precios</a>
         <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
+        <a data-section="product-section" href="${homeHref('#product-section')}">Producto</a>
+        <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
+        <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
         <div class="nw-nav-resources">
           <button class="nw-nav-resources__toggle" type="button" aria-expanded="false">Recursos <i class="fa fa-angle-down" aria-hidden="true"></i></button>
           <div class="nw-nav-resources__menu">
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
         <a href="contact.html"${onHome ? '' : ' aria-current="page"'}>Contacto</a>
-        <a class="nw-nav-cta" href="${onHome ? '#download-section' : 'index.html#download-section'}">Solicitar demo <span aria-hidden="true">→</span></a>
+        <a class="nw-nav-cta" href="${onHome ? '#download-section' : 'index.html#download-section'}">Probar gratis <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;
 
