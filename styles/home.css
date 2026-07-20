@@ -333,3 +333,25 @@ main{padding-top:76px}.nw-product-section,.nw-features-section,.nw-ideal-section
   .nw-request-option__card{grid-template-columns:auto 1fr;padding:12px}
   .nw-request-option__check{display:none}
 }
+
+
+/* Corrección de iconografía: SVG único, centrado y sin glifos dependientes de fuentes */
+.nw-icon{display:block;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.nw-download-benefits .nw-icon{width:14px;height:14px}
+.nw-zero-risk article>.nw-icon{width:17px;height:17px;margin:0;color:#8fc1ff}
+.nw-request-option__icon .nw-icon{width:18px;height:18px}
+.nw-request-option__check .nw-icon{width:13px;height:13px}
+.nw-download-input-group>.nw-icon{position:absolute;left:14px;top:50%;z-index:2;width:16px;height:16px;transform:translateY(-50%);color:#718198;pointer-events:none}
+.nw-billing-heading>span .nw-icon{width:16px;height:16px}
+.nw-billing-note,.nw-download-privacy{display:flex;align-items:flex-start;justify-content:center;gap:6px}
+.nw-billing-note .nw-icon,.nw-download-privacy .nw-icon{width:13px;height:13px;margin-top:1px}
+.nw-download-trust .nw-icon{width:14px;height:14px;color:#85b9ff}
+.nw-footer__platform>.nw-icon{width:20px;height:20px;color:#7db4ff}
+.nw-footer__badges .nw-icon{width:15px;height:15px;color:#79adf4}
+.nw-footer__back .nw-icon{width:18px;height:18px}
+.nw-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.nw-footer__logo-mark{display:grid;place-items:center;flex:0 0 54px;width:54px;height:46px}
+.nw-footer__logo-mark img{display:block;width:54px;height:38px;object-fit:contain;object-position:center}
+.nw-footer__logo>span:last-child{display:grid;gap:2px}
+.nw-footer__logo>span:last-child strong{font-size:.98rem;line-height:1.15}
+.nw-footer__logo>span:last-child small{font-size:.72rem;line-height:1.2;color:#8fa0b7}
