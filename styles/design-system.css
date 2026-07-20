@@ -9,13 +9,6 @@
   --nw-shell:1180px;
 }
 *,*::before,*::after{box-sizing:border-box}
-/* Stable base: prevents Bootstrap and legacy template rules from leaking into the landing. */
-.super_container{width:100%;min-height:100%;overflow:clip}
-main,section,header,footer,nav{display:block}
-.header ul,.header ol,.nw-footer ul,.nw-footer ol{margin:0;padding:0;list-style:none}
-.nw-shell>*{min-width:0}
-.nw-btn,.nw-main-nav a,.nw-brand{-webkit-tap-highlight-color:transparent}
-
 html{scroll-behavior:smooth;scroll-padding-top:88px}
 body{margin:0;background:var(--nw-bg);color:var(--nw-text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
 body.menu-open{overflow:hidden}
