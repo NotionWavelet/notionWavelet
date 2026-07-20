@@ -11,7 +11,9 @@
 <meta content="#071633" name="theme-color"/>
 <meta content="light" name="color-scheme"/>
 <link href="https://notionwavelet.com/" rel="canonical"/>
-<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon-32x32.png" rel="alternate icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="site.webmanifest" rel="manifest"/>
 <meta content="website" property="og:type"/>
 <meta content="Notion Wavelet" property="og:site_name"/>
@@ -62,12 +64,10 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="styles/bootstrap4/bootstrap.min.css" rel="stylesheet"/>
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="plugins/OwlCarousel2-2.2.1/owl.carousel.css" rel="stylesheet"/>
 <link href="styles/design-system.css?v=2" rel="stylesheet"/>
 <link href="styles/home.css?v=2" rel="stylesheet"/>
-<noscript><style>.nw-reveal{opacity:1!important;transform:none!important}</style></noscript></head>
+<noscript><style>.nw-reveal{opacity:1;transform:none}</style></noscript></head>
 <body>
 <a class="nw-skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <div class="super_container">
@@ -482,19 +482,19 @@
 <p>Capturas reales de las áreas principales de la aplicación. Pulsa sobre cada imagen para verla con más detalle.</p>
 </div>
 <div class="nw-tour-grid">
-<a class="nw-tour-card nw-reveal" href="images/notionwavelet-clientes.jpg" rel="noopener" target="_blank">
+<a class="nw-tour-card nw-reveal" href="images/notionwavelet-clientes.jpg" rel="noopener" target="_blank" rel="noopener noreferrer">
 <div class="nw-tour-image"><img src="images/notionwavelet-clientes.jpg" alt="Captura real de módulo 1 en Notion Wavelet" loading="lazy"/></div>
 <div><span>01</span><h3>Clientes</h3><p>Datos de contacto e historial accesibles desde una sola ficha.</p></div>
 </a>
-<a class="nw-tour-card nw-reveal" href="images/notionwavelet-datos-vehiculo.jpg" rel="noopener" target="_blank">
+<a class="nw-tour-card nw-reveal" href="images/notionwavelet-datos-vehiculo.jpg" rel="noopener" target="_blank" rel="noopener noreferrer">
 <div class="nw-tour-image"><img src="images/notionwavelet-datos-vehiculo.jpg" alt="Captura real de módulo 2 en Notion Wavelet" loading="lazy"/></div>
 <div><span>02</span><h3>Vehículos</h3><p>Matrícula, kilometraje, propietario y datos técnicos organizados.</p></div>
 </a>
-<a class="nw-tour-card nw-reveal" href="images/notionwavelet-orden-trabajo.jpg" rel="noopener" target="_blank">
+<a class="nw-tour-card nw-reveal" href="images/notionwavelet-orden-trabajo.jpg" rel="noopener" target="_blank" rel="noopener noreferrer">
 <div class="nw-tour-image"><img src="images/notionwavelet-orden-trabajo.jpg" alt="Captura real de módulo 3 en Notion Wavelet" loading="lazy"/></div>
 <div><span>03</span><h3>Órdenes de reparación</h3><p>Trabajos, materiales y observaciones dentro del mismo proceso.</p></div>
 </a>
-<a class="nw-tour-card nw-reveal" href="images/notionwavelet-facturacion.jpg" rel="noopener" target="_blank">
+<a class="nw-tour-card nw-reveal" href="images/notionwavelet-facturacion.jpg" rel="noopener" target="_blank" rel="noopener noreferrer">
 <div class="nw-tour-image"><img src="images/notionwavelet-facturacion.jpg" alt="Captura real de módulo 4 en Notion Wavelet" loading="lazy"/></div>
 <div><span>04</span><h3>Facturación</h3><p>Presupuestos, albaranes y facturas sin volver a introducir los datos.</p></div>
 </a>
@@ -750,7 +750,7 @@
 <label class="nw-consent" for="trial-consent">
 <input aria-describedby="trial-consent-error" id="trial-consent" name="privacidad_aceptada" required="" type="checkbox" value="Sí"/>
 <span>
-                  He leído y acepto la <a href="privacidad.html" rel="noopener" target="_blank">política de privacidad</a> y el tratamiento de mis datos para gestionar la solicitud.
+                  He leído y acepto la <a href="privacidad.html" rel="noopener" target="_blank" rel="noopener noreferrer">política de privacidad</a> y el tratamiento de mis datos para gestionar la solicitud.
                 </span>
 </label>
 <small class="nw-field-error nw-field-error--consent" id="trial-consent-error"></small>
@@ -798,7 +798,7 @@
 <div class="nw-footer__links">
 <div class="nw-footer__column">
 <strong>Producto</strong>
-<a href="#dashboard-section">Panel de control</a>
+<a href="#product-section">Panel de control</a>
 <a href="#features-section">Funciones</a>
 <a href="#product-section">Capturas</a>
 <a href="#pricing-section">Precio</a>
@@ -832,12 +832,9 @@
 </div>
 </footer>
 </div>
-<script defer="" src="js/jquery-3.2.1.min.js"></script>
-<script defer="" src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script defer="" src="js/custom.js"></script>
-<script defer="" src="js/navbar.js?v=1"></script>
+<script defer="" src="js/navbar.js?v=8"></script>
 <script defer="" src="js/formulario.js?v=3"></script>
-<script defer="" src="js/site-enhancements.js?v=1"></script>
+<script defer="" src="js/site-enhancements.js?v=2"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var year = document.getElementById("nw-current-year");
