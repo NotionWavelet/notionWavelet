@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /pomodoro.html
-Disallow: /planificadorBoda.html
-Disallow: /product.html
-Disallow: /productbueno.html
 
 Sitemap: https://notionwavelet.com/sitemap.xml
