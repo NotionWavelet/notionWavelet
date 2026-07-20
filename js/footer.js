@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>Software de gestión y facturación para talleres.</p>
       </div>
       <nav class="nw-shared-footer__links" aria-label="Enlaces del pie">
-        <a href="${prefix}soporte.html">Soporte</a>
-        <a href="${prefix}requisitos.html">Requisitos</a>
         <a href="${prefix}privacidad.html">Privacidad</a>
         <a href="${prefix}aviso-legal.html">Aviso legal</a>
       </nav>
