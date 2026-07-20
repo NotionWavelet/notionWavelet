@@ -70,7 +70,7 @@
 <link href="styles/footer.css" rel="stylesheet"/>
 <link href="styles/professional-home.css?v=80" rel="stylesheet"/>
 <noscript><style>.nw-reveal{opacity:1!important;transform:none!important}</style></noscript>
-<link href="styles/home-professional-v8.css?v=81" rel="stylesheet"/></head>
+<link href="styles/home-professional-v9.css?v=90" rel="stylesheet"/></head>
 <body>
 <a class="nw-skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <div class="super_container">
@@ -90,12 +90,37 @@
 <div class="nw-trust"><span><i class="fa fa-check"></i> VeriFactu integrado</span><span><i class="fa fa-check"></i> Datos locales</span><span><i class="fa fa-check"></i> Copias automáticas</span><span><i class="fa fa-check"></i> Soporte en español</span></div>
 </div>
 <div aria-label="Vista conceptual de Notion Wavelet" class="nw-hero__visual">
-<div class="nw-product-browser nw-product-browser--hero">
-<div class="nw-product-browser__bar"><span></span><span></span><span></span><strong>Notion Wavelet · Taller</strong></div>
-<img alt="Pantalla principal de gestión de órdenes de Notion Wavelet" fetchpriority="high" src="images/notionwavelet-orden-trabajo.jpg"/>
+<div aria-label="Vista del panel de Notion Wavelet" class="nw-app-preview">
+<div class="nw-app-preview__topbar">
+<div class="nw-app-preview__brand"><img alt="" src="images/logo-wavelet-mark.png?v=1"/><strong>Notion Wavelet</strong></div>
+<span>Taller</span>
+<div class="nw-app-preview__status"><i class="fa fa-check-circle"></i> VeriFactu activo</div>
 </div>
-<div class="nw-hero-badge nw-hero-badge--vf"><i class="fa fa-qrcode"></i><span><strong>VeriFactu</strong><small>Integrado en la facturación</small></span></div>
-<div class="nw-hero-badge nw-hero-badge--local"><i class="fa fa-database"></i><span><strong>Datos locales</strong><small>Tu información en tu equipo</small></span></div>
+<div class="nw-app-preview__body">
+<aside aria-hidden="true" class="nw-app-preview__sidebar">
+<span class="is-active"><i class="fa fa-wrench"></i></span>
+<span><i class="fa fa-users"></i></span>
+<span><i class="fa fa-car"></i></span>
+<span><i class="fa fa-file-text-o"></i></span>
+<span><i class="fa fa-bar-chart"></i></span>
+</aside>
+<div class="nw-app-preview__content">
+<div class="nw-app-preview__heading"><div><small>Orden de reparación</small><strong>OR-2026-0148</strong></div><span class="nw-status-pill">En curso</span></div>
+<div class="nw-app-preview__cards">
+<article><small>Cliente</small><strong>Taller Ejemplo S.L.</strong><span>Cliente habitual</span></article>
+<article><small>Vehículo</small><strong>1234 LMW</strong><span>Turismo · 86.240 km</span></article>
+<article><small>Total</small><strong>428,70 €</strong><span>IVA incluido</span></article>
+</div>
+<div class="nw-app-preview__table">
+<div class="nw-app-preview__table-head"><span>Trabajo</span><span>Estado</span><span>Importe</span></div>
+<div><span>Cambio de aceite y filtros</span><span><b class="nw-dot nw-dot--green"></b>Completado</span><strong>186,50 €</strong></div>
+<div><span>Revisión sistema de frenos</span><span><b class="nw-dot"></b>En curso</span><strong>142,20 €</strong></div>
+<div><span>Diagnosis electrónica</span><span><b class="nw-dot nw-dot--gray"></b>Pendiente</span><strong>100,00 €</strong></div>
+</div>
+<div class="nw-app-preview__footer"><span><i class="fa fa-database"></i> Datos guardados localmente</span><button type="button">Emitir factura</button></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section><section aria-label="Ventajas principales" class="nw-proof-strip">
@@ -172,7 +197,16 @@
 <span class="nw-window__status"><i class="fa fa-circle"></i> Activo</span>
 </div>
 <div class="nw-window__image">
-<img alt="Pantalla de gestión de clientes de Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-clientes.jpg" width="1365"/>
+<div class="nw-module-preview">
+<div class="nw-module-preview__toolbar"><strong>Clientes</strong><span><i class="fa fa-search"></i> Buscar</span><button type="button">+ Nuevo</button></div>
+<div class="nw-module-preview__summary"><article><small>Registros</small><strong>31</strong></article><article><small>Actualizados hoy</small><strong>3</strong></article><article><small>Estado</small><strong>Al día</strong></article></div>
+<div class="nw-module-preview__list">
+<div class="is-head"><span>Descripción</span><span>Referencia</span><span>Estado</span></div>
+<div><span>Toda la información del cliente en segundos</span><span>NW-202601</span><span class="nw-mini-pill">Activo</span></div>
+<div><span>Información vinculada y organizada</span><span>NW-202611</span><span class="nw-mini-pill nw-mini-pill--muted">Revisado</span></div>
+<div><span>Historial disponible</span><span>NW-202621</span><span class="nw-mini-pill">Activo</span></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -197,7 +231,16 @@
 <span class="nw-window__status"><i class="fa fa-circle"></i> Guardada</span>
 </div>
 <div class="nw-window__image">
-<img alt="Orden de reparación y resumen de factura en Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-orden-trabajo.jpg" width="1365"/>
+<div class="nw-module-preview">
+<div class="nw-module-preview__toolbar"><strong>Órdenes de trabajo</strong><span><i class="fa fa-search"></i> Buscar</span><button type="button">+ Nuevo</button></div>
+<div class="nw-module-preview__summary"><article><small>Registros</small><strong>38</strong></article><article><small>Actualizados hoy</small><strong>4</strong></article><article><small>Estado</small><strong>Al día</strong></article></div>
+<div class="nw-module-preview__list">
+<div class="is-head"><span>Descripción</span><span>Referencia</span><span>Estado</span></div>
+<div><span>El centro de todo el trabajo del taller</span><span>NW-202602</span><span class="nw-mini-pill">Activo</span></div>
+<div><span>Información vinculada y organizada</span><span>NW-202612</span><span class="nw-mini-pill nw-mini-pill--muted">Revisado</span></div>
+<div><span>Historial disponible</span><span>NW-202622</span><span class="nw-mini-pill">Activo</span></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -222,7 +265,16 @@
 <span class="nw-window__status"><i class="fa fa-file-pdf-o"></i> PDF</span>
 </div>
 <div class="nw-window__image">
-<img alt="Pantalla para emitir facturas de Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-facturacion.jpg" width="1365"/>
+<div class="nw-module-preview">
+<div class="nw-module-preview__toolbar"><strong>Facturación</strong><span><i class="fa fa-search"></i> Buscar</span><button type="button">+ Nuevo</button></div>
+<div class="nw-module-preview__summary"><article><small>Registros</small><strong>45</strong></article><article><small>Actualizados hoy</small><strong>5</strong></article><article><small>Estado</small><strong>Al día</strong></article></div>
+<div class="nw-module-preview__list">
+<div class="is-head"><span>Descripción</span><span>Referencia</span><span>Estado</span></div>
+<div><span>Factura con una operativa integrada con VeriFactu</span><span>NW-202603</span><span class="nw-mini-pill">Activo</span></div>
+<div><span>Información vinculada y organizada</span><span>NW-202613</span><span class="nw-mini-pill nw-mini-pill--muted">Revisado</span></div>
+<div><span>Historial disponible</span><span>NW-202623</span><span class="nw-mini-pill">Activo</span></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -247,7 +299,16 @@
 <span class="nw-window__status"><i class="fa fa-calendar"></i> 2026</span>
 </div>
 <div class="nw-window__image">
-<img alt="Módulo de contabilidad e ingresos de Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-contabilidad.jpg" width="1365"/>
+<div class="nw-module-preview">
+<div class="nw-module-preview__toolbar"><strong>Contabilidad</strong><span><i class="fa fa-search"></i> Buscar</span><button type="button">+ Nuevo</button></div>
+<div class="nw-module-preview__summary"><article><small>Registros</small><strong>52</strong></article><article><small>Actualizados hoy</small><strong>6</strong></article><article><small>Estado</small><strong>Al día</strong></article></div>
+<div class="nw-module-preview__list">
+<div class="is-head"><span>Descripción</span><span>Referencia</span><span>Estado</span></div>
+<div><span>Control económico sin hojas de cálculo</span><span>NW-202604</span><span class="nw-mini-pill">Activo</span></div>
+<div><span>Información vinculada y organizada</span><span>NW-202614</span><span class="nw-mini-pill nw-mini-pill--muted">Revisado</span></div>
+<div><span>Historial disponible</span><span>NW-202624</span><span class="nw-mini-pill">Activo</span></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -272,7 +333,16 @@
 <span class="nw-window__status"><i class="fa fa-check-circle"></i> Completo</span>
 </div>
 <div class="nw-window__image">
-<img alt="Ficha de datos del vehículo en Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-datos-vehiculo.jpg" width="1365"/>
+<div class="nw-module-preview">
+<div class="nw-module-preview__toolbar"><strong>Vehículos</strong><span><i class="fa fa-search"></i> Buscar</span><button type="button">+ Nuevo</button></div>
+<div class="nw-module-preview__summary"><article><small>Registros</small><strong>59</strong></article><article><small>Actualizados hoy</small><strong>7</strong></article><article><small>Estado</small><strong>Al día</strong></article></div>
+<div class="nw-module-preview__list">
+<div class="is-head"><span>Descripción</span><span>Referencia</span><span>Estado</span></div>
+<div><span>La ficha técnica y comercial, siempre organizada</span><span>NW-202605</span><span class="nw-mini-pill">Activo</span></div>
+<div><span>Información vinculada y organizada</span><span>NW-202615</span><span class="nw-mini-pill nw-mini-pill--muted">Revisado</span></div>
+<div><span>Historial disponible</span><span>NW-202625</span><span class="nw-mini-pill">Activo</span></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -297,7 +367,16 @@
 <span class="nw-window__status"><i class="fa fa-cog"></i> Configuración</span>
 </div>
 <div class="nw-window__image">
-<img alt="Configuración de métodos de pago en Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-metodos-pago.jpg" width="1365"/>
+<div class="nw-module-preview">
+<div class="nw-module-preview__toolbar"><strong>Configuración</strong><span><i class="fa fa-search"></i> Buscar</span><button type="button">+ Nuevo</button></div>
+<div class="nw-module-preview__summary"><article><small>Registros</small><strong>66</strong></article><article><small>Actualizados hoy</small><strong>8</strong></article><article><small>Estado</small><strong>Al día</strong></article></div>
+<div class="nw-module-preview__list">
+<div class="is-head"><span>Descripción</span><span>Referencia</span><span>Estado</span></div>
+<div><span>Adapta el programa a la forma de trabajar de tu negocio</span><span>NW-202606</span><span class="nw-mini-pill">Activo</span></div>
+<div><span>Información vinculada y organizada</span><span>NW-202616</span><span class="nw-mini-pill nw-mini-pill--muted">Revisado</span></div>
+<div><span>Historial disponible</span><span>NW-202626</span><span class="nw-mini-pill">Activo</span></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -407,19 +486,19 @@
 </div>
 <div class="nw-tour-grid">
 <a class="nw-tour-card nw-reveal" href="images/notionwavelet-clientes.jpg" rel="noopener" target="_blank">
-<div class="nw-tour-image"><img alt="Pantalla de gestión de clientes de Notion Wavelet" loading="lazy" src="images/notionwavelet-clientes.jpg"/></div>
+<div class="nw-tour-image"><div class="nw-tour-placeholder"><i class="fa fa-desktop"></i><strong>Vista del programa</strong><span>Módulo 1 · Demostración guiada</span></div></div>
 <div><span>01</span><h3>Clientes</h3><p>Datos de contacto e historial accesibles desde una sola ficha.</p></div>
 </a>
 <a class="nw-tour-card nw-reveal" href="images/notionwavelet-datos-vehiculo.jpg" rel="noopener" target="_blank">
-<div class="nw-tour-image"><img alt="Ficha de vehículo en Notion Wavelet" loading="lazy" src="images/notionwavelet-datos-vehiculo.jpg"/></div>
+<div class="nw-tour-image"><div class="nw-tour-placeholder"><i class="fa fa-desktop"></i><strong>Vista del programa</strong><span>Módulo 2 · Demostración guiada</span></div></div>
 <div><span>02</span><h3>Vehículos</h3><p>Matrícula, kilometraje, propietario y datos técnicos organizados.</p></div>
 </a>
 <a class="nw-tour-card nw-reveal" href="images/notionwavelet-orden-trabajo.jpg" rel="noopener" target="_blank">
-<div class="nw-tour-image"><img alt="Orden de reparación en Notion Wavelet" loading="lazy" src="images/notionwavelet-orden-trabajo.jpg"/></div>
+<div class="nw-tour-image"><div class="nw-tour-placeholder"><i class="fa fa-desktop"></i><strong>Vista del programa</strong><span>Módulo 3 · Demostración guiada</span></div></div>
 <div><span>03</span><h3>Órdenes de reparación</h3><p>Trabajos, materiales y observaciones dentro del mismo proceso.</p></div>
 </a>
 <a class="nw-tour-card nw-reveal" href="images/notionwavelet-facturacion.jpg" rel="noopener" target="_blank">
-<div class="nw-tour-image"><img alt="Pantalla de facturación de Notion Wavelet" loading="lazy" src="images/notionwavelet-facturacion.jpg"/></div>
+<div class="nw-tour-image"><div class="nw-tour-placeholder"><i class="fa fa-desktop"></i><strong>Vista del programa</strong><span>Módulo 4 · Demostración guiada</span></div></div>
 <div><span>04</span><h3>Facturación</h3><p>Presupuestos, albaranes y facturas sin volver a introducir los datos.</p></div>
 </a>
 </div>
