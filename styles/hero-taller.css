@@ -71,9 +71,9 @@ body { font-family: "DM Sans", sans-serif; }
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 .hero-button:hover { transform: translateY(-2px); }
-.hero-button-primary { color: #fff !important; background: var(--hero-blue); box-shadow: 0 14px 28px rgba(37,99,235,.25); }
+.hero-button-primary { color: #fff ; background: var(--hero-blue); box-shadow: 0 14px 28px rgba(37,99,235,.25); }
 .hero-button-primary:hover { background: var(--hero-blue-dark); box-shadow: 0 18px 34px rgba(37,99,235,.31); }
-.hero-button-secondary { color: #243247 !important; border: 1px solid #ccd8e8; background: rgba(255,255,255,.8); }
+.hero-button-secondary { color: #243247 ; border: 1px solid #ccd8e8; background: rgba(255,255,255,.8); }
 .hero-button-secondary:hover { background: #fff; box-shadow: 0 12px 26px rgba(30,64,110,.10); }
 
 .hero-benefits { display: flex; flex-wrap: wrap; gap: 11px 20px; color: #516071; font-size: 13px; font-weight: 600; }
