@@ -221,3 +221,115 @@ main{padding-top:76px}.nw-product-section,.nw-features-section,.nw-ideal-section
   .nw-download-form-heading{align-items:flex-start}
   .nw-download-form-icon{width:48px;height:48px;flex-basis:48px}
 }
+
+/* Corrección final: CTA de prueba y footer */
+.nw-download-section{
+  position:relative;
+  overflow:hidden;
+  padding:96px 0;
+  background:
+    radial-gradient(circle at 12% 12%,rgba(74,144,255,.20),transparent 30%),
+    radial-gradient(circle at 88% 88%,rgba(29,99,214,.16),transparent 32%),
+    #0b1932;
+}
+.nw-download-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:linear-gradient(to bottom,transparent,#000 15%,#000 85%,transparent);
+}
+.nw-download-panel{
+  position:relative;
+  z-index:1;
+  grid-template-columns:minmax(300px,.78fr) minmax(620px,1.22fr);
+  gap:72px;
+  align-items:center;
+}
+.nw-download-copy{padding:0;max-width:510px}
+.nw-download-copy h2{font-size:clamp(2.55rem,4vw,4.25rem);line-height:1.02;letter-spacing:-.055em}
+.nw-download-copy>p{max-width:470px;font-size:1.08rem;line-height:1.75}
+.nw-download-benefits{gap:13px;margin-top:26px}
+.nw-download-benefits span{align-items:center;font-size:.94rem}
+.nw-download-benefits i{display:grid;place-items:center;width:20px;height:20px;border-radius:999px;background:rgba(89,157,255,.16);font-size:.72rem}
+.nw-zero-risk{grid-template-columns:1fr;gap:10px;margin-top:32px}
+.nw-zero-risk article{align-items:center;padding:15px 16px;border-color:rgba(151,184,230,.2);background:rgba(255,255,255,.055);backdrop-filter:blur(8px)}
+.nw-zero-risk article>i{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;margin:0;border-radius:10px;background:rgba(102,164,255,.14)}
+.nw-zero-risk strong{font-size:.88rem}.nw-zero-risk small{margin-top:2px;font-size:.73rem;line-height:1.45}
+
+.nw-download-form-card{
+  overflow:visible;
+  padding:34px;
+  border:1px solid rgba(255,255,255,.65);
+  border-radius:26px;
+  background:#fff;
+  box-shadow:0 32px 90px rgba(1,8,24,.34),0 0 0 1px rgba(15,23,42,.04);
+}
+.nw-download-form-card::before{display:none}
+.nw-download-form-heading{margin:0 0 24px;padding:0 0 20px;border-bottom:1px solid #e7edf5;align-items:center}
+.nw-download-form-icon{width:48px;height:48px;flex-basis:48px;border:0;border-radius:14px;background:#eaf3ff;box-shadow:none;color:#176edc}
+.nw-download-form-icon svg{width:22px;height:22px}
+.nw-download-form-heading strong{font-size:1.08rem}.nw-download-form-heading span{font-size:.82rem}
+.nw-request-type{padding:0;border:0;background:transparent;border-radius:0}
+.nw-request-type legend{margin-bottom:13px}.nw-request-type legend span{font-size:.94rem}.nw-request-type legend small{margin-top:3px}
+.nw-request-option{margin-top:10px}
+.nw-request-option__card{min-height:64px;padding:12px 14px;border-radius:15px;box-shadow:none}
+.nw-request-option__card:hover{transform:none;box-shadow:none}
+.nw-request-option__icon{width:38px;height:38px;border:0;border-radius:11px;box-shadow:none}
+.nw-request-option__copy strong{font-size:.88rem}.nw-request-option__copy small{font-size:.72rem;line-height:1.4}
+.nw-request-option__check{width:22px;height:22px;background:transparent}
+
+.nw-form-grid{padding:0;border:0;border-radius:0;background:transparent;gap:15px 16px}
+.nw-form-field label{margin-bottom:7px;font-size:.74rem;color:#26364c}
+.nw-form-field input,.nw-form-field select,.nw-form-field textarea{min-height:48px;padding:12px 14px;border-radius:12px;background:#fff;border-color:#cfdbea;font-size:.88rem}
+.nw-download-input-group>i{display:grid;position:absolute;left:14px;top:50%;z-index:2;place-items:center;width:16px;height:16px;transform:translateY(-50%);color:#718198;pointer-events:none}
+.nw-download-input-group input{padding-left:41px}
+.nw-download-input-group>.nw-field-icon{display:none}
+.nw-billing-fields{margin-top:22px;padding-top:20px;border-top:1px solid #e7edf5}
+.nw-billing-heading{margin:0 0 15px;padding:0;border:0;gap:10px}
+.nw-billing-heading::before{display:none}
+.nw-billing-heading>span{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#eef5ff;color:#176edc}
+.nw-billing-heading strong,.nw-billing-heading small{display:block}.nw-billing-heading small{margin-top:2px;color:#728197;font-size:.71rem}
+.nw-billing-note{margin-top:10px}
+.nw-consent{align-items:flex-start;margin-top:18px;padding:0;border:0;background:transparent;font-size:.72rem;line-height:1.5}
+.nw-consent input{margin-top:3px}
+.nw-download-form button[type=submit]{min-height:52px;margin-top:16px;border-radius:12px;box-shadow:0 10px 22px rgba(20,115,247,.2)}
+.nw-download-privacy{margin:12px 0 0;font-size:.69rem}
+.nw-download-trust{position:relative;z-index:1;margin-top:20px;color:#c2cde0;font-size:.75rem}
+.nw-download-trust span{display:inline-flex;align-items:center;gap:7px}
+
+.nw-footer{padding:50px 0 22px;background:#071322}
+.nw-footer__logo-mark img{width:58px;height:44px}
+.nw-footer__platform{display:inline-flex;padding:8px 11px;border:1px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.035)}
+.nw-footer__platform>span{padding:0;border:0;background:none}
+.nw-footer__bottom{position:relative}
+.nw-footer__badges{align-items:center;gap:14px}
+.nw-footer__badges span{display:inline-flex;align-items:center;gap:7px;min-height:auto;padding:0;border:0;border-radius:0;background:transparent;color:#94a3b8}
+.nw-footer__badges i{width:16px;text-align:center;color:#79adf4;font-size:.88rem}
+.nw-footer__back{flex:0 0 40px;width:40px;height:40px;border:1px solid rgba(255,255,255,.09);border-radius:11px;background:rgba(255,255,255,.055)}
+
+@media(max-width:1100px){
+  .nw-download-panel{grid-template-columns:1fr;gap:42px}
+  .nw-download-copy{max-width:720px;text-align:center;margin-inline:auto}
+  .nw-download-copy>p{margin-inline:auto}.nw-download-benefits{justify-items:center}
+  .nw-zero-risk{grid-template-columns:repeat(3,1fr)}
+  .nw-download-form-card{width:min(760px,100%);margin-inline:auto}
+}
+@media(max-width:760px){
+  .nw-download-section{padding:64px 0}
+  .nw-download-copy h2{font-size:2.6rem}
+  .nw-download-copy{text-align:left}.nw-download-copy>p{margin-inline:0}
+  .nw-download-benefits{justify-items:start}
+  .nw-zero-risk{grid-template-columns:1fr}
+  .nw-download-form-card{padding:24px;border-radius:20px}
+  .nw-form-grid{grid-template-columns:1fr}
+  .nw-footer__badges{flex-wrap:wrap}
+}
+@media(max-width:480px){
+  .nw-download-copy h2{font-size:2.25rem}
+  .nw-download-form-card{padding:20px}
+  .nw-request-option__card{grid-template-columns:auto 1fr;padding:12px}
+  .nw-request-option__check{display:none}
+}
