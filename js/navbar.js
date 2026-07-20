@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   container.innerHTML = `
     <div class="nw-nav__inner">
-      <a class="nw-brand" href="${homeHref('#inicio')}" aria-label="Notion Wavelet, inicio">
+      <a class="nw-brand" href="${homeHref('#hero-section')}" aria-label="Notion Wavelet, inicio">
         <img src="images/logo-wavelet-mark.png?v=2" alt="" width="54" height="34">
         <span class="nw-brand__copy"><strong>Notion Wavelet</strong><small>Gestión para talleres</small></span>
       </a>
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
         <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
         <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
-        <a data-section="product-section" href="${homeHref('#product-section')}">El programa</a>
+        <a data-section="product-section" href="${homeHref('#product-section')}">Programa</a>
         <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
         <a data-section="faq-section" href="${homeHref('#faq-section')}">FAQ</a>
         <a class="nw-nav-cta" href="${homeHref('#download-section')}">Probar gratis <span aria-hidden="true">→</span></a>
