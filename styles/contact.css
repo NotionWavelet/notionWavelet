@@ -211,20 +211,20 @@
   box-shadow: 0 0 0 4px rgba(18, 101, 244, .1);
 }
 
-.nw-contact-message { display: block; margin-top: 18px !important; }
+.nw-contact-message { display: block; margin-top: 18px ; }
 
 .nw-contact-consent {
-  display: flex !important;
+  display: flex ;
   align-items: flex-start;
   gap: 10px;
-  margin-top: 16px !important;
+  margin-top: 16px ;
   color: #66758d;
   font-size: 12px;
   line-height: 1.45;
 }
 
 .nw-contact-consent input { width: 17px; height: 17px; flex: 0 0 17px; margin: 1px 0 0; accent-color: var(--contact-blue); }
-.nw-contact-consent span { margin: 0 !important; color: inherit !important; font-size: inherit !important; font-weight: 500 !important; }
+.nw-contact-consent span { margin: 0 ; color: inherit ; font-size: inherit ; font-weight: 500 ; }
 .nw-contact-consent a { color: var(--contact-blue); font-weight: 700; }
 
 .nw-contact-submit {
