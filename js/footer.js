@@ -1,27 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var footerContent = `
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <div class="footer_social">
-                    <ul>
-                        <li><a href="https://twitter.com/NotionWavelet"><img src="images/twitter.png" alt="" width="35"></a></li>
-                        <li><a href="https://www.instagram.com/notionwavelet/"><img src="images/instagram.png" alt="" width="35"></a></li>
-                        <li><a href="https://www.tiktok.com/@notion.wavelet"><img src="images/tiktok.png" alt="" width="35"></a></li>
-                        <li><a href="https://www.pinterest.es/notionwavelet/"><img src="images/pinterest.png" alt="" width="35"></a></li>
-                    </ul>
-                </div>
-                <div class="copyright" style="margin-top: 15px; font-size: 0.9rem; color: #6c757d;">
-                    &copy; 2026 Noción de Ondícula. Todos los derechos reservados. <br>
-                    <a href="legal.html" style="color: #BAC4CF; text-decoration: underline; margin-top: 5px; display: inline-block;">Aviso Legal y Privacidad</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    `;
-
-    var footerContainer = document.querySelector("#footer_container");
-    if (footerContainer) {
-        footerContainer.innerHTML = footerContent;
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
+  var container = document.getElementById("footer_container");
+  if (!container) return;
+  var path = window.location.pathname;
+  var prefix = path.indexOf("/docs/") !== -1 ? "../" : "";
+  var year = new Date().getFullYear();
+  container.innerHTML = `
+    <div class="nw-shell nw-shared-footer__inner">
+      <div class="nw-shared-footer__brand">
+        <a href="${prefix}index.html" aria-label="Notion Wavelet, inicio">
+          <img src="${prefix}images/logo-wavelet-final.png" alt="" width="48" height="34">
+          <strong>Notion Wavelet</strong>
+        </a>
+        <p>Software de gestión y facturación para talleres.</p>
+      </div>
+      <nav class="nw-shared-footer__links" aria-label="Enlaces del pie">
+        <a href="${prefix}soporte.html">Soporte</a>
+        <a href="${prefix}requisitos.html">Requisitos</a>
+        <a href="${prefix}privacidad.html">Privacidad</a>
+        <a href="${prefix}aviso-legal.html">Aviso legal</a>
+      </nav>
+      <p class="nw-shared-footer__copyright">© ${year} Notion Wavelet</p>
+    </div>`;
 });
