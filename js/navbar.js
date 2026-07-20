@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a data-section="migration-section" href="${homeHref('#migration-section')}">Migración</a>
         <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
         <a data-section="faq-section" href="${homeHref('#faq-section')}">FAQ</a>
-        <a class="nw-nav-cta" href="${homeHref('#download-section')}">Probar gratis <span aria-hidden="true">→</span></a>
+        <a class="nw-nav-cta" href="${homeHref('#download-section')}">Solicitar demo <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;
 
