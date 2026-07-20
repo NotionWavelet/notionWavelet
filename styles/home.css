@@ -387,3 +387,54 @@ main{padding-top:76px}.nw-product-section,.nw-features-section,.nw-ideal-section
   margin: 0 !important;
   transform: translateY(1px);
 }
+
+/* 2026-07: capturas reales, onboarding, comparativa, confianza y recursos */
+.nw-real-screens{padding:120px 0;background:linear-gradient(180deg,#f7faff 0%,#fff 100%)}
+.nw-screen-showcase{margin-top:48px;display:grid;gap:28px}
+.nw-screen-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.nw-screen-card{margin:0;background:#fff;border:1px solid rgba(19,45,86,.1);border-radius:24px;overflow:hidden;box-shadow:0 22px 60px rgba(20,46,89,.09)}
+.nw-screen-card__image{padding:12px;background:#eef4ff;border-bottom:1px solid rgba(19,45,86,.08)}
+.nw-screen-card__image img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(9,34,74,.14)}
+.nw-screen-card figcaption{padding:22px 24px 25px;display:grid;gap:7px}
+.nw-screen-card figcaption span{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#1769e0}
+.nw-screen-card figcaption strong{font-size:16px;line-height:1.5;color:#10264b}
+.nw-screen-card--featured figcaption strong{font-size:20px}
+.nw-screen-card--featured .nw-screen-card__image{padding:18px}
+
+.nw-onboarding-section,.nw-comparison-section,.nw-trust-section,.nw-resources-section{padding:112px 0}
+.nw-onboarding-section{background:#fff}
+.nw-onboarding-steps{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;position:relative}
+.nw-onboarding-steps:before{content:"";position:absolute;left:16%;right:16%;top:39px;height:1px;background:linear-gradient(90deg,rgba(23,105,224,.15),rgba(23,105,224,.55),rgba(23,105,224,.15))}
+.nw-onboarding-steps article{position:relative;z-index:1;padding:34px 30px;border:1px solid rgba(15,48,92,.1);border-radius:24px;background:#fff;box-shadow:0 18px 48px rgba(15,48,92,.07)}
+.nw-onboarding-steps article>span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#1769e0;color:#fff;font-weight:800;box-shadow:0 0 0 9px #fff}
+.nw-onboarding-steps i{display:block;margin:34px 0 18px;font-size:26px;color:#1769e0}
+.nw-onboarding-steps h3{margin:0 0 10px;color:#10264b;font-size:20px}
+.nw-onboarding-steps p{margin:0;color:#66758c;line-height:1.7}
+
+.nw-comparison-section{background:#071633;color:#fff}
+.nw-comparison-section .nw-section-heading h2,.nw-comparison-section .nw-section-heading p{color:#fff}
+.nw-comparison-section .nw-section-heading p{opacity:.72}
+.nw-comparison-card{margin-top:48px;overflow:auto;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:rgba(255,255,255,.055);box-shadow:0 28px 75px rgba(0,0,0,.18)}
+.nw-comparison-card table{width:100%;border-collapse:collapse;min-width:720px}
+.nw-comparison-card th,.nw-comparison-card td{padding:22px 26px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}
+.nw-comparison-card th{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9fc5ff;background:rgba(255,255,255,.04)}
+.nw-comparison-card td:first-child{font-weight:700;color:#fff}
+.nw-comparison-card td{color:#d9e3f3}
+.nw-comparison-card tr:last-child td{border-bottom:0}
+.nw-comparison-card .fa-check-circle{color:#58d49b}.nw-comparison-card .fa-exclamation-circle{color:#ffd36a}.nw-comparison-card .fa-times-circle{color:#ff8d8d}
+
+.nw-trust-section{background:#f5f8fd}
+.nw-trust-panel{padding:52px;border-radius:30px;background:#fff;border:1px solid rgba(19,45,86,.09);display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center;box-shadow:0 24px 70px rgba(15,48,92,.08)}
+.nw-trust-panel h2{margin:18px 0 16px;font-size:clamp(30px,4vw,48px);line-height:1.08;color:#10264b}
+.nw-trust-panel p{margin:0;color:#66758c;line-height:1.75}
+.nw-trust-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.nw-trust-facts article{padding:22px;border-radius:18px;background:#f7faff;border:1px solid rgba(23,105,224,.09)}
+.nw-trust-facts i{font-size:22px;color:#1769e0;margin-bottom:14px}.nw-trust-facts strong,.nw-trust-facts span{display:block}.nw-trust-facts strong{color:#10264b;margin-bottom:7px}.nw-trust-facts span{color:#66758c;font-size:14px;line-height:1.55}
+
+.nw-resources-section{background:#fff}
+.nw-resources-grid{margin-top:46px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.nw-resources-grid article{padding:30px;border-radius:24px;border:1px solid rgba(19,45,86,.1);background:linear-gradient(180deg,#fff,#f8fbff);box-shadow:0 17px 45px rgba(15,48,92,.06)}
+.nw-resources-grid i{font-size:24px;color:#1769e0}.nw-resources-grid article>span{display:block;margin:22px 0 10px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#1769e0}.nw-resources-grid h3{margin:0 0 12px;font-size:21px;color:#10264b}.nw-resources-grid p{margin:0 0 22px;color:#66758c;line-height:1.65}.nw-resources-grid a{font-weight:800;color:#1769e0}
+
+@media(max-width:991.98px){.nw-screen-grid,.nw-onboarding-steps,.nw-resources-grid{grid-template-columns:1fr}.nw-onboarding-steps:before{display:none}.nw-trust-panel{grid-template-columns:1fr}.nw-footer__links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:575.98px){.nw-real-screens,.nw-onboarding-section,.nw-comparison-section,.nw-trust-section,.nw-resources-section{padding:78px 0}.nw-screen-card,.nw-onboarding-steps article,.nw-resources-grid article{border-radius:20px}.nw-screen-card__image,.nw-screen-card--featured .nw-screen-card__image{padding:8px}.nw-screen-card figcaption{padding:18px}.nw-trust-panel{padding:28px 22px;border-radius:22px}.nw-trust-facts{grid-template-columns:1fr}.nw-comparison-card th,.nw-comparison-card td{padding:18px}}
