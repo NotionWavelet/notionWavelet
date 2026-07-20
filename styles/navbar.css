@@ -116,7 +116,7 @@
 }
 .search_button:focus
 {
-	outline: none !important;
+	outline: none ;
 }
 .search_button img
 {
