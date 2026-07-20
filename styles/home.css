@@ -355,3 +355,17 @@ main{padding-top:76px}.nw-product-section,.nw-features-section,.nw-ideal-section
 .nw-footer__logo>span:last-child{display:grid;gap:2px}
 .nw-footer__logo>span:last-child strong{font-size:.98rem;line-height:1.15}
 .nw-footer__logo>span:last-child small{font-size:.72rem;line-height:1.2;color:#8fa0b7}
+
+
+/* Protección de tamaño para iconos inline. Los atributos HTML evitan también
+   el tamaño SVG predeterminado mientras se carga o renueva la caché. */
+.nw-download-section svg,
+.nw-footer svg{max-width:24px;max-height:24px}
+.nw-download-form-icon svg{width:22px;height:22px}
+.nw-download-input-group>svg{width:16px;height:16px}
+.nw-zero-risk article>svg{width:17px;height:17px}
+.nw-download-benefits svg{width:14px;height:14px}
+.nw-download-trust svg{width:14px;height:14px}
+.nw-footer__platform>svg{width:20px;height:20px}
+.nw-footer__badges svg{width:15px;height:15px}
+.nw-footer__back svg{width:18px;height:18px}
