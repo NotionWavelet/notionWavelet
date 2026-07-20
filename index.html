@@ -1,799 +1,213 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<title>Notion Wavelet - VeriFactu para Talleres Pequeños</title>
-<meta charset="utf-8"/>
-<meta content="Software sencillo de gestión y facturación VeriFactu para talleres mecánicos de 1 a 3 empleados y un usuario por taller." name="description"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="index, follow, max-image-preview:large" name="robots"/>
-<meta content="Notion Wavelet" name="author"/>
-<meta content="#071633" name="theme-color"/>
-<meta content="light" name="color-scheme"/>
-<link href="https://notionwavelet.com/" rel="canonical"/>
-<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="site.webmanifest" rel="manifest"/>
-<meta content="website" property="og:type"/>
-<meta content="Notion Wavelet" property="og:site_name"/>
-<meta content="es_ES" property="og:locale"/>
-<meta content="Notion Wavelet, software de gestión para talleres mecánicos" property="og:image:alt"/>
-<meta content="Notion Wavelet | Software de Gestión para Talleres" name="twitter:title"/>
-<meta content="Gestiona clientes, vehículos, reparaciones, stock y facturación adaptada a VeriFactu desde un único programa." name="twitter:description"/>
-<meta content="https://notionwavelet.com/images/logo-social.jpg" name="twitter:image"/>
-<meta content="Notion Wavelet | Software de Gestión para Talleres" property="og:title"/>
-<meta content="Gestiona tu taller y adapta tu facturación a VeriFactu con planes mensuales sencillos y soporte especializado." property="og:description"/>
-<meta content="https://notionwavelet.com/images/logo-social.jpg" property="og:image"/>
-<meta content="https://notionwavelet.com/" property="og:url"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<script type="application/ld+json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notion Wavelet | Gestión de taller y facturación VeriFactu</title>
+  <meta name="description" content="Gestiona clientes, vehículos, órdenes, presupuestos, facturas, cobros y VeriFactu desde una única aplicación para Windows pensada para talleres pequeños.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#071735">
+  <link rel="canonical" href="https://notionwavelet.com/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Notion Wavelet">
+  <meta property="og:title" content="Notion Wavelet | Todo tu taller en una sola aplicación">
+  <meta property="og:description" content="Clientes, vehículos, órdenes, facturas, cobros y VeriFactu, conectados en un programa claro para talleres pequeños.">
+  <meta property="og:image" content="https://notionwavelet.com/images/logo-social.jpg">
+  <meta property="og:url" content="https://notionwavelet.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/bootstrap4/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/notionwavelet.css">
+  <link rel="stylesheet" href="styles/notionwavelet_responsive.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/professional-home.css?v=30">
+  <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Notion Wavelet",
-    "url": "https://notionwavelet.com/",
-    "applicationCategory": "BusinessApplication",
-    "applicationSubCategory": "Software de gestión para talleres mecánicos",
-    "operatingSystem": "Windows 10, Windows 11",
-    "inLanguage": "es",
-    "description": "Software de gestión para talleres mecánicos con facturación adaptada a VeriFactu, clientes, vehículos, órdenes de reparación, recambios, presupuestos y contabilidad.",
-    "image": "https://notionwavelet.com/images/logo-social.jpg",
-    "offers": {
-      "@type": "Offer",
-      "price": "29",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/OnlineOnly",
-      "url": "https://notionwavelet.com/#pricing-section"
-    }
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Notion Wavelet",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Windows",
+    "description":"Aplicación de gestión para talleres con clientes, vehículos, órdenes, facturación, cobros y VeriFactu.",
+    "offers":{"@type":"Offer","price":"29","priceCurrency":"EUR"}
   }
   </script>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"¿Qué incluye la prueba gratuita?","acceptedAnswer":{"@type":"Answer","text":"Incluye 14 días para conocer el Plan Taller Esencial y probar clientes, vehículos, presupuestos, órdenes y facturación. No se solicita tarjeta para empezar."}},
-      {"@type":"Question","name":"¿Puedo cancelar en cualquier momento?","acceptedAnswer":{"@type":"Answer","text":"Sí. La facturación es mensual, no existe permanencia y puedes solicitar la cancelación sin penalización."}},
-      {"@type":"Question","name":"¿Cuántos usuarios puedo añadir?","acceptedAnswer":{"@type":"Answer","text":"El Plan Taller Esencial incluye un usuario por taller y está orientado a talleres de 1 a 3 empleados."}},
-      {"@type":"Question","name":"¿Necesito instalar algo?","acceptedAnswer":{"@type":"Answer","text":"Sí. La aplicación se instala en un ordenador con Windows 10 u 11 y se ofrece ayuda para la puesta en marcha."}},
-      {"@type":"Question","name":"¿Hay soporte técnico?","acceptedAnswer":{"@type":"Answer","text":"Sí. El plan incluye soporte en español y acompañamiento inicial."}}
-    ]
-  }
-  </script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="styles/bootstrap4/bootstrap.min.css" rel="stylesheet"/>
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="plugins/OwlCarousel2-2.2.1/owl.carousel.css" rel="stylesheet"/>
-<link href="styles/notionwavelet.css" rel="stylesheet"/>
-<link href="styles/notionwavelet_responsive.css" rel="stylesheet"/>
-<link href="styles/footer.css" rel="stylesheet"/>
-<link href="styles/professional-home.css?v=24" rel="stylesheet"/>
-<noscript><style>.nw-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-<a class="nw-skip-link" href="#contenido-principal">Saltar al contenido principal</a>
-<div class="super_container">
+<a class="nw-skip-link" href="#contenido">Saltar al contenido</a>
 <header class="header"><div id="navbar_container"></div></header>
-<main id="inicio" tabindex="-1">
-<span aria-hidden="true" class="nw-anchor-target" id="contenido-principal"></span>
 
+<main id="contenido">
+  <section id="inicio" class="v3-hero">
+    <div class="v3-orb v3-orb--one"></div><div class="v3-orb v3-orb--two"></div>
+    <div class="v3-shell v3-hero__grid">
+      <div class="v3-hero__copy">
+        <div class="v3-eyebrow"><span></span> Software para talleres pequeños</div>
+        <h1>Todo tu taller,<br><em>en una sola aplicación.</em></h1>
+        <p>Conecta clientes, vehículos, órdenes de reparación, presupuestos, facturas y cobros. Trabaja con más orden y factura con VeriFactu desde el mismo programa.</p>
+        <div class="v3-actions">
+          <a href="#prueba" class="v3-btn v3-btn--primary">Probar gratis 14 días <i class="fa fa-arrow-right"></i></a>
+          <a href="#producto" class="v3-btn v3-btn--ghost"><i class="fa fa-play-circle"></i> Ver cómo funciona</a>
+        </div>
+        <div class="v3-proof">
+          <span><i class="fa fa-check"></i> Sin permanencia</span>
+          <span><i class="fa fa-check"></i> Datos en tu equipo</span>
+          <span><i class="fa fa-check"></i> Soporte en español</span>
+        </div>
+      </div>
 
+      <div class="v3-product-window" aria-label="Vista del programa Notion Wavelet">
+        <div class="v3-windowbar"><div><i></i><i></i><i></i></div><strong>Notion Wavelet</strong><span>— □ ×</span></div>
+        <div class="v3-app">
+          <aside class="v3-app__sidebar">
+            <div class="v3-app__logo"><img src="images/logo-wavelet.svg" alt=""><b>NW</b></div>
+            <a class="active"><i class="fa fa-wrench"></i><span>Taller</span></a>
+            <a><i class="fa fa-users"></i><span>Clientes</span></a>
+            <a><i class="fa fa-car"></i><span>Vehículos</span></a>
+            <a><i class="fa fa-file-text-o"></i><span>Facturas</span></a>
+            <a><i class="fa fa-line-chart"></i><span>Cuentas</span></a>
+          </aside>
+          <div class="v3-app__main">
+            <div class="v3-app__heading"><div><small>ORDEN DE REPARACIÓN</small><h3>Taller</h3></div><button>+ Nueva orden</button></div>
+            <div class="v3-app__stats">
+              <div><small>Órdenes abiertas</small><strong>12</strong><span>3 para hoy</span></div>
+              <div><small>Facturación del mes</small><strong>8.420 €</strong><span>+12,4%</span></div>
+              <div><small>Pendiente de cobro</small><strong>1.260 €</strong><span>4 facturas</span></div>
+            </div>
+            <div class="v3-app__panel">
+              <div class="v3-app__panelhead"><b>Últimas órdenes</b><span>Ver todas</span></div>
+              <div class="v3-table-row v3-table-row--head"><span>Orden</span><span>Vehículo</span><span>Cliente</span><span>Estado</span></div>
+              <div class="v3-table-row"><span>#0248</span><span>Seat León</span><span>David Pérez</span><span><b class="v3-status v3-status--blue">En taller</b></span></div>
+              <div class="v3-table-row"><span>#0247</span><span>Ford Focus</span><span>María López</span><span><b class="v3-status v3-status--green">Finalizada</b></span></div>
+              <div class="v3-table-row"><span>#0246</span><span>VW Golf</span><span>Ángel Ruiz</span><span><b class="v3-status v3-status--amber">Presupuesto</b></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="v3-floating-card v3-floating-card--vf"><i class="fa fa-qrcode"></i><div><b>VeriFactu</b><small>Factura registrada correctamente</small></div><span>✓</span></div>
+        <div class="v3-floating-card v3-floating-card--backup"><i class="fa fa-cloud-upload"></i><div><b>Copia automática</b><small>Tus datos están protegidos</small></div></div>
+      </div>
+    </div>
+  </section>
 
+  <section class="v3-trustbar">
+    <div class="v3-shell v3-trustbar__grid">
+      <div><i class="fa fa-windows"></i><span><b>Aplicación Windows</b><small>Instalada en tu taller</small></span></div>
+      <div><i class="fa fa-database"></i><span><b>Datos en local</b><small>Sin depender de la nube</small></span></div>
+      <div><i class="fa fa-refresh"></i><span><b>Copias automáticas</b><small>Protección al cerrar</small></span></div>
+      <div><i class="fa fa-check-circle"></i><span><b>VeriFactu integrado</b><small>QR, hash y trazabilidad</small></span></div>
+    </div>
+  </section>
 
+  <section id="producto" class="v3-section v3-workflow">
+    <div class="v3-shell">
+      <div class="v3-heading v3-heading--center"><span>UN FLUJO DE TRABAJO CLARO</span><h2>Del vehículo al cobro, sin perder información</h2><p>Cada dato queda conectado. Abres una orden, añades trabajos y materiales, generas documentos, facturas y registras el cobro sin repetir información.</p></div>
+      <div class="v3-flow">
+        <article><i class="fa fa-user"></i><b>Cliente</b><small>Datos y contacto</small></article><em>→</em>
+        <article><i class="fa fa-car"></i><b>Vehículo</b><small>Ficha e historial</small></article><em>→</em>
+        <article><i class="fa fa-wrench"></i><b>Orden</b><small>Trabajos y materiales</small></article><em>→</em>
+        <article><i class="fa fa-file-text-o"></i><b>Presupuesto</b><small>Documento profesional</small></article><em>→</em>
+        <article><i class="fa fa-eur"></i><b>Factura</b><small>Con VeriFactu</small></article><em>→</em>
+        <article><i class="fa fa-check-circle"></i><b>Cobro</b><small>Total o parcial</small></article>
+      </div>
+    </div>
+  </section>
 
+  <section id="funciones" class="v3-section v3-features">
+    <div class="v3-shell">
+      <div class="v3-heading"><span>TODO LO QUE NECESITAS</span><h2>La gestión diaria del taller, bien organizada</h2><p>Sin módulos innecesarios ni procesos complicados. Las funciones que realmente utilizas, reunidas en un único programa.</p></div>
+      <div class="v3-feature-grid">
+        <article class="v3-feature v3-feature--wide"><div class="v3-feature__icon"><i class="fa fa-wrench"></i></div><div><h3>Órdenes de reparación completas</h3><p>Gestiona cliente, vehículo, trabajos, operaciones, materiales, observaciones y documentos desde la misma pantalla.</p><ul><li>Presupuestos, resguardos y albaranes</li><li>Órdenes facturadas protegidas</li><li>Historial del vehículo</li></ul></div></article>
+        <article class="v3-feature"><div class="v3-feature__icon"><i class="fa fa-users"></i></div><h3>Clientes y vehículos</h3><p>Fichas relacionadas, búsqueda rápida, control de duplicados e histórico de reparaciones.</p></article>
+        <article class="v3-feature"><div class="v3-feature__icon"><i class="fa fa-file-text-o"></i></div><h3>Facturación y cobros</h3><p>Emite desde la orden, registra cobros totales o parciales y consulta facturas pendientes.</p></article>
+        <article class="v3-feature"><div class="v3-feature__icon"><i class="fa fa-cubes"></i></div><h3>Operaciones y materiales</h3><p>Crea tu catálogo de trabajos habituales, recambios, precios, unidades y observaciones.</p></article>
+        <article class="v3-feature"><div class="v3-feature__icon"><i class="fa fa-line-chart"></i></div><h3>Ingresos y gastos</h3><p>Consulta resúmenes, gráficos, gastos fijos y la evolución económica del taller.</p></article>
+        <article class="v3-feature"><div class="v3-feature__icon"><i class="fa fa-file-pdf-o"></i></div><h3>PDF e impresión</h3><p>Previsualiza, imprime y guarda presupuestos, albaranes, resguardos y facturas.</p></article>
+        <article class="v3-feature"><div class="v3-feature__icon"><i class="fa fa-upload"></i></div><h3>Importación de datos</h3><p>Importa clientes, vehículos, órdenes, facturas y catálogos desde CSV.</p></article>
+      </div>
+    </div>
+  </section>
 
+  <section id="verifactu" class="v3-verifactu">
+    <div class="v3-shell v3-vf-grid">
+      <div class="v3-vf-copy">
+        <span class="v3-vf-label"><i class="fa fa-check-circle"></i> VERIFACTU INTEGRADO</span>
+        <h2>Factura cumpliendo con VeriFactu, sin salir del programa</h2>
+        <p>Notion Wavelet incorpora el proceso de facturación VeriFactu dentro del flujo habitual del taller. Emite la factura desde la orden y el programa se encarga de la trazabilidad.</p>
+        <div class="v3-vf-list">
+          <div><i class="fa fa-qrcode"></i><span><b>Código QR en factura</b><small>Incluido automáticamente en el documento.</small></span></div>
+          <div><i class="fa fa-link"></i><span><b>Hash y encadenamiento</b><small>Cada registro queda vinculado al anterior.</small></span></div>
+          <div><i class="fa fa-paper-plane"></i><span><b>Registro VeriFactu</b><small>Gestión del estado y trazabilidad del envío.</small></span></div>
+          <div><i class="fa fa-archive"></i><span><b>Archivo legal</b><small>Exportación de registros y auditoría.</small></span></div>
+        </div>
+        <a class="v3-btn v3-btn--light" href="#prueba">Probar facturación VeriFactu <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="v3-invoice">
+        <div class="v3-invoice__top"><div><img src="images/logo-wavelet.svg" alt=""><b>TALLER MOTOR</b></div><span>FACTURA</span></div>
+        <div class="v3-invoice__meta"><div><small>Factura</small><b>F-2026-0048</b></div><div><small>Fecha</small><b>20/07/2026</b></div></div>
+        <div class="v3-invoice__client"><small>CLIENTE</small><b>María López García</b><span>Seat León · 1234 ABC</span></div>
+        <div class="v3-invoice__lines"><div><b>Descripción</b><b>Importe</b></div><div><span>Revisión y cambio de aceite</span><span>165,00 €</span></div><div><span>Filtro de aceite</span><span>18,50 €</span></div></div>
+        <div class="v3-invoice__total"><span>Total</span><b>222,04 €</b></div>
+        <div class="v3-invoice__vf"><div class="v3-qr"><i class="fa fa-qrcode"></i></div><div><b>Factura VeriFactu</b><small>Registro encadenado · Hash verificado</small><span><i class="fa fa-check"></i> Registro correcto</span></div></div>
+      </div>
+    </div>
+  </section>
 
+  <section class="v3-section v3-local">
+    <div class="v3-shell v3-local__grid">
+      <div class="v3-local__visual"><div class="v3-security-ring"><i class="fa fa-shield"></i><span>SQLite local</span></div><div class="v3-mini-card v3-mini-card--one"><i class="fa fa-database"></i><b>Tus datos</b><small>En el equipo del taller</small></div><div class="v3-mini-card v3-mini-card--two"><i class="fa fa-history"></i><b>Copia automática</b><small>Al cerrar la aplicación</small></div></div>
+      <div class="v3-local__copy"><span class="v3-kicker">CONTROL Y TRANQUILIDAD</span><h2>Tus datos siguen estando en tu taller</h2><p>Notion Wavelet funciona en Windows con una base de datos local. Puedes trabajar sin depender de una conexión permanente y conservar el control de la información de tu negocio.</p><ul><li><i class="fa fa-check"></i> Funciona sin internet para la gestión diaria</li><li><i class="fa fa-check"></i> Copias automáticas de seguridad</li><li><i class="fa fa-check"></i> Restauración desde una copia validada</li><li><i class="fa fa-check"></i> Importación de datos existentes</li></ul></div>
+    </div>
+  </section>
 
+  <section id="precio" class="v3-section v3-pricing">
+    <div class="v3-shell">
+      <div class="v3-heading v3-heading--center"><span>UN PLAN SENCILLO</span><h2>Todo incluido. Sin letra pequeña.</h2><p>Una cuota clara para un taller pequeño. Sin módulos extra, permanencia ni precios difíciles de entender.</p></div>
+      <div class="v3-price-card">
+        <div class="v3-price-card__intro"><span>PLAN TALLER</span><h3>Todo lo que necesitas para gestionar y facturar</h3><p>Un usuario por taller. Ideal para autónomos y equipos de 1 a 3 empleados.</p></div>
+        <div class="v3-price-card__features"><div><i class="fa fa-check"></i> Clientes y vehículos</div><div><i class="fa fa-check"></i> Órdenes y presupuestos</div><div><i class="fa fa-check"></i> Facturas y cobros</div><div><i class="fa fa-check"></i> VeriFactu integrado</div><div><i class="fa fa-check"></i> Copias automáticas</div><div><i class="fa fa-check"></i> Actualizaciones y soporte</div></div>
+        <div class="v3-price-card__price"><div><strong>29 €</strong><span>/mes + IVA</span></div><small>Sin permanencia</small><a class="v3-btn v3-btn--primary" href="#prueba">Empezar prueba gratuita <i class="fa fa-arrow-right"></i></a><em>No necesitas tarjeta</em></div>
+      </div>
+    </div>
+  </section>
 
+  <section id="faq" class="v3-section v3-faq">
+    <div class="v3-shell v3-faq__grid">
+      <div class="v3-faq__intro"><span class="v3-kicker">PREGUNTAS FRECUENTES</span><h2>Todo claro antes de empezar</h2><p>Las dudas más habituales sobre instalación, datos, VeriFactu y funcionamiento.</p><a href="contact.html">¿Tienes otra pregunta? Escríbenos →</a></div>
+      <div class="v3-accordion">
+        <details open><summary>¿Funciona sin internet?<i class="fa fa-plus"></i></summary><p>Sí. La gestión diaria funciona en local. Solo necesitas conexión para servicios externos como correo o comunicaciones con VeriFactu.</p></details>
+        <details><summary>¿Dónde se guardan los datos?<i class="fa fa-plus"></i></summary><p>En una base de datos local del equipo Windows del taller. La aplicación crea copias automáticas para proteger la información.</p></details>
+        <details><summary>¿Qué incluye VeriFactu?<i class="fa fa-plus"></i></summary><p>Generación de QR, hash y encadenamiento de registros, estados de envío, archivo legal, trazabilidad y gestión de anulaciones.</p></details>
+        <details><summary>¿Puedo importar mis clientes y vehículos?<i class="fa fa-plus"></i></summary><p>Sí. Puedes importar clientes, vehículos, órdenes, facturas y catálogos desde archivos CSV.</p></details>
+        <details><summary>¿Necesito saber de informática?<i class="fa fa-plus"></i></summary><p>No. Está pensado para realizar el trabajo habitual del taller con un flujo claro y con acompañamiento durante la puesta en marcha.</p></details>
+        <details><summary>¿Hay permanencia?<i class="fa fa-plus"></i></summary><p>No. El plan es mensual y puedes cancelarlo sin penalización.</p></details>
+      </div>
+    </div>
+  </section>
 
+  <section id="prueba" class="v3-cta">
+    <div class="v3-shell v3-cta__inner"><div><span>14 DÍAS GRATIS</span><h2>Empieza a gestionar tu taller con más orden</h2><p>Prueba clientes, vehículos, órdenes, facturación, cobros y VeriFactu sin compromiso.</p></div><div><a class="v3-btn v3-btn--light" href="contact.html">Solicitar prueba gratuita <i class="fa fa-arrow-right"></i></a><small>Sin tarjeta · Sin permanencia · Ayuda inicial incluida</small></div></div>
+  </section>
+</main>
 
-
-
-
-
-
-
-
-<section class="nw-hero">
-<div class="nw-shell nw-hero__grid">
-<div class="nw-hero__copy">
-<span class="nw-kicker"><i class="fa fa-shield"></i> Facturación preparada para VeriFactu</span>
-<h1>Gestiona tu taller y factura con <span>VeriFactu</span> sin complicarte</h1>
-<p class="nw-hero__lead">Un programa claro para talleres pequeños: clientes, vehículos, órdenes, presupuestos y facturas en un único flujo de trabajo.</p>
-<div class="nw-hero__actions">
-<a class="nw-btn nw-btn--primary" href="#download-section"><i class="fa fa-play-circle"></i> Probar gratis 14 días <span>→</span></a>
-<a class="nw-btn nw-btn--secondary" href="#product-section"><i class="fa fa-desktop"></i> Ver cómo funciona</a>
-</div>
-<div class="nw-trust"><span>Sin tarjeta</span><span>29 €/mes + IVA</span><span>Sin permanencia</span><span>Soporte en español</span></div>
-</div>
-<div aria-label="Vista conceptual de Notion Wavelet" class="nw-hero__visual">
-<div class="nw-laptop">
-<div class="nw-laptop__camera"></div>
-<div class="nw-laptop__screen">
-<div class="nw-app-topbar">
-<div class="nw-app-mark"><img alt="" aria-hidden="true" src="images/logo-wavelet.svg?v=3"/></div>
-<nav><span class="active">Taller</span><span>Clientes</span><span>Informes</span><span>Cuentas</span></nav>
-<div class="nw-app-user">NW</div>
-</div>
-<div class="nw-app-tabs"><span class="active">Taller</span><span>Operaciones</span><span>Materiales</span><span>Marcas</span></div>
-<div class="nw-app-body">
-<div class="nw-app-actions"><button><i class="fa fa-file-text-o"></i> Presupuesto</button><button><i class="fa fa-truck"></i> Albarán</button><button><i class="fa fa-file"></i> Facturar</button></div>
-<div class="nw-app-form">
-<div class="nw-field nw-field--short"><small>Orden</small><span></span></div>
-<div class="nw-field"><small>Vehículo</small><span></span></div>
-<div class="nw-field"><small>Cliente</small><span></span></div>
-<aside><small>Km</small><span></span><small>Fecha</small><span></span></aside>
-</div>
-<div class="nw-work-tabs"><span class="active"><i class="fa fa-wrench"></i> Orden de reparación</span><span>Presupuesto</span><span>Trabajos</span><span>Histórico</span></div>
-<div class="nw-app-table">
-<div><strong>Referencia</strong><strong>Descripción</strong></div>
-<div><span>Buscar referencia...</span><span>Descripción del artículo o trabajo...</span></div>
-<div class="nw-table-empty"><i class="fa fa-check-circle-o"></i><b>Tu taller, organizado</b><small>Órdenes, materiales y facturación en un solo lugar</small></div>
-</div>
-</div>
-</div>
-<div class="nw-laptop__base"><span></span></div>
-</div>
-<div class="nw-float nw-float--one"><i class="fa fa-file-text-o"></i> Facturación en segundos</div>
-<div class="nw-float nw-float--two"><i class="fa fa-check"></i> Todo bajo control</div>
-</div>
-</div>
-</section><section aria-label="Ventajas principales" class="nw-proof-strip">
-<div class="nw-shell nw-proof-strip__grid">
-<span><i class="fa fa-check-circle"></i> Preparado para VeriFactu</span>
-<span><i class="fa fa-users"></i> Talleres de 1 a 3 empleados</span>
-<span><i class="fa fa-refresh"></i> Actualizaciones incluidas</span>
-<span><i class="fa fa-windows"></i> Compatible con Windows</span>
-</div>
-</section><section aria-label="Propuesta de valor" class="nw-positioning"><div class="nw-shell nw-positioning__grid"><div><span class="nw-section-kicker">Menos administración. Más taller.</span><h2>Todo el trabajo conectado, de la orden a la factura</h2></div><p>Evita duplicar datos y saltar entre programas. Cada cliente, vehículo, reparación y documento queda relacionado para que encuentres la información cuando la necesitas.</p></div></section><section class="nw-verifactu-section" id="benefits-section">
-<div class="nw-shell">
-<div class="nw-verifactu-panel">
-<div class="nw-verifactu-copy">
-<span class="nw-verifactu-eyebrow"><i class="fa fa-shield"></i> VERIFACTU</span>
-<h2>VeriFactu integrado en la gestión diaria de tu taller</h2>
-<p>Crea la orden, prepara el presupuesto y emite la factura desde el mismo programa. Notion Wavelet mantiene el proceso organizado y preparado para los requisitos de VeriFactu.</p>
-<div class="nw-verifactu-checks">
-<span><i class="fa fa-check"></i> Registros de facturación trazables</span>
-<span><i class="fa fa-check"></i> Actualizaciones legales incluidas</span>
-<span><i class="fa fa-check"></i> Sin configuraciones complicadas</span>
-<span><i class="fa fa-check"></i> Soporte para la puesta en marcha</span>
-</div>
-<div class="nw-verifactu-actions">
-<a class="nw-btn nw-btn--light" href="#download-section">Solicitar demostración <span>→</span></a>
-<small><i class="fa fa-check-circle"></i> Incluido en el plan de 29 €/mes</small>
-</div>
-</div>
-<div aria-label="Facturación preparada para VeriFactu" class="nw-verifactu-visual">
-<div class="nw-verifactu-glow"></div>
-<div class="nw-verifactu-window">
-<div class="nw-verifactu-window__bar">
-<span><i class="fa fa-file-text-o"></i> Factura</span>
-<strong><i class="fa fa-check-circle"></i> Registro correcto</strong>
-</div>
-<div class="nw-verifactu-window__body">
-<div class="nw-vf-row"><span>N.º factura</span><strong>F-2026-00128</strong></div>
-<div class="nw-vf-row"><span>Estado</span><strong class="nw-vf-ok">Preparada</strong></div>
-<div class="nw-vf-code">
-<i class="fa fa-qrcode"></i>
-<div><small>Registro de facturación</small><strong>Íntegro y trazable</strong></div>
-</div>
-<div class="nw-vf-chain">
-<span class="is-done"><i class="fa fa-check"></i></span><b></b>
-<span class="is-done"><i class="fa fa-check"></i></span><b></b>
-<span class="is-done"><i class="fa fa-check"></i></span>
-</div>
-<div class="nw-vf-statuses"><span>Factura creada</span><span>Registro protegido</span><span>Lista para emitir</span></div>
-</div>
-</div>
-<div class="nw-verifactu-seal"><i class="fa fa-shield"></i><span><strong>Siempre al día</strong><small>Actualizaciones incluidas</small></span></div>
-</div>
-</div>
-</div>
-</section><section class="nw-product-section" id="product-section">
-<div class="nw-shell">
-<div class="nw-product-heading">
-<span class="nw-section-kicker">El producto</span>
-<h2>Así se trabaja con Notion Wavelet</h2>
-<p>Un recorrido visual por las tareas principales, desde la recepción del vehículo hasta la factura.</p>
-</div>
-<div class="nw-product-list">
-<article class="nw-product-row">
-<div class="nw-product-copy">
-<span class="nw-product-number">01</span>
-<span class="nw-product-label"><i class="fa fa-users"></i> Clientes</span>
-<h3>Toda la información del cliente en segundos</h3>
-<p>Consulta datos de contacto, observaciones y el historial relacionado con cada cliente sin saltar entre distintas herramientas.</p>
-<ul>
-<li><i class="fa fa-check"></i> Búsqueda rápida y listado organizado</li>
-<li><i class="fa fa-check"></i> Datos comerciales y contactos provisionales</li>
-<li><i class="fa fa-check"></i> Información siempre accesible</li>
-</ul>
-</div>
-<div class="nw-product-visual nw-product-visual--wide">
-<div class="nw-window">
-<div class="nw-window__bar">
-<div class="nw-window__dots"><span></span><span></span><span></span></div>
-<span class="nw-window__title">Clientes · Notion Wavelet</span>
-<span class="nw-window__status"><i class="fa fa-circle"></i> Activo</span>
-</div>
-<div class="nw-window__image">
-<img alt="Pantalla de gestión de clientes de Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-clientes.png" width="1365"/>
-</div>
-</div>
-</div>
-</article>
-<article class="nw-product-row nw-product-row--reverse">
-<div class="nw-product-copy">
-<span class="nw-product-number">02</span>
-<span class="nw-product-label"><i class="fa fa-wrench"></i> Órdenes de trabajo</span>
-<h3>El centro de todo el trabajo del taller</h3>
-<p>Desde una única orden puedes identificar el vehículo y el cliente, registrar trabajos, consultar el histórico y preparar la facturación.</p>
-<ul>
-<li><i class="fa fa-check"></i> Reparaciones y materiales centralizados</li>
-<li><i class="fa fa-check"></i> Presupuesto, albarán y factura conectados</li>
-<li><i class="fa fa-check"></i> Resumen económico en tiempo real</li>
-</ul>
-</div>
-<div class="nw-product-visual nw-product-visual--wide">
-<div class="nw-window">
-<div class="nw-window__bar">
-<div class="nw-window__dots"><span></span><span></span><span></span></div>
-<span class="nw-window__title">Orden de reparación</span>
-<span class="nw-window__status"><i class="fa fa-circle"></i> Guardada</span>
-</div>
-<div class="nw-window__image">
-<img alt="Orden de reparación y resumen de factura en Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-orden-trabajo.png" width="1365"/>
-</div>
-</div>
-</div>
-</article>
-<article class="nw-product-row">
-<div class="nw-product-copy">
-<span class="nw-product-number">03</span>
-<span class="nw-product-label"><i class="fa fa-file-text-o"></i> Facturación</span>
-<h3>Factura con una operativa preparada para VeriFactu</h3>
-<p>Revisa los datos, valida el resumen económico y genera facturas con un registro ordenado, seguro y preparado para su comunicación tributaria.</p>
-<ul>
-<li><i class="fa fa-check"></i> Registro y trazabilidad de facturas</li>
-<li><i class="fa fa-check"></i> Código QR y datos fiscales preparados</li>
-<li><i class="fa fa-check"></i> Datos fiscales y forma de pago integrados</li>
-</ul>
-</div>
-<div class="nw-product-visual nw-product-visual--portrait">
-<div class="nw-window">
-<div class="nw-window__bar">
-<div class="nw-window__dots"><span></span><span></span><span></span></div>
-<span class="nw-window__title">Emitir factura</span>
-<span class="nw-window__status"><i class="fa fa-file-pdf-o"></i> PDF</span>
-</div>
-<div class="nw-window__image">
-<img alt="Pantalla para emitir facturas de Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-facturacion.png" width="1365"/>
-</div>
-</div>
-</div>
-</article>
-<article class="nw-product-row nw-product-row--reverse">
-<div class="nw-product-copy">
-<span class="nw-product-number">04</span>
-<span class="nw-product-label"><i class="fa fa-bar-chart"></i> Contabilidad</span>
-<h3>Control económico sin hojas de cálculo</h3>
-<p>Consulta ingresos, gastos y documentos relacionados con el negocio desde una vista clara y filtrada por ejercicio.</p>
-<ul>
-<li><i class="fa fa-check"></i> Ingresos creados desde las facturas</li>
-<li><i class="fa fa-check"></i> Gastos PDF y gastos fijos</li>
-<li><i class="fa fa-check"></i> Informes del negocio</li>
-</ul>
-</div>
-<div class="nw-product-visual nw-product-visual--wide">
-<div class="nw-window">
-<div class="nw-window__bar">
-<div class="nw-window__dots"><span></span><span></span><span></span></div>
-<span class="nw-window__title">Contabilidad</span>
-<span class="nw-window__status"><i class="fa fa-calendar"></i> 2026</span>
-</div>
-<div class="nw-window__image">
-<img alt="Módulo de contabilidad e ingresos de Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-contabilidad.png" width="1365"/>
-</div>
-</div>
-</div>
-</article>
-<article class="nw-product-row">
-<div class="nw-product-copy">
-<span class="nw-product-number">05</span>
-<span class="nw-product-label"><i class="fa fa-car"></i> Vehículos</span>
-<h3>La ficha técnica y comercial, siempre organizada</h3>
-<p>Guarda matrícula, bastidor, motor, fechas, propietario y contactos en una ficha clara que facilita el trabajo diario.</p>
-<ul>
-<li><i class="fa fa-check"></i> Datos principales y complementarios</li>
-<li><i class="fa fa-check"></i> Información del propietario</li>
-<li><i class="fa fa-check"></i> Observaciones del vehículo</li>
-</ul>
-</div>
-<div class="nw-product-visual nw-product-visual--compact">
-<div class="nw-window">
-<div class="nw-window__bar">
-<div class="nw-window__dots"><span></span><span></span><span></span></div>
-<span class="nw-window__title">Datos del vehículo</span>
-<span class="nw-window__status"><i class="fa fa-check-circle"></i> Completo</span>
-</div>
-<div class="nw-window__image">
-<img alt="Ficha de datos del vehículo en Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-datos-vehiculo.png" width="1365"/>
-</div>
-</div>
-</div>
-</article>
-<article class="nw-product-row nw-product-row--reverse">
-<div class="nw-product-copy">
-<span class="nw-product-number">06</span>
-<span class="nw-product-label"><i class="fa fa-sliders"></i> Configuración</span>
-<h3>Adapta el programa a la forma de trabajar de tu negocio</h3>
-<p>Configura métodos de pago y otros parámetros habituales para que el programa refleje el funcionamiento real del taller.</p>
-<ul>
-<li><i class="fa fa-check"></i> Métodos de pago personalizados</li>
-<li><i class="fa fa-check"></i> Valor predeterminado configurable</li>
-<li><i class="fa fa-check"></i> Gestión sencilla y centralizada</li>
-</ul>
-</div>
-<div class="nw-product-visual nw-product-visual--wide">
-<div class="nw-window">
-<div class="nw-window__bar">
-<div class="nw-window__dots"><span></span><span></span><span></span></div>
-<span class="nw-window__title">Métodos de pago</span>
-<span class="nw-window__status"><i class="fa fa-cog"></i> Configuración</span>
-</div>
-<div class="nw-window__image">
-<img alt="Configuración de métodos de pago en Notion Wavelet" decoding="async" height="768" loading="lazy" src="images/notionwavelet-metodos-pago.png" width="1365"/>
-</div>
-</div>
-</div>
-</article>
-</div>
-<div class="nw-product-final">
-<div>
-<span>Todo conectado</span>
-<strong>Del cliente a la factura, sin duplicar el trabajo.</strong>
-</div>
-<a class="nw-btn nw-btn--primary" href="#download-section">Probar Notion Wavelet <span>→</span></a>
-</div>
-</div>
-</section><section class="nw-features-section" id="features-section">
-<div class="nw-shell">
-<div class="nw-features-heading">
-<span class="nw-section-kicker">Todo incluido</span>
-<h2>Lo necesario para gestionar un taller pequeño</h2>
-<p>Gestiona clientes, vehículos, reparaciones, facturas y recambios desde una única aplicación sencilla y organizada.</p>
-</div>
-<div class="nw-features-grid">
-<article class="nw-feature-card">
-<span class="nw-feature-card__icon"><i class="fa fa-users"></i></span>
-<h3>Clientes y vehículos</h3>
-<p>Consulta los datos de cada cliente y el historial completo de sus vehículos en cuestión de segundos.</p>
-<span class="nw-feature-card__detail"><i class="fa fa-check"></i> Historial siempre disponible</span>
-</article>
-<article class="nw-feature-card">
-<span class="nw-feature-card__icon"><i class="fa fa-wrench"></i></span>
-<h3>Órdenes de trabajo</h3>
-<p>Organiza cada reparación, controla su estado y guarda todas las operaciones realizadas en el vehículo.</p>
-<span class="nw-feature-card__detail"><i class="fa fa-check"></i> Seguimiento de reparaciones</span>
-</article>
-<article class="nw-feature-card">
-<span class="nw-feature-card__icon"><i class="fa fa-file-text-o"></i></span>
-<h3>Facturación VeriFactu</h3>
-<p>Crea presupuestos, albaranes y facturas con trazabilidad, numeración y registros preparados para VeriFactu.</p>
-<span class="nw-feature-card__detail"><i class="fa fa-check"></i> Facturas seguras y trazables</span>
-</article>
-<article class="nw-feature-card">
-<span class="nw-feature-card__icon"><i class="fa fa-cubes"></i></span>
-<h3>Stock y recambios</h3>
-<p>Controla las piezas disponibles, registra entradas y evita quedarte sin los recambios que más utilizas.</p>
-<span class="nw-feature-card__detail"><i class="fa fa-check"></i> Inventario bajo control</span>
-</article>
-<article class="nw-feature-card">
-<span class="nw-feature-card__icon"><i class="fa fa-bar-chart"></i></span>
-<h3>Informes del negocio</h3>
-<p>Consulta ingresos, trabajos realizados y facturas pendientes para conocer mejor el estado de tu taller.</p>
-<span class="nw-feature-card__detail"><i class="fa fa-check"></i> Decisiones con información</span>
-</article>
-<article class="nw-feature-card nw-feature-card--highlighted">
-<span class="nw-feature-card__icon"><i class="fa fa-shield"></i></span>
-<h3>Tus datos bajo control</h3>
-<p>Trabaja desde tu propio equipo y mantén la información de tu negocio bajo tu control.</p>
-<span class="nw-feature-card__detail"><i class="fa fa-check"></i> Compatible con Windows</span>
-</article>
-</div>
-</div>
-</section><section class="nw-ideal-section" id="ideal-section">
-<div class="nw-shell">
-<div class="nw-ideal-grid">
-<div class="nw-ideal-copy">
-<span class="nw-section-kicker">Hecho para tu tipo de taller</span>
-<h2>Una solución sencilla para quien lleva el día a día</h2>
-<p>No intentamos ser el programa con más módulos. Notion Wavelet está pensado para talleres independientes donde una sola persona gestiona recepción, reparaciones y facturación.</p>
-<div class="nw-ideal-tags">
-<span><i class="fa fa-check"></i> Talleres independientes</span>
-<span><i class="fa fa-check"></i> Autónomos y talleres familiares</span>
-<span><i class="fa fa-check"></i> Equipos de 1 a 3 empleados</span>
-<span><i class="fa fa-check"></i> Un usuario por taller</span>
-</div>
-</div>
-<div class="nw-compare-card">
-<div class="nw-compare-row nw-compare-row--head"><strong>Otros programas</strong><strong>Notion Wavelet</strong></div>
-<div class="nw-compare-row"><span>Muchos módulos y menús</span><span>Solo lo necesario</span></div>
-<div class="nw-compare-row"><span>Formación y configuración complejas</span><span>Empieza rápidamente</span></div>
-<div class="nw-compare-row"><span>Precio pensado para equipos grandes</span><span>Cuota para un taller pequeño</span></div>
-<div class="nw-compare-row"><span>Pagas por varios usuarios</span><span>Una licencia, un usuario</span></div>
-</div>
-</div>
-</div>
-</section><section class="nw-pricing-section nw-pricing-section--premium" id="pricing-section">
-<div class="nw-shell">
-<div class="nw-pricing-heading">
-<span class="nw-section-kicker">Precio</span>
-<h2>Un único plan. Todo incluido.</h2>
-<p class="nw-pricing-terms"><i class="fa fa-check-circle"></i> Sin permanencia <span>·</span> Cancela cuando quieras <span>·</span> Facturación mensual</p>
-</div>
-<article class="nw-plan-showcase">
-<div class="nw-plan-summary">
-<span class="nw-price-badge">Plan Taller Esencial</span>
-<h3>La gestión que necesitas, sin pagar por complejidad.</h3>
-<p>Para talleres independientes de 1 a 3 empleados, gestionados desde una única cuenta.</p>
-<div class="nw-price nw-price--light"><strong>29 €</strong><span>/mes + IVA</span></div>
-<p class="nw-price-plain"><i class="fa fa-lock"></i> El precio que ves es el precio del plan. Sin módulos obligatorios ni costes ocultos.</p>
-<a class="nw-btn nw-btn--light" href="#download-section">Solicitar demostración <span>→</span></a>
-<small><i class="fa fa-check-circle"></i> 14 días de prueba gratuita · sin tarjeta</small>
-</div>
-<div class="nw-plan-features">
-<div class="nw-plan-group"><span class="nw-plan-group__icon"><i class="fa fa-users"></i></span><div><h4>Gestión</h4><ul><li>1 usuario por taller</li><li>Clientes ilimitados</li><li>Vehículos ilimitados</li><li>Búsqueda por matrícula</li><li>Historial del vehículo</li><li>Registro de kilometraje</li></ul></div></div>
-<div class="nw-plan-group"><span class="nw-plan-group__icon"><i class="fa fa-wrench"></i></span><div><h4>Reparaciones</h4><ul><li>Órdenes de reparación</li><li>Estado de cada orden</li><li>Notas y trabajos realizados</li><li>Presupuestos</li><li>Conversión a factura</li><li>Historial de reparaciones</li></ul></div></div>
-<div class="nw-plan-group"><span class="nw-plan-group__icon"><i class="fa fa-file-text-o"></i></span><div><h4>Facturación</h4><ul><li>Facturación preparada para VeriFactu</li><li>Facturas en PDF</li><li>Numeración correlativa</li><li>Gestión de impuestos</li><li>Datos fiscales del taller</li><li>Presupuestos y albaranes</li></ul></div></div>
-<div class="nw-plan-group"><span class="nw-plan-group__icon"><i class="fa fa-cloud"></i></span><div><h4>Siempre incluido</h4><ul><li>Actualizaciones legales</li><li>Mejoras continuas</li><li>Copias de seguridad</li><li>Soporte técnico</li><li>Acceso desde cualquier ordenador</li><li>Sin módulos adicionales</li></ul></div></div>
-</div>
-</article>
-<p class="nw-pricing-footnote">Una única licencia para la persona que gestiona el taller. Los empleados pueden realizar su trabajo sin que tengas que pagar por usuarios que no necesitan entrar en el programa.</p>
-</div>
-</section><section aria-labelledby="onboarding-title" class="nw-onboarding-section" id="onboarding-section">
-<div class="nw-shell">
-<div class="nw-section-heading nw-section-heading--center nw-reveal">
-<span class="nw-section-kicker">Puesta en marcha</span>
-<h2 id="onboarding-title">Empieza a trabajar en cuatro pasos</h2>
-<p>Primero conoces la aplicación. Después configuramos únicamente lo necesario para tu taller.</p>
-</div>
-<div class="nw-onboarding-grid">
-<article class="nw-onboarding-card nw-reveal"><span>01</span><i class="fa fa-comments-o"></i><h3>Solicita la prueba</h3><p>Nos cuentas cómo trabajas y qué necesitas gestionar.</p></article>
-<article class="nw-onboarding-card nw-reveal"><span>02</span><i class="fa fa-desktop"></i><h3>Conoce el programa</h3><p>Pruebas clientes, vehículos, órdenes, presupuestos y facturación.</p></article>
-<article class="nw-onboarding-card nw-reveal"><span>03</span><i class="fa fa-sliders"></i><h3>Configura tu taller</h3><p>Añades los datos fiscales, el logotipo y la numeración de documentos.</p></article>
-<article class="nw-onboarding-card nw-reveal"><span>04</span><i class="fa fa-check-circle-o"></i><h3>Decide sin presión</h3><p>Continúas por 29 €/mes + IVA o finalizas la prueba sin penalización.</p></article>
-</div>
-</div>
-</section><section class="nw-faq-section" id="faq-section">
-<div class="nw-shell">
-<div class="nw-faq-heading nw-reveal">
-<span class="nw-section-kicker">Preguntas frecuentes</span>
-<h2>Todo lo que necesitas saber antes de empezar</h2>
-<p>Resolvemos las dudas más habituales sobre instalación, funcionamiento, datos y soporte.</p>
-</div>
-<div class="nw-faq-layout">
-<div class="nw-faq-list">
-<details class="nw-faq-item nw-reveal" open="">
-<summary><span>¿Qué incluye la prueba gratuita?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>Incluye 14 días para conocer el Plan Taller Esencial, crear clientes y vehículos, preparar presupuestos, gestionar órdenes de reparación y probar la facturación. No pedimos tarjeta para empezar.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿Puedo cancelar en cualquier momento?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>Sí. La facturación es mensual y no existe permanencia. Puedes solicitar la cancelación cuando quieras, sin penalizaciones.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿Cuántos usuarios puedo añadir?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>El Plan Taller Esencial incluye un usuario por taller. Está diseñado para negocios de 1 a 3 empleados donde una persona gestiona recepción, presupuestos, órdenes y facturación.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿Funciona en móvil o tablet?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>La aplicación de gestión principal está diseñada para ordenadores con Windows 10 y Windows 11. Actualmente el móvil o la tablet no sustituyen a la aplicación de escritorio.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿Mis datos están seguros?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>Aplicamos medidas de protección, copias de seguridad y control de acceso. Tus datos se utilizan únicamente para prestar el servicio y atender tus solicitudes, conforme a la política de privacidad.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿Puedo cambiar de plan?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>No necesitas elegir entre varios niveles: ofrecemos un único Plan Taller Esencial con todas las funciones anunciadas. Así evitas módulos, extras y comparaciones confusas.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿Necesito instalar algo?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>Sí, la aplicación se instala en tu ordenador Windows. Te ayudamos a comprobar los requisitos y a realizar la puesta en marcha.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿Qué pasa con mis datos si cancelo?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>Tus datos siguen siendo tuyos. Antes de cerrar el servicio te ayudaremos a conservar o exportar la información disponible según las opciones de la aplicación y las obligaciones legales aplicables.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿Hay soporte técnico?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>Sí. El plan incluye soporte en español y acompañamiento inicial para configurar el taller y resolver dudas de uso.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿En qué países está disponible?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>La versión actual está orientada principalmente a talleres en España, especialmente por su enfoque de facturación y adaptación a VeriFactu.</p></div>
-</details>
-<details class="nw-faq-item nw-reveal">
-<summary><span>¿Puedo importar presupuestos desde GT Estimate, Audatex o SErtec?</span><i aria-hidden="true" class="fa fa-plus"></i></summary>
-<div class="nw-faq-answer"><p>Esta importación automática no forma parte actualmente del Plan Taller Esencial. No anunciamos funciones que todavía no estén disponibles; puedes consultarnos tu flujo de trabajo y valoraremos alternativas.</p></div>
-</details>
-</div>
-<aside class="nw-faq-card nw-reveal">
-<span class="nw-faq-card__icon"><i class="fa fa-comments-o"></i></span>
-<span class="nw-faq-card__eyebrow">Respuesta clara, antes de pagar</span>
-<h3>Cuéntanos cómo trabaja tu taller</h3>
-<p>Revisamos contigo qué necesitas, qué incluye el plan y qué funciones no están disponibles. Sin promesas ambiguas.</p>
-<a class="nw-btn nw-btn--primary" href="#download-section">
-              Solicitar información <i class="fa fa-arrow-right"></i>
-</a>
-<small><i class="fa fa-check-circle"></i> Sin compromiso</small>
-</aside>
-</div>
-</div>
-</section><section class="nw-download-section" id="download-section">
-<div class="nw-shell">
-<div class="nw-download-panel">
-<div class="nw-download-copy">
-<span class="nw-download-kicker"><i class="fa fa-check-circle"></i> Empieza con VeriFactu</span>
-<h2>Prepara hoy la facturación de tu taller</h2>
-<p>Déjanos tus datos y te ayudaremos a activar una prueba gratuita de 14 días del Plan Taller Esencial.</p>
-<div class="nw-download-benefits">
-<span><i class="fa fa-check"></i> 14 días de prueba gratuita y sin compromiso</span>
-<span><i class="fa fa-check"></i> No necesitas tarjeta para probarlo</span>
-<span><i class="fa fa-check"></i> Plan completo por 29 €/mes + IVA</span>
-</div>
-<div aria-label="Condiciones de la prueba" class="nw-zero-risk">
-<article><i class="fa fa-credit-card"></i><div><strong>Sin tarjeta</strong><small>No pedimos datos de pago para la demostración.</small></div></article>
-<article><i class="fa fa-ban"></i><div><strong>Sin permanencia</strong><small>Podrás cancelar cuando quieras.</small></div></article>
-<article><i class="fa fa-eye"></i><div><strong>Decide después</strong><small>Primero conoces la aplicación; después eliges.</small></div></article>
-</div>
-</div>
-<div class="nw-download-form-card">
-<div class="nw-download-form-heading">
-<span class="nw-download-form-icon"><i class="fa fa-envelope-o"></i></span>
-<div>
-<strong>Solicita una prueba</strong>
-<span>Recibe acceso a la prueba gratuita de 14 días.</span>
-</div>
-</div>
-<form action="https://formspree.io/f/mojgddly" class="nw-download-form" id="trial-form" method="POST" novalidate="">
-<input name="_subject" type="hidden" value="Nueva solicitud VeriFactu de Notion Wavelet"/>
-<input name="_language" type="hidden" value="es"/>
-<input name="origen" type="hidden" value="Landing principal"/>
-<fieldset class="nw-request-type">
-<legend>
-<span>Elige cómo quieres empezar</span>
-<small>Puedes probar la aplicación sin facilitar datos de pago.</small>
-</legend>
-<label class="nw-request-option is-selected">
-<input checked="" name="tipo_solicitud" type="radio" value="Solicitar demostración"/>
-<span class="nw-request-option__card">
-<span class="nw-request-option__icon"><i aria-hidden="true" class="fa fa-play"></i></span>
-<span class="nw-request-option__copy">
-<strong>Probar primero</strong>
-<small>14 días gratis, sin tarjeta y sin compromiso.</small>
-</span>
-<span class="nw-request-option__check"><i aria-hidden="true" class="fa fa-check"></i></span>
-</span>
-</label>
-<label class="nw-request-option">
-<input name="tipo_solicitud" type="radio" value="Quiero contratar"/>
-<span class="nw-request-option__card">
-<span class="nw-request-option__icon"><i aria-hidden="true" class="fa fa-file-text-o"></i></span>
-<span class="nw-request-option__copy">
-<strong>Quiero contratar</strong>
-<small>Completa después los datos fiscales para preparar el alta.</small>
-</span>
-<span class="nw-request-option__check"><i aria-hidden="true" class="fa fa-check"></i></span>
-</span>
-</label>
-</fieldset>
-<div class="nw-form-grid">
-<div class="nw-form-field">
-<label for="trial-name">Nombre y apellidos</label>
-<div class="nw-download-input-group">
-<i aria-hidden="true" class="fa fa-user-o"></i>
-<input aria-describedby="trial-name-error" autocomplete="name" id="trial-name" maxlength="80" minlength="2" name="nombre" placeholder="Tu nombre" required="" type="text"/>
-</div>
-<small class="nw-field-error" id="trial-name-error"></small>
-</div>
-<div class="nw-form-field">
-<label for="trial-workshop">Nombre del taller</label>
-<div class="nw-download-input-group">
-<i aria-hidden="true" class="fa fa-wrench"></i>
-<input aria-describedby="trial-workshop-error" autocomplete="organization" id="trial-workshop" maxlength="100" minlength="2" name="taller" placeholder="Nombre de tu taller" required="" type="text"/>
-</div>
-<small class="nw-field-error" id="trial-workshop-error"></small>
-</div>
-<div class="nw-form-field">
-<label for="trial-email">Correo electrónico</label>
-<div class="nw-download-input-group">
-<i aria-hidden="true" class="fa fa-envelope-o"></i>
-<input aria-describedby="trial-email-error" autocomplete="email" id="trial-email" inputmode="email" maxlength="120" name="email" placeholder="nombre@tutaller.com" required="" type="email"/>
-</div>
-<small class="nw-field-error" id="trial-email-error"></small>
-</div>
-<div class="nw-form-field">
-<label for="trial-phone">Teléfono <span class="nw-optional">(opcional)</span></label>
-<div class="nw-download-input-group">
-<i aria-hidden="true" class="fa fa-phone"></i>
-<input aria-describedby="trial-phone-error" autocomplete="tel" id="trial-phone" inputmode="tel" maxlength="30" name="telefono" placeholder="600 000 000" type="tel"/>
-</div>
-<small class="nw-field-error" id="trial-phone-error"></small>
-</div>
-</div>
-<div class="nw-billing-fields" hidden="" id="billing-fields">
-<div class="nw-billing-heading">
-<span><i class="fa fa-file-text-o"></i></span>
-<div><strong>Datos de facturación</strong><small>Solo son necesarios si quieres contratar ahora.</small></div>
-</div>
-<div class="nw-form-grid">
-<div class="nw-form-field">
-<label for="billing-business-name">Razón social / titular</label>
-<div class="nw-download-input-group"><i class="fa fa-building-o"></i><input autocomplete="organization" id="billing-business-name" name="razon_social" placeholder="Nombre fiscal" type="text"/></div>
-</div>
-<div class="nw-form-field">
-<label for="billing-tax-id">NIF / CIF</label>
-<div class="nw-download-input-group"><i class="fa fa-id-card-o"></i><input id="billing-tax-id" maxlength="20" name="nif_cif" placeholder="12345678A" type="text"/></div>
-</div>
-<div class="nw-form-field nw-form-field--wide">
-<label for="billing-address">Dirección de facturación</label>
-<div class="nw-download-input-group"><i class="fa fa-map-marker"></i><input autocomplete="street-address" id="billing-address" name="direccion_facturacion" placeholder="Calle, número, local..." type="text"/></div>
-</div>
-<div class="nw-form-field">
-<label for="billing-postal">Código postal</label>
-<div class="nw-download-input-group"><i class="fa fa-map-pin"></i><input autocomplete="postal-code" id="billing-postal" maxlength="10" name="codigo_postal" placeholder="28001" type="text"/></div>
-</div>
-<div class="nw-form-field">
-<label for="billing-city">Localidad / provincia</label>
-<div class="nw-download-input-group"><i class="fa fa-map-o"></i><input autocomplete="address-level2" id="billing-city" name="localidad_provincia" placeholder="Madrid" type="text"/></div>
-</div>
-</div>
-<p class="nw-billing-note"><i class="fa fa-lock"></i> Estos datos se usarán únicamente para preparar el alta y la factura.</p>
-</div>
-<div aria-hidden="true" class="nw-form-honeypot">
-<label for="trial-company-web">No rellenar este campo</label>
-<input autocomplete="off" id="trial-company-web" name="_gotcha" tabindex="-1" type="text"/>
-</div>
-<label class="nw-consent" for="trial-consent">
-<input aria-describedby="trial-consent-error" id="trial-consent" name="privacidad_aceptada" required="" type="checkbox" value="Sí"/>
-<span>
-                  He leído y acepto la <a href="privacidad.html" rel="noopener" target="_blank">política de privacidad</a> y el tratamiento de mis datos para gestionar la solicitud.
-                </span>
-</label>
-<small class="nw-field-error nw-field-error--consent" id="trial-consent-error"></small>
-<div aria-live="polite" class="nw-form-status" id="trial-form-status" role="status"></div>
-<button id="trial-submit" type="submit">
-<span class="nw-submit-label">Solicitar prueba</span>
-<span aria-hidden="true" class="nw-submit-arrow">→</span>
-<span aria-hidden="true" class="nw-submit-spinner"></span>
-</button>
-</form>
-<p class="nw-download-privacy"><i class="fa fa-shield"></i> La prueba no requiere tarjeta. Los datos de facturación solo se solicitan si eliges contratar.</p>
-</div>
-</div>
-<div class="nw-download-trust">
-<span><i class="fa fa-lock"></i> Tus datos protegidos</span>
-<span><i class="fa fa-clock-o"></i> Respuesta rápida</span>
-<span><i class="fa fa-headphones"></i> Soporte especializado</span>
-</div>
-</div>
-</section></main>
-<div aria-hidden="true" class="nw-page-progress"><span id="nw-page-progress-bar"></span></div>
-<button aria-label="Volver al inicio" class="nw-back-to-top" id="nw-back-to-top" type="button">
-<i aria-hidden="true" class="fa fa-arrow-up"></i>
-</button>
-<footer class="nw-footer">
-<div class="nw-shell">
-<div class="nw-footer__top">
-<div class="nw-footer__brand">
-<a aria-label="Volver al inicio" class="nw-footer__logo" href="#inicio">
-<span class="nw-footer__logo-mark"><img alt="" aria-hidden="true" src="images/logo-wavelet.svg?v=3"/></span>
-<span>
-<strong>Notion Wavelet</strong>
-<small>Software para talleres</small>
-</span>
-</a>
-<p>Software sencillo para talleres de 1 a 3 empleados, con un usuario por taller y facturación preparada para VeriFactu.</p>
-<div class="nw-footer__platform">
-<i class="fa fa-windows"></i>
-<span>
-<strong>Aplicación de escritorio</strong>
-<small>Compatible con Windows 10 y 11</small>
-</span>
-</div>
-</div>
-<div class="nw-footer__links">
-<div class="nw-footer__column">
-<strong>Producto</strong>
-<a href="#dashboard-section">Panel de control</a>
-<a href="#features-section">Funciones</a>
-<a href="#product-section">Capturas</a>
-<a href="#pricing-section">Precio</a>
-<a href="#benefits-section">VeriFactu</a>
-</div>
-<div class="nw-footer__column">
-<strong>Recursos</strong>
-<a href="docs/index.html">Documentación</a>
-<a href="docs/primeros-pasos.html">Primeros pasos</a>
-<a href="requisitos.html">Requisitos técnicos</a>
-<a href="versiones.html">Versiones</a>
-<a href="#faq-section">Preguntas frecuentes</a>
-</div>
-<div class="nw-footer__column">
-<strong>Ayuda</strong>
-<a href="contact.html">Contacto</a>
-<a href="soporte.html">Soporte</a>
-<a href="#download-section">Solicitar prueba</a>
-<a href="privacidad.html">Privacidad</a>
-<a href="aviso-legal.html">Aviso legal</a>
-</div>
-</div>
-</div>
-<div class="nw-footer__bottom">
-<p>© <span id="nw-current-year">2026</span> Notion Wavelet. Todos los derechos reservados.</p>
-<div class="nw-footer__badges">
-<span><i class="fa fa-lock"></i> Conexión segura</span>
-<span><i class="fa fa-check-circle"></i> Actualizaciones incluidas</span>
-</div>
-<a aria-label="Volver arriba" class="nw-footer__back" href="#inicio">
-          Volver arriba <i class="fa fa-arrow-up"></i>
-</a>
-</div>
-</div>
+<footer class="v3-footer">
+  <div class="v3-shell v3-footer__grid">
+    <div class="v3-footer__brand"><a href="#inicio"><img src="images/logo-wavelet.svg" alt="Notion Wavelet"><span><b>Notion Wavelet</b><small>Software para talleres</small></span></a><p>Gestión clara para talleres pequeños, con facturación VeriFactu integrada.</p></div>
+    <div><b>Producto</b><a href="#producto">Cómo funciona</a><a href="#funciones">Funciones</a><a href="#verifactu">VeriFactu</a><a href="#precio">Precio</a></div>
+    <div><b>Ayuda</b><a href="docs/index.html">Documentación</a><a href="requisitos.html">Requisitos</a><a href="soporte.html">Soporte</a><a href="contact.html">Contacto</a></div>
+    <div><b>Legal</b><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="legal.html">Cookies</a></div>
+  </div>
+  <div class="v3-shell v3-footer__bottom"><span>© 2026 Notion Wavelet</span><span>Software de gestión para talleres</span></div>
 </footer>
-</div>
-<script defer="" src="js/jquery-3.2.1.min.js"></script>
-<script defer="" src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script defer="" src="js/custom.js"></script>
-<script defer="" src="js/navbar.js?v=8"></script>
-<script defer="" src="js/formulario.js?v=3"></script>
-<script defer="" src="js/site-enhancements.js?v=1"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var year = document.getElementById("nw-current-year");
-  if (year) year.textContent = new Date().getFullYear();
-
-  var animatedElements = document.querySelectorAll(
-    ".nw-dashboard-heading, .nw-dashboard-frame, .nw-included-heading, .nw-included-grid article, " +
-    ".nw-features-heading, .nw-feature-card, .nw-demo-copy, .nw-demo-card, " +
-    ".nw-product-heading, .nw-product-row, .nw-benefits-heading, .nw-benefit-card, " +
-    ".nw-onboarding-card, .nw-tour-card, .nw-tour-note, .nw-support-copy, .nw-support-card, .nw-transparency-panel, " +
-    ".nw-faq-heading, .nw-faq-item, .nw-faq-card, " +
-    ".nw-download-copy, .nw-download-form-card, .nw-footer__top, .nw-footer__bottom"
-  );
-
-  if (!("IntersectionObserver" in window) ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    animatedElements.forEach(function (element) {
-      element.classList.add("nw-reveal", "is-visible");
-    });
-    return;
-  }
-
-  animatedElements.forEach(function (element, index) {
-    element.classList.add("nw-reveal");
-    element.style.setProperty("--nw-reveal-delay", (index % 3) * 70 + "ms");
-  });
-
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: "0px 0px -40px 0px"
-  });
-
-  animatedElements.forEach(function (element) {
-    observer.observe(element);
-  });
-});
-</script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="js/navbar.js?v=30"></script>
+<script src="js/site-enhancements.js?v=5"></script>
 </body>
 </html>
