@@ -2,31 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('#navbar_container');
   if (!container) return;
 
-  const pageName = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const pageName = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const onHome = pageName === 'index.html' || pageName === '';
-  const homeHref = (anchor) => (onHome ? anchor : `index.html${anchor}`);
+  const homeHref = anchor => onHome ? anchor : `index.html${anchor}`;
 
   container.innerHTML = `
     <div class="nw-nav__inner">
-      <a class="nw-brand" href="${onHome ? '#inicio' : 'index.html#inicio'}" aria-label="Notion Wavelet, página de inicio">
-        <img src="images/logo-wavelet-mark.png?v=1" alt="" width="58" height="44">
-        <span class="nw-brand__copy">
-          <strong>Notion Wavelet</strong>
-          <small>Gestión para talleres</small>
-        </span>
+      <a class="nw-brand" href="${homeHref('#inicio')}" aria-label="Notion Wavelet, inicio">
+        <img src="images/logo-wavelet-mark.png?v=2" alt="" width="54" height="34">
+        <span class="nw-brand__copy"><strong>Notion Wavelet</strong><small>Gestión para talleres</small></span>
       </a>
-
-      <button class="nw-menu-toggle" type="button" aria-expanded="false" aria-controls="nw-main-nav" aria-label="Abrir menú de navegación">
+      <button class="nw-menu-toggle" type="button" aria-expanded="false" aria-controls="nw-main-nav" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
         <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
-        <a data-section="product-section" href="${homeHref('#product-section')}">El programa</a>
         <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
+        <a data-section="product-section" href="${homeHref('#product-section')}">El programa</a>
         <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
-        <a data-section="faq-section" href="${homeHref('#faq-section')}">Preguntas frecuentes</a>
-        <a href="contact.html"${!onHome && pageName === 'contact.html' ? ' aria-current="page"' : ''}>Contacto</a>
+        <a data-section="faq-section" href="${homeHref('#faq-section')}">FAQ</a>
         <a class="nw-nav-cta" href="${homeHref('#download-section')}">Probar gratis <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;
@@ -34,66 +28,54 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header');
   const toggle = container.querySelector('.nw-menu-toggle');
   const nav = container.querySelector('.nw-main-nav');
-  const sectionLinks = [...nav.querySelectorAll('[data-section]')];
+  const links = [...nav.querySelectorAll('[data-section]')];
 
-  const closeMenu = () => {
+  const closeMenu = (restoreFocus = false) => {
     nav.classList.remove('is-open');
     toggle.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Abrir menú de navegación');
+    toggle.setAttribute('aria-label', 'Abrir menú');
     document.body.classList.remove('menu-open');
+    if (restoreFocus) toggle.focus();
   };
 
   toggle.addEventListener('click', () => {
-    const open = !nav.classList.contains('is-open');
-    nav.classList.toggle('is-open', open);
-    toggle.classList.toggle('is-open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
-    document.body.classList.toggle('menu-open', open);
+    const opening = !nav.classList.contains('is-open');
+    nav.classList.toggle('is-open', opening);
+    toggle.classList.toggle('is-open', opening);
+    toggle.setAttribute('aria-expanded', String(opening));
+    toggle.setAttribute('aria-label', opening ? 'Cerrar menú' : 'Abrir menú');
+    document.body.classList.toggle('menu-open', opening);
   });
 
-  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-
-  document.addEventListener('click', (event) => {
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a')) closeMenu();
+  });
+  document.addEventListener('click', event => {
     if (!container.contains(event.target)) closeMenu();
   });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeMenu();
-      toggle.focus();
-    }
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav.classList.contains('is-open')) closeMenu(true);
+  });
+  window.addEventListener('resize', () => {
+    if (innerWidth > 960) closeMenu();
   });
 
-  const updateHeader = () => {
-    if (header) header.classList.toggle('is-scrolled', window.scrollY > 10);
-  };
+  const updateHeader = () => header?.classList.toggle('is-scrolled', scrollY > 8);
   updateHeader();
-  window.addEventListener('scroll', updateHeader, { passive: true });
+  addEventListener('scroll', updateHeader, { passive: true });
 
   if (onHome && 'IntersectionObserver' in window) {
-    const sections = sectionLinks
-      .map((link) => document.getElementById(link.dataset.section))
-      .filter(Boolean);
-
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!visible) return;
-      sectionLinks.forEach((link) => {
-        const active = link.dataset.section === visible.target.id;
+    const sections = links.map(link => document.getElementById(link.dataset.section)).filter(Boolean);
+    const observer = new IntersectionObserver(entries => {
+      const current = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!current) return;
+      links.forEach(link => {
+        const active = link.dataset.section === current.target.id;
         link.classList.toggle('is-active', active);
-        if (active) link.setAttribute('aria-current', 'location');
-        else link.removeAttribute('aria-current');
+        active ? link.setAttribute('aria-current','location') : link.removeAttribute('aria-current');
       });
-    }, { rootMargin: '-25% 0px -60% 0px', threshold: [0.05, 0.2, 0.5] });
-
-    sections.forEach((section) => observer.observe(section));
+    }, { rootMargin: '-28% 0px -58% 0px', threshold: [0.05,.2,.5] });
+    sections.forEach(section => observer.observe(section));
   }
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth >= 1024) closeMenu();
-  });
 });
