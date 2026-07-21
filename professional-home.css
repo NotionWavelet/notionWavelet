@@ -3958,3 +3958,5 @@ select:focus-visible {
     transition-duration: .01ms !important;
   }
 }
+
+.nw-resources-grid--single{grid-template-columns:minmax(0,760px)!important;justify-content:center}.nw-resources-grid--single article{padding:34px}.nw-resources-grid--single article h3{font-size:28px;max-width:620px}
