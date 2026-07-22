@@ -49,3 +49,14 @@ p{margin:0}
 .nw-shared-footer__inner{min-height:150px;padding-block:34px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
 .nw-shared-footer__brand a{display:inline-flex;align-items:center;gap:10px;color:#fff}.nw-shared-footer__brand img{width:48px;height:34px;object-fit:contain}.nw-shared-footer__brand p,.nw-shared-footer__copyright{margin-top:8px;color:#91a2ba;font-size:.84rem}.nw-shared-footer__links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px 18px}.nw-shared-footer__links a{color:#c4d0df;font-size:.88rem;font-weight:650}.nw-shared-footer__links a:hover{color:#fff}.nw-shared-footer__copyright{grid-column:1/-1;margin:0;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
 @media(max-width:760px){.nw-shared-footer__inner{grid-template-columns:1fr}.nw-shared-footer__links{justify-content:flex-start}.nw-shared-footer__copyright{grid-column:auto}}
+
+/* v20: footer organizado por producto, ayuda y empresa */
+.nw-shared-footer__inner{grid-template-columns:minmax(220px,.8fr) minmax(520px,1.4fr);align-items:start}
+.nw-shared-footer__columns{display:grid;grid-template-columns:repeat(3,minmax(130px,1fr));gap:36px}
+.nw-shared-footer__column{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+.nw-shared-footer__column>strong{margin-bottom:4px;color:#fff;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
+.nw-shared-footer__column a{color:#c4d0df;font-size:.88rem;font-weight:600}
+.nw-shared-footer__column a:hover{color:#fff}
+@media(max-width:900px){.nw-shared-footer__inner{grid-template-columns:1fr}.nw-shared-footer__columns{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){.nw-shared-footer__columns{grid-template-columns:1fr 1fr;gap:28px}.nw-shared-footer__column:last-child{grid-column:1/-1}}
+@media(max-width:420px){.nw-shared-footer__columns{grid-template-columns:1fr}.nw-shared-footer__column:last-child{grid-column:auto}}
