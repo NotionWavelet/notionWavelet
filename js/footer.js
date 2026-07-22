@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       <nav class="nw-shared-footer__links" aria-label="Enlaces del pie">
         <a href="index.html#funciones">Funciones</a>
-        <a href="capturas.html">Capturas</a>
         <a href="index.html#verifactu">VeriFactu</a>
+        <a href="guia-migracion.html">Migración</a>
         <a href="index.html#precio">Precio</a>
-        <a href="contact.html">Contacto</a>
         <a href="ayuda.html">Centro de ayuda</a>
+        <a href="index.html#faq-section">Preguntas frecuentes</a>
+        <a href="contact.html">Contacto</a>
         <a href="privacidad.html">Privacidad</a>
         <a href="aviso-legal.html">Aviso legal</a>
       </nav>

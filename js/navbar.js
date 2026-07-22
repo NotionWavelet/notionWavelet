@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const onHome = pageName === 'index.html' || pageName === '';
   const sectionHref = id => onHome ? `#${id}` : `index.html#${id}`;
   const resourcePages = new Set([
-    'ayuda.html','guia-primeros-pasos.html','guia-migracion.html','guia-verifactu.html',
+    'ayuda.html','guia-primeros-pasos.html','guia-verifactu.html',
   ]);
   const resourcesActive = resourcePages.has(pageName);
 
@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
         <a class="nw-mobile-home${onHome ? ' is-active' : ''}" href="index.html"${onHome ? ' aria-current="page"' : ''}>Inicio</a>
         <a data-section="funciones" href="${sectionHref('funciones')}">Funciones</a>
-        <a href="capturas.html"${pageName === 'capturas.html' ? ' class="is-active" aria-current="page"' : ''}>Capturas</a>
         <a data-section="verifactu" href="${sectionHref('verifactu')}">VeriFactu</a>
         <a data-section="precio" href="${sectionHref('precio')}">Precio</a>
 
@@ -40,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="nw-more-menu__icon" aria-hidden="true">1</span>
               <span class="nw-more-menu__copy"><strong>Primeros pasos</strong><small>Empieza a trabajar con Wavelet</small></span>
             </a>
-            <a href="guia-migracion.html"${pageName === 'guia-migracion.html' ? ' class="is-active" aria-current="page"' : ''}>
-              <span class="nw-more-menu__icon" aria-hidden="true">⇄</span>
-              <span class="nw-more-menu__copy"><strong>Migración de datos</strong><small>Cambia de programa con acompañamiento</small></span>
-            </a>
             <a href="guia-verifactu.html"${pageName === 'guia-verifactu.html' ? ' class="is-active" aria-current="page"' : ''}>
               <span class="nw-more-menu__icon" aria-hidden="true">✓</span>
               <span class="nw-more-menu__copy"><strong>Guía VeriFactu</strong><small>Funcionamiento explicado con claridad</small></span>
+            </a>
+            <a href="${sectionHref('faq-section')}">
+              <span class="nw-more-menu__icon" aria-hidden="true">i</span>
+              <span class="nw-more-menu__copy"><strong>Preguntas frecuentes</strong><small>Precio, instalación, soporte y funcionamiento</small></span>
             </a>
           </div>
         </div>
@@ -142,4 +141,4 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => observer.observe(section));
   }
 });
-// Navigation build: 2026-07-22-v17-clean
+// Navigation build: 2026-07-22-v18-migration-first
