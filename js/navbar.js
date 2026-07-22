@@ -183,3 +183,5 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => observer.observe(section));
   }
 });
+
+// Navigation build: 2026-07-22-menu-more-v12
