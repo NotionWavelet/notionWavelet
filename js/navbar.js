@@ -16,40 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
   const moreIsActive = morePages.includes(pageName);
 
-  /* El desplegable se estiliza aquí para que funcione también al sustituir
-     únicamente navbar.js en el proyecto completo. */
-  if (!document.querySelector('#nw-more-menu-styles')) {
-    const style = document.createElement('style');
-    style.id = 'nw-more-menu-styles';
-    style.textContent = `
-      .nw-more-menu{position:relative;display:flex;align-items:center}
-      .nw-more-menu__button{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer;padding:10px 2px;white-space:nowrap}
-      .nw-more-menu__button svg{width:14px;height:14px;transition:transform .18s ease}
-      .nw-more-menu.is-open .nw-more-menu__button svg{transform:rotate(180deg)}
-      .nw-more-menu__button.is-active{color:var(--accent,#5b5ce2)}
-      .nw-more-menu__panel{position:absolute;z-index:100;top:calc(100% + 12px);right:0;width:300px;padding:10px;border:1px solid rgba(15,23,42,.10);border-radius:16px;background:rgba(255,255,255,.98);box-shadow:0 18px 50px rgba(15,23,42,.16);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease,visibility .16s ease}
-      .nw-more-menu.is-open .nw-more-menu__panel{opacity:1;visibility:visible;transform:translateY(0)}
-      .nw-more-menu__panel a{display:grid!important;grid-template-columns:36px 1fr;gap:10px;align-items:center;padding:10px!important;border-radius:11px;text-decoration:none}
-      .nw-more-menu__panel a:hover,.nw-more-menu__panel a:focus-visible{background:#f5f7fb}
-      .nw-more-menu__icon{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#f0f2f8;font-size:17px}
-      .nw-more-menu__copy{display:flex;flex-direction:column;gap:2px;line-height:1.2}
-      .nw-more-menu__copy strong{font-size:14px;font-weight:650;color:#172033}
-      .nw-more-menu__copy small{font-size:12px;color:#687386;font-weight:400}
-      .nw-more-menu__divider{height:1px;margin:7px 5px;background:rgba(15,23,42,.08)}
-      @media (min-width:961px){
-        .nw-more-menu:hover .nw-more-menu__panel,.nw-more-menu:focus-within .nw-more-menu__panel{opacity:1;visibility:visible;transform:translateY(0)}
-      }
-      @media (max-width:960px){
-        .nw-more-menu{display:block;width:100%}
-        .nw-more-menu__button{width:100%;justify-content:space-between;padding:12px 0}
-        .nw-more-menu__panel{position:static;width:auto;margin:0 0 8px;padding:6px;background:#f7f8fb;border-radius:12px;box-shadow:none;display:none;opacity:1;visibility:visible;transform:none}
-        .nw-more-menu.is-open .nw-more-menu__panel{display:block}
-        .nw-more-menu__panel a{padding:9px!important}
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
   container.innerHTML = `
     <div class="nw-nav__inner">
       <a class="nw-brand" href="${homeHref('#hero-section')}" aria-label="Notion Wavelet, inicio">
@@ -184,4 +150,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Navigation build: 2026-07-22-menu-more-v12
+// Navigation build: 2026-07-22-menu-more-v14
