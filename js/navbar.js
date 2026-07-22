@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const onHome = pageName === 'index.html' || pageName === '';
   const homeHref = anchor => onHome ? anchor : `index.html${anchor}`;
 
-  const active = target => pageName === target ? ' class="is-active" aria-current="page"' : '';
-
   container.innerHTML = `
     <div class="nw-nav__inner">
       <a class="nw-brand" href="${homeHref('#hero-section')}" aria-label="Notion Wavelet, inicio">
@@ -19,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
       </button>
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
         <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
-        <a href="capturas.html"${active('capturas.html')}>Capturas</a>
+        <a data-section="product-section" href="${homeHref('#product-section')}">Capturas</a>
         <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
         <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
-        <a href="contact.html"${active('contact.html')}>Contacto</a>
+        <a href="contact.html"${pageName === 'contact.html' ? ' class="is-active" aria-current="page"' : ''}>Contacto</a>
         <a class="nw-nav-cta" href="${homeHref('#download-section')}">Solicitar demo <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;
@@ -49,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.setAttribute('aria-label', opening ? 'Cerrar menú' : 'Abrir menú');
     document.body.classList.toggle('menu-open', opening);
   });
+
   nav.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
   document.addEventListener('click', event => { if (!container.contains(event.target)) closeMenu(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && nav.classList.contains('is-open')) closeMenu(true); });
@@ -64,9 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const current = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
       if (!current) return;
       links.forEach(link => {
-        const isActive = link.dataset.section === current.target.id;
-        link.classList.toggle('is-active', isActive);
-        isActive ? link.setAttribute('aria-current','location') : link.removeAttribute('aria-current');
+        const active = link.dataset.section === current.target.id;
+        link.classList.toggle('is-active', active);
+        active ? link.setAttribute('aria-current','location') : link.removeAttribute('aria-current');
       });
     }, { rootMargin: '-28% 0px -58% 0px', threshold: [0.05,.2,.5] });
     sections.forEach(section => observer.observe(section));
