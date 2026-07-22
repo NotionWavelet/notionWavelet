@@ -309,3 +309,6 @@
 .nw-contact-page .nw-nav__inner,
 .nw-contact-page .nw-main-nav,
 .nw-contact-page .nw-main-nav a { position:relative;z-index:10001;pointer-events:auto; }
+
+/* Simplified demonstration form */
+.nw-contact-message textarea{min-height:120px}.nw-contact-card__header p{max-width:430px}

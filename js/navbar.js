@@ -55,7 +55,7 @@
     const toggle = mount.querySelector('.nw-navbar__toggle');
     const dropdown = mount.querySelector('.nw-navbar__dropdown');
     const dropdownToggle = mount.querySelector('.nw-navbar__dropdown-toggle');
-    const desktop = window.matchMedia('(min-width: 1121px)');
+    const desktop = window.matchMedia('(min-width: 1201px)');
 
     const setDropdown = (open) => {
       dropdown.classList.toggle('is-open', open);

@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <strong>Empresa</strong>
           <a href="sobre-wavelet.html">Sobre Wavelet</a>
           <a href="versiones.html">Novedades</a>
-          <a href="roadmap.html">Roadmap</a>
+          <a href="roadmap.html">Próximas mejoras</a>
           <a href="privacidad.html">Privacidad</a>
           <a href="aviso-legal.html">Aviso legal</a>
         </nav>
@@ -46,4 +46,4 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>`;
 });
 
-// Footer build: 2026-07-22-v21-navigation-audit
+// Footer build: 2026-07-22-v22-commercial-polish

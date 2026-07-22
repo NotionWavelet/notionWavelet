@@ -32,16 +32,16 @@ body.nw-menu-open{overflow:hidden}
 .nw-navbar__toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .nw-navbar__toggle.is-open span:nth-child(2){opacity:0}
 .nw-navbar__toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-#hero-section,#funciones,#verifactu,#precio,#faq-section,#demo{scroll-margin-top:calc(var(--nw-header-h) + 18px)}
+#hero-section,#funciones,#verifactu,#migracion,#precio,#faq-section,#demo{scroll-margin-top:calc(var(--nw-header-h) + 18px)}
 
-@media (max-width:1200px) and (min-width:1121px){
+@media (max-width:1320px) and (min-width:1201px){
   .nw-navbar{width:calc(100% - 28px);gap:12px}
   .nw-navbar__brand small{display:none}
   .nw-navbar__menu>a,.nw-navbar__dropdown-toggle{padding-inline:8px;font-size:13px}
   .nw-navbar__cta{padding-inline:12px!important}
 }
 
-@media (max-width:1120px){
+@media (max-width:1200px){
   :root{--nw-header-h:70px}
   .nw-navbar{width:calc(100% - 28px)}
   .nw-navbar__toggle{display:flex}
