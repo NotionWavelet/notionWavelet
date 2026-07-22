@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </button>
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
         <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
-        <a data-section="product-section" href="${homeHref('#product-section')}">Capturas</a>
+        <a href="capturas.html"${pageName === 'capturas.html' ? ' class="is-active" aria-current="page"' : ''}>Capturas</a>
         <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
         <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
 
@@ -150,4 +150,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Navigation build: 2026-07-22-menu-more-v14
+// Navigation build: 2026-07-22-menu-more-v15-audited
