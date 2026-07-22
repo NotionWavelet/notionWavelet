@@ -4,80 +4,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const pageName = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const onHome = pageName === 'index.html' || pageName === '';
-  const homeHref = anchor => onHome ? anchor : `index.html${anchor}`;
-  const morePages = [
-    'ayuda.html',
-    'guia-primeros-pasos.html',
-    'guia-migracion.html',
-    'guia-verifactu.html',
-    'versiones.html',
-    'roadmap.html',
-    'sobre-wavelet.html'
-  ];
-  const moreIsActive = morePages.includes(pageName);
+  const sectionHref = id => onHome ? `#${id}` : `index.html#${id}`;
+  const resourcePages = new Set([
+    'ayuda.html','guia-primeros-pasos.html','guia-migracion.html','guia-verifactu.html',
+    'versiones.html','roadmap.html','sobre-wavelet.html'
+  ]);
+  const resourcesActive = resourcePages.has(pageName);
 
   container.innerHTML = `
     <div class="nw-nav__inner">
-      <a class="nw-brand" href="${homeHref('#hero-section')}" aria-label="Notion Wavelet, inicio">
-        <img src="images/logo-wavelet-final.png?v=2" alt="" width="68" height="48">
+      <a class="nw-brand" href="${sectionHref('hero-section')}" aria-label="Notion Wavelet, inicio">
+        <img src="images/logo-wavelet-final.png?v=2" alt="" width="42" height="42">
         <span class="nw-brand__copy"><strong>Notion Wavelet</strong><small>Gestión para talleres</small></span>
       </a>
       <button class="nw-menu-toggle" type="button" aria-expanded="false" aria-controls="nw-main-nav" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
-        <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
+        <a data-section="funciones" href="${sectionHref('funciones')}">Funciones</a>
         <a href="capturas.html"${pageName === 'capturas.html' ? ' class="is-active" aria-current="page"' : ''}>Capturas</a>
-        <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
-        <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
+        <a data-section="verifactu" href="${sectionHref('verifactu')}">VeriFactu</a>
+        <a data-section="precio" href="${sectionHref('precio')}">Precio</a>
 
-        <div class="nw-more-menu${moreIsActive ? ' is-current' : ''}">
-          <button class="nw-more-menu__button${moreIsActive ? ' is-active' : ''}" type="button" aria-expanded="false" aria-controls="nw-more-panel">
-            Más
+        <div class="nw-more-menu${resourcesActive ? ' is-current' : ''}">
+          <button class="nw-more-menu__button${resourcesActive ? ' is-active' : ''}" type="button" aria-expanded="false" aria-controls="nw-more-panel">
+            Recursos
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="nw-more-menu__panel" id="nw-more-panel">
-            <a href="ayuda.html"${pageName === 'ayuda.html' ? ' class="is-active" aria-current="page"' : ''}>
-              <span class="nw-more-menu__icon" aria-hidden="true">?</span>
-              <span class="nw-more-menu__copy"><strong>Centro de ayuda</strong><small>Respuestas y documentación</small></span>
-            </a>
-            <a href="guia-primeros-pasos.html"${pageName === 'guia-primeros-pasos.html' ? ' class="is-active" aria-current="page"' : ''}>
-              <span class="nw-more-menu__icon" aria-hidden="true">↗</span>
-              <span class="nw-more-menu__copy"><strong>Primeros pasos</strong><small>Empieza a utilizar Wavelet</small></span>
-            </a>
-            <a href="guia-migracion.html"${pageName === 'guia-migracion.html' ? ' class="is-active" aria-current="page"' : ''}>
-              <span class="nw-more-menu__icon" aria-hidden="true">⇄</span>
-              <span class="nw-more-menu__copy"><strong>Migración</strong><small>Trae los datos de tu taller</small></span>
-            </a>
-            <a href="guia-verifactu.html"${pageName === 'guia-verifactu.html' ? ' class="is-active" aria-current="page"' : ''}>
-              <span class="nw-more-menu__icon" aria-hidden="true">✓</span>
-              <span class="nw-more-menu__copy"><strong>Guía VeriFactu</strong><small>Funcionamiento y conceptos clave</small></span>
-            </a>
-            <div class="nw-more-menu__divider" aria-hidden="true"></div>
-            <a href="versiones.html"${pageName === 'versiones.html' ? ' class="is-active" aria-current="page"' : ''}>
-              <span class="nw-more-menu__icon" aria-hidden="true">✦</span>
-              <span class="nw-more-menu__copy"><strong>Novedades</strong><small>Cambios y versiones de Wavelet</small></span>
-            </a>
-            <a href="roadmap.html"${pageName === 'roadmap.html' ? ' class="is-active" aria-current="page"' : ''}>
-              <span class="nw-more-menu__icon" aria-hidden="true">◇</span>
-              <span class="nw-more-menu__copy"><strong>Roadmap</strong><small>Qué estamos preparando</small></span>
-            </a>
-            <a href="sobre-wavelet.html"${pageName === 'sobre-wavelet.html' ? ' class="is-active" aria-current="page"' : ''}>
-              <span class="nw-more-menu__icon" aria-hidden="true">W</span>
-              <span class="nw-more-menu__copy"><strong>Sobre Wavelet</strong><small>Conoce el proyecto</small></span>
-            </a>
+            <section class="nw-resource-group" aria-labelledby="nw-help-title">
+              <p class="nw-resource-group__title" id="nw-help-title">Ayuda</p>
+              <a href="ayuda.html"${pageName === 'ayuda.html' ? ' class="is-active" aria-current="page"' : ''}>
+                <span class="nw-more-menu__icon" aria-hidden="true">?</span>
+                <span class="nw-more-menu__copy"><strong>Centro de ayuda</strong><small>Todas las guías en un único lugar</small></span>
+              </a>
+              <a href="guia-primeros-pasos.html"${pageName === 'guia-primeros-pasos.html' ? ' class="is-active" aria-current="page"' : ''}>
+                <span class="nw-more-menu__icon" aria-hidden="true">1</span>
+                <span class="nw-more-menu__copy"><strong>Primeros pasos</strong><small>Configura y empieza a trabajar</small></span>
+              </a>
+              <a href="guia-migracion.html"${pageName === 'guia-migracion.html' ? ' class="is-active" aria-current="page"' : ''}>
+                <span class="nw-more-menu__icon" aria-hidden="true">⇄</span>
+                <span class="nw-more-menu__copy"><strong>Migración de datos</strong><small>Trae la información de tu taller</small></span>
+              </a>
+              <a href="guia-verifactu.html"${pageName === 'guia-verifactu.html' ? ' class="is-active" aria-current="page"' : ''}>
+                <span class="nw-more-menu__icon" aria-hidden="true">✓</span>
+                <span class="nw-more-menu__copy"><strong>Guía VeriFactu</strong><small>Conceptos y funcionamiento</small></span>
+              </a>
+            </section>
+            <section class="nw-resource-group nw-resource-group--secondary" aria-labelledby="nw-project-title">
+              <p class="nw-resource-group__title" id="nw-project-title">Wavelet</p>
+              <a href="versiones.html"${pageName === 'versiones.html' ? ' class="is-active" aria-current="page"' : ''}><span class="nw-more-menu__copy"><strong>Novedades</strong><small>Últimos cambios publicados</small></span></a>
+              <a href="roadmap.html"${pageName === 'roadmap.html' ? ' class="is-active" aria-current="page"' : ''}><span class="nw-more-menu__copy"><strong>Próximas mejoras</strong><small>Qué estamos preparando</small></span></a>
+              <a href="sobre-wavelet.html"${pageName === 'sobre-wavelet.html' ? ' class="is-active" aria-current="page"' : ''}><span class="nw-more-menu__copy"><strong>Sobre Wavelet</strong><small>El proyecto y su enfoque</small></span></a>
+            </section>
           </div>
         </div>
 
         <a href="contact.html"${pageName === 'contact.html' ? ' class="is-active" aria-current="page"' : ''}>Contacto</a>
-        <a class="nw-nav-cta" href="${homeHref('#download-section')}">Solicitar demo <span aria-hidden="true">→</span></a>
+        <a class="nw-nav-cta" data-section="demo" href="${sectionHref('demo')}">Solicitar demo <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;
 
   const header = document.querySelector('.header');
   const toggle = container.querySelector('.nw-menu-toggle');
   const nav = container.querySelector('.nw-main-nav');
-  const links = [...nav.querySelectorAll('[data-section]')];
+  const sectionLinks = [...nav.querySelectorAll('[data-section]')];
   const moreMenu = container.querySelector('.nw-more-menu');
   const moreButton = container.querySelector('.nw-more-menu__button');
 
@@ -85,36 +76,51 @@ document.addEventListener('DOMContentLoaded', () => {
     moreMenu?.classList.remove('is-open');
     moreButton?.setAttribute('aria-expanded', 'false');
   };
-
   const closeMenu = (restoreFocus = false) => {
-    nav.classList.remove('is-open');
-    toggle.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Abrir menú');
-    document.body.classList.remove('menu-open');
-    closeMoreMenu();
+    nav.classList.remove('is-open'); toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Abrir menú');
+    document.body.classList.remove('menu-open'); closeMoreMenu();
     if (restoreFocus) toggle.focus();
+  };
+  const scrollToSection = (id, updateHistory = true) => {
+    const target = document.getElementById(id);
+    if (!target) return false;
+    const offset = (header?.getBoundingClientRect().height || 76) + 12;
+    const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset);
+    window.scrollTo({ top, behavior: 'smooth' });
+    if (updateHistory) history.pushState(null, '', `#${id}`);
+    return true;
   };
 
   toggle.addEventListener('click', () => {
     const opening = !nav.classList.contains('is-open');
-    nav.classList.toggle('is-open', opening);
-    toggle.classList.toggle('is-open', opening);
-    toggle.setAttribute('aria-expanded', String(opening));
-    toggle.setAttribute('aria-label', opening ? 'Cerrar menú' : 'Abrir menú');
+    nav.classList.toggle('is-open', opening); toggle.classList.toggle('is-open', opening);
+    toggle.setAttribute('aria-expanded', String(opening)); toggle.setAttribute('aria-label', opening ? 'Cerrar menú' : 'Abrir menú');
     document.body.classList.toggle('menu-open', opening);
   });
-
   moreButton?.addEventListener('click', event => {
     event.stopPropagation();
     const opening = !moreMenu.classList.contains('is-open');
-    moreMenu.classList.toggle('is-open', opening);
-    moreButton.setAttribute('aria-expanded', String(opening));
+    moreMenu.classList.toggle('is-open', opening); moreButton.setAttribute('aria-expanded', String(opening));
   });
+
+  if (onHome) {
+    container.addEventListener('click', event => {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+      const id = link.getAttribute('href').slice(1);
+      if (!document.getElementById(id)) return;
+      event.preventDefault(); closeMenu(); scrollToSection(id);
+    });
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      requestAnimationFrame(() => setTimeout(() => scrollToSection(id, false), 40));
+    }
+  }
 
   nav.addEventListener('click', event => {
     if (event.target.closest('.nw-more-menu__button')) return;
-    if (event.target.closest('a')) closeMenu();
+    if (event.target.closest('a') && !event.target.closest('a[href^="#"]')) closeMenu();
   });
   document.addEventListener('click', event => {
     if (!moreMenu?.contains(event.target)) closeMoreMenu();
@@ -122,32 +128,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
-    if (moreMenu?.classList.contains('is-open')) {
-      closeMoreMenu();
-      moreButton?.focus();
-      return;
-    }
+    if (moreMenu?.classList.contains('is-open')) { closeMoreMenu(); moreButton?.focus(); return; }
     if (nav.classList.contains('is-open')) closeMenu(true);
   });
   window.addEventListener('resize', () => { if (innerWidth > 960) closeMenu(); });
 
   const updateHeader = () => header?.classList.toggle('is-scrolled', scrollY > 8);
-  updateHeader();
-  addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader(); addEventListener('scroll', updateHeader, { passive: true });
 
   if (onHome && 'IntersectionObserver' in window) {
-    const sections = links.map(link => document.getElementById(link.dataset.section)).filter(Boolean);
+    const observedLinks = sectionLinks.filter(link => link.dataset.section !== 'demo');
+    const sections = observedLinks.map(link => document.getElementById(link.dataset.section)).filter(Boolean);
     const observer = new IntersectionObserver(entries => {
-      const current = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      const current = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio-a.intersectionRatio)[0];
       if (!current) return;
-      links.forEach(link => {
+      observedLinks.forEach(link => {
         const active = link.dataset.section === current.target.id;
         link.classList.toggle('is-active', active);
         active ? link.setAttribute('aria-current','location') : link.removeAttribute('aria-current');
       });
-    }, { rootMargin: '-28% 0px -58% 0px', threshold: [0.05,.2,.5] });
+    }, { rootMargin: '-20% 0px -68% 0px', threshold: [0, .1, .25] });
     sections.forEach(section => observer.observe(section));
   }
 });
-
-// Navigation build: 2026-07-22-menu-more-v15-audited
+// Navigation build: 2026-07-22-v16-organized
