@@ -457,6 +457,13 @@ main{padding-top:76px}.nw-product-section,.nw-features-section,.nw-ideal-section
 /* Funciones previstas para el lanzamiento */
 .nw-feature-card--planned{position:relative;border-color:rgba(23,105,224,.24);background:linear-gradient(180deg,#fff 0%,#f4f8ff 100%)}
 .nw-feature-status{display:inline-flex;align-items:center;width:max-content;max-width:100%;margin:0 0 18px;padding:7px 11px;border-radius:999px;background:#e8f2ff;color:#145fbe;font-size:10px;font-weight:900;line-height:1.25;letter-spacing:.08em;text-transform:uppercase}
+.nw-feature-group-heading{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:6px;padding:18px 22px;border-radius:18px;background:#fff;border:1px solid rgba(19,45,86,.1)}
+.nw-feature-group-heading span{font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#188357}
+.nw-feature-group-heading strong{color:#10264b;font-size:15px;text-align:right}
+.nw-feature-group-heading--planned{margin-top:24px;background:#edf5ff;border-color:rgba(23,105,224,.18)}
+.nw-feature-group-heading--planned span{color:#145fbe}
+.nw-feature-card--planned .nw-feature-status{display:none}
+@media(max-width:575.98px){.nw-feature-group-heading{align-items:flex-start;flex-direction:column;gap:7px}.nw-feature-group-heading strong{text-align:left}}
 
 /* Pie simplificado */
 @media(min-width:992px){.nw-footer__links{grid-template-columns:repeat(3,minmax(120px,1fr))}}
