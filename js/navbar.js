@@ -17,12 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
       </button>
       <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
         <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
-        <a href="contact.html"${pageName === 'contact.html' ? ' class="is-active" aria-current="page"' : ''}>Contacto</a>
         <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
-        <a data-section="workflow-section" href="${homeHref('#workflow-section')}">Cómo funciona</a>
         <a data-section="migration-section" href="${homeHref('#migration-section')}">Migración</a>
         <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
         <a data-section="faq-section" href="${homeHref('#faq-section')}">FAQ</a>
+        <a href="contact.html"${pageName === 'contact.html' ? ' class="is-active" aria-current="page"' : ''}>Contacto</a>
         <a class="nw-nav-cta" href="${homeHref('#download-section')}">Solicitar demo <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;

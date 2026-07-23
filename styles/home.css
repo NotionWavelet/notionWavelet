@@ -457,3 +457,6 @@ main{padding-top:76px}.nw-product-section,.nw-features-section,.nw-ideal-section
 /* Funciones previstas para el lanzamiento */
 .nw-feature-card--planned{position:relative;border-color:rgba(23,105,224,.24);background:linear-gradient(180deg,#fff 0%,#f4f8ff 100%)}
 .nw-feature-status{display:inline-flex;align-items:center;width:max-content;max-width:100%;margin:0 0 18px;padding:7px 11px;border-radius:999px;background:#e8f2ff;color:#145fbe;font-size:10px;font-weight:900;line-height:1.25;letter-spacing:.08em;text-transform:uppercase}
+
+/* Pie simplificado */
+@media(min-width:992px){.nw-footer__links{grid-template-columns:repeat(3,minmax(120px,1fr))}}
