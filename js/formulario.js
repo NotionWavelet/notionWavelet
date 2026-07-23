@@ -57,7 +57,7 @@
       requestTypeInputs.forEach(function (input) {
         input.closest("label").classList.toggle("is-selected", input.checked);
       });
-      submitLabel.textContent = contracting ? "Solicitar alta" : "Solicitar prueba";
+      submitLabel.textContent = contracting ? "Solicitar alta" : "Solicitar demostración";
     }
 
     requestTypeInputs.forEach(function (input) { input.addEventListener("change", updateRequestType); });
@@ -130,7 +130,7 @@
       form.classList.toggle("is-submitting", submitting);
       submitButton.disabled = submitting;
       submitButton.setAttribute("aria-busy", submitting ? "true" : "false");
-      submitLabel.textContent = submitting ? "Enviando solicitud…" : ((form.querySelector('input[name="tipo_solicitud"]:checked') || {}).value === "Quiero contratar" ? "Solicitar alta" : "Solicitar prueba");
+      submitLabel.textContent = submitting ? "Enviando solicitud…" : ((form.querySelector('input[name="tipo_solicitud"]:checked') || {}).value === "Quiero contratar" ? "Solicitar alta" : "Solicitar demostración");
     }
 
     fields.forEach(function (field) {

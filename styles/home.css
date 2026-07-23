@@ -298,6 +298,41 @@ main{padding-top:76px}.nw-product-section,.nw-features-section,.nw-ideal-section
 .nw-download-form button[type=submit]{min-height:52px;margin-top:16px;border-radius:12px;box-shadow:0 10px 22px rgba(20,115,247,.2)}
 .nw-download-privacy{margin:12px 0 0;font-size:.69rem}
 .nw-download-trust{position:relative;z-index:1;margin-top:20px;color:#c2cde0;font-size:.75rem}
+
+/* Mensaje único de prelanzamiento y puesta en marcha integrada */
+.nw-prelaunch-note{
+  max-width:620px;
+  margin:22px 0 0;
+  padding:13px 16px;
+  border:1px solid #cfe3ff;
+  border-radius:14px;
+  background:#f4f8ff;
+  color:#294665;
+  font-size:.9rem;
+  font-weight:650;
+  line-height:1.55;
+}
+.nw-migration-steps{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-top:26px;
+}
+.nw-migration-steps span{
+  padding:14px 15px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:14px;
+  background:rgba(255,255,255,.06);
+  color:#dbe8f8;
+  font-size:.84rem;
+  line-height:1.5;
+}
+.nw-migration-steps strong{color:#69a7ff}
+
+@media(max-width:760px){
+  .nw-prelaunch-note{font-size:.84rem}
+  .nw-migration-steps{grid-template-columns:1fr}
+}
 .nw-download-trust span{display:inline-flex;align-items:center;gap:7px}
 
 .nw-footer{padding:50px 0 22px;background:#071322}
