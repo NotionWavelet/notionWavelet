@@ -333,6 +333,68 @@ main{padding-top:76px}.nw-product-section,.nw-features-section,.nw-ideal-section
   .nw-prelaunch-note{font-size:.84rem}
   .nw-migration-steps{grid-template-columns:1fr}
 }
+
+/* Quién está detrás */
+.nw-about-section{
+  padding:82px 0;
+  background:#f5f8fd;
+}
+.nw-about-panel{
+  display:grid;
+  grid-template-columns:minmax(0,.95fr) minmax(380px,1.05fr);
+  align-items:center;
+  gap:64px;
+  padding:52px;
+  border:1px solid rgba(19,45,86,.09);
+  border-radius:28px;
+  background:#fff;
+  box-shadow:0 22px 65px rgba(15,48,92,.07);
+}
+.nw-about-copy h2{
+  margin:16px 0 18px;
+  color:#10264b;
+  font-size:clamp(2rem,3.5vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.035em;
+}
+.nw-about-copy p{
+  margin:0;
+  color:#66758c;
+  line-height:1.75;
+}
+.nw-about-copy p+p{margin-top:12px}
+.nw-about-facts{display:grid;gap:13px}
+.nw-about-facts article{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  padding:18px;
+  border:1px solid #e3ebf5;
+  border-radius:17px;
+  background:#f8fbff;
+}
+.nw-about-facts i{
+  display:grid;
+  place-items:center;
+  flex:0 0 42px;
+  width:42px;
+  height:42px;
+  border-radius:13px;
+  background:#e8f2ff;
+  color:#1769e0;
+  font-size:18px;
+}
+.nw-about-facts strong,.nw-about-facts span{display:block}
+.nw-about-facts strong{margin-bottom:5px;color:#10264b}
+.nw-about-facts span{color:#66758c;font-size:.86rem;line-height:1.5}
+
+@media(max-width:900px){
+  .nw-about-panel{grid-template-columns:1fr;gap:34px}
+}
+@media(max-width:680px){
+  .nw-about-section{padding:58px 0}
+  .nw-about-panel{padding:28px 22px;border-radius:22px}
+}
 .nw-download-trust span{display:inline-flex;align-items:center;gap:7px}
 
 .nw-footer{padding:50px 0 22px;background:#071322}

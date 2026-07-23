@@ -55,7 +55,8 @@
       if (billingFields) billingFields.hidden = !contracting;
       billingRequired.forEach(function (input) { input.required = Boolean(contracting); });
       requestTypeInputs.forEach(function (input) {
-        input.closest("label").classList.toggle("is-selected", input.checked);
+        var option = input.closest("label");
+        if (option) option.classList.toggle("is-selected", input.checked);
       });
       submitLabel.textContent = contracting ? "Solicitar alta" : "Solicitar demostración";
     }
