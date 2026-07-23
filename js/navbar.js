@@ -17,9 +17,9 @@
 
     mount.innerHTML = `
       <div class="nw-navbar">
-        <a class="nw-navbar__brand" href="index.html" aria-label="Notion Wavelet, ir al inicio">
+        <a class="nw-navbar__brand" href="index.html" aria-label="Wavelet, ir al inicio">
           <img src="images/logo-wavelet-final.png?v=2" alt="" width="40" height="40">
-          <span><strong>Notion Wavelet</strong><small>Gestión para talleres</small></span>
+          <span><strong>Wavelet</strong><small>Software para talleres</small></span>
         </a>
 
         <button class="nw-navbar__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nw-navbar-menu">
