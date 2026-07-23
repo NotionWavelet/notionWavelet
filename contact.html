@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Contacto y demostración | Notion Wavelet</title>
-<meta content="Contacta con Notion Wavelet para solicitar una demostración o resolver dudas sobre el software de gestión para talleres." name="description"/>
+<meta content="Contacta con Notion Wavelet para solicitar una demostración, empezar la prueba gratuita o resolver dudas sobre el software de gestión para talleres." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <meta content="#071633" name="theme-color"/>
 <link href="https://notionwavelet.com/contact.html" rel="canonical"/><link href="favicon.ico" rel="icon" sizes="any"/><link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/><link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon"/><link href="site.webmanifest" rel="manifest"/>
@@ -16,15 +16,21 @@
 <meta content="https://notionwavelet.com/contact.html" property="og:url"/>
 <meta content="https://notionwavelet.com/images/notion-wavelet-social.jpg" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
+
+
+
+
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="styles/design-system.css?v=20" rel="stylesheet"/>
+<link href="styles/design-system.css?v=3" rel="stylesheet"/>
 <link href="styles/home.css?v=3" rel="stylesheet"/>
-<link href="styles/contact.css?v=22" rel="stylesheet"/>
-<meta content="Notion Wavelet" name="author"/><meta content="Notion Wavelet" property="og:site_name"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="image/jpeg" property="og:image:type"/><meta content="Notion Wavelet, software de gestión para talleres mecánicos" property="og:image:alt"/><meta content="Contacto y demostración | Notion Wavelet" name="twitter:title"/><meta content="Solicita una demostración o resuelve tus dudas sobre Notion Wavelet para talleres mecánicos." name="twitter:description"/><meta content="https://notionwavelet.com/images/notion-wavelet-social.jpg" name="twitter:image"/><link href="styles/navbar.css?v=22" rel="stylesheet"/></head>
+<link href="styles/contact.css?v=19" rel="stylesheet"/>
+<meta content="Notion Wavelet" name="author"/><meta content="Notion Wavelet" property="og:site_name"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="image/jpeg" property="og:image:type"/><meta content="Notion Wavelet, software de gestión para talleres mecánicos" property="og:image:alt"/><meta content="Contacto y demostración | Notion Wavelet" name="twitter:title"/><meta content="Solicita una demostración o resuelve tus dudas sobre Notion Wavelet para talleres mecánicos." name="twitter:description"/><meta content="https://notionwavelet.com/images/notion-wavelet-social.jpg" name="twitter:image"/></head>
 <body class="nw-contact-page">
 <a class="nw-skip-link" href="#contact-content">Saltar al contenido principal</a>
 <div class="super_container">
-<header class="header"><div id="navbar_container"></div></header>
+<header class="header">
+<div id="navbar_container"></div>
+</header>
 <main id="contact-content" tabindex="-1">
 <section aria-labelledby="contact-title" class="nw-contact-hero">
 <div aria-hidden="true" class="nw-contact-glow nw-contact-glow--one"></div>
@@ -35,8 +41,11 @@
 <i aria-hidden="true" class="fa fa-envelope-o"></i>
               Contacta con el equipo
             </span>
-<h1 id="contact-title">Solicita una demostración de Wavelet</h1>
-<p>Cuéntanos qué taller tienes y te contactaremos para acordar el día y la hora. Sin tarjeta y sin compromiso.</p>
+<h1 id="contact-title">Estamos aquí para ayudarte.</h1>
+<p>
+              Resuelve tus dudas, solicita una demostración gratuita o cuéntanos cómo funciona tu taller.
+              Te responderemos personalmente lo antes posible.
+            </p>
 <div aria-label="Ventajas del contacto" class="nw-contact-benefits">
 <article>
 <span class="nw-contact-benefit-icon"><i aria-hidden="true" class="fa fa-clock-o"></i></span>
@@ -58,15 +67,39 @@
 <i class="fa fa-envelope-o"></i>
 </span>
 <div>
-<h2>Solicitar demostración</h2>
-<p>Solo necesitamos unos datos básicos para contactar contigo.</p>
+<h2>Solicita una prueba</h2>
+<p>Recibe información y acceso a una demostración.</p>
 </div>
 </div>
 <form class="nw-contact-form" id="review_form" novalidate="">
-<div class="nw-contact-fields"><label><span>Nombre</span><input autocomplete="name" id="nombre" name="nombre" placeholder="Tu nombre" required="" type="text"/></label><label><span>Nombre del taller</span><input autocomplete="organization" id="taller" name="taller" placeholder="Nombre de tu taller" required="" type="text"/></label><label><span>Correo electrónico</span><input autocomplete="email" id="email" name="email" placeholder="nombre@taller.es" required="" type="email"/></label><label><span>Teléfono</span><input autocomplete="tel" id="telefono" name="telefono" placeholder="600 000 000" required="" type="tel"/></label></div>
+<div class="nw-contact-fields">
+<label>
+<span>Nombre</span>
+<input autocomplete="name" id="nombre" name="nombre" placeholder="Tu nombre" required="" type="text"/>
+</label>
+<label>
+<span>Correo electrónico</span>
+<input autocomplete="email" id="email" name="email" placeholder="nombre@taller.es" required="" type="email"/>
+</label>
+<label>
+<span>Teléfono <small>(opcional)</small></span>
+<input autocomplete="tel" id="telefono" name="telefono" placeholder="600 000 000" type="tel"/>
+</label>
+<label>
+<span>Asunto</span>
+<select id="asunto" name="asunto" required="">
+<option value="">Selecciona una opción</option>
+<option value="Solicitar demostración">Solicitar demostración</option>
+<option value="Información sobre VeriFactu">Información sobre VeriFactu</option>
+<option value="Dudas sobre el plan">Dudas sobre el plan</option>
+<option value="Soporte">Soporte</option>
+<option value="Otra consulta">Otra consulta</option>
+</select>
+</label>
+</div>
 <label class="nw-contact-message">
-<span>Mensaje (opcional)</span>
-<textarea id="mensaje" name="mensaje" placeholder="Por ejemplo: qué programa utilizas ahora o qué quieres ver en la demostración" rows="4"></textarea>
+<span>¿En qué podemos ayudarte?</span>
+<textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué necesitas..." required="" rows="6"></textarea>
 </label>
 <label class="nw-contact-consent">
 <input id="privacidad" required="" type="checkbox"/>
@@ -74,10 +107,13 @@
 </label>
 <button class="nw-contact-submit" id="enviar_mensaje" type="submit">
 <i aria-hidden="true" class="fa fa-paper-plane-o"></i>
-<span>Solicitar demostración</span>
+<span>Enviar mensaje</span>
 </button>
 <p aria-live="polite" class="nw-contact-status" id="contact_status" role="status"></p>
-<div class="nw-contact-security"><i aria-hidden="true" class="fa fa-clock-o"></i> Te contactaremos para acordar el día y la hora.</div>
+<div class="nw-contact-security">
+<i aria-hidden="true" class="fa fa-lock"></i>
+                Tus datos se utilizarán únicamente para responder a tu consulta.
+              </div>
 </form>
 </div>
 </div>
@@ -95,9 +131,9 @@
 <div id="footer_container"></div>
 </footer>
 </div>
-<script defer="" src="js/navbar.js?v=22"></script>
+<script defer="" src="js/navbar.js?v=9"></script>
 <script defer="" src="js/site-enhancements.js?v=2"></script>
-<script defer="" src="js/footer.js?v=22"></script>
+<script defer="" src="js/footer.js"></script>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -127,8 +163,7 @@
           nombre: document.getElementById('nombre').value.trim(),
           email: document.getElementById('email').value.trim(),
           telefono: document.getElementById('telefono').value.trim(),
-          taller: document.getElementById('taller').value.trim(),
-          asunto: 'Solicitar demostración',
+          asunto: document.getElementById('asunto').value,
           mensaje: document.getElementById('mensaje').value.trim()
         };
 

@@ -1,113 +1,83 @@
-(() => {
-  'use strict';
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('#navbar_container');
+  if (!container) return;
 
-  const initNavbar = () => {
-    const mount = document.getElementById('navbar_container');
-    if (!mount || mount.dataset.ready === 'true') return;
-    mount.dataset.ready = 'true';
+  const pageName = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const onHome = pageName === 'index.html' || pageName === '';
+  const homeHref = anchor => onHome ? anchor : `index.html${anchor}`;
 
-    const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    const isHome = file === 'index.html' || file === '';
-    const homeLink = (anchor) => isHome ? `#${anchor}` : `index.html#${anchor}`;
-    const helpFiles = new Set(['ayuda.html', 'guia-primeros-pasos.html', 'guia-verifactu.html']);
-    const isHelp = helpFiles.has(file);
+  container.innerHTML = `
+    <div class="nw-nav__inner">
+      <a class="nw-brand" href="${homeHref('#hero-section')}" aria-label="Notion Wavelet, inicio">
+        <img src="images/logo-wavelet-final.png?v=2" alt="" width="68" height="48">
+        <span class="nw-brand__copy"><strong>Notion Wavelet</strong><small>Gestión para talleres</small></span>
+      </a>
+      <button class="nw-menu-toggle" type="button" aria-expanded="false" aria-controls="nw-main-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nw-main-nav" id="nw-main-nav" aria-label="Navegación principal">
+        <a data-section="benefits-section" href="${homeHref('#benefits-section')}">VeriFactu</a>
+        <a href="contact.html"${pageName === 'contact.html' ? ' class="is-active" aria-current="page"' : ''}>Contacto</a>
+        <a data-section="features-section" href="${homeHref('#features-section')}">Funciones</a>
+        <a data-section="workflow-section" href="${homeHref('#workflow-section')}">Cómo funciona</a>
+        <a data-section="migration-section" href="${homeHref('#migration-section')}">Migración</a>
+        <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
+        <a data-section="faq-section" href="${homeHref('#faq-section')}">FAQ</a>
+        <a class="nw-nav-cta" href="${homeHref('#download-section')}">Solicitar demo <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>`;
 
-    const activeClass = (condition) => condition ? ' is-active' : '';
-    const current = (condition) => condition ? ' aria-current="page"' : '';
+  const header = document.querySelector('.header');
+  const toggle = container.querySelector('.nw-menu-toggle');
+  const nav = container.querySelector('.nw-main-nav');
+  const links = [...nav.querySelectorAll('[data-section]')];
 
-    mount.innerHTML = `
-      <div class="nw-navbar">
-        <a class="nw-navbar__brand" href="index.html" aria-label="Notion Wavelet, ir al inicio">
-          <img src="images/logo-wavelet-final.png?v=2" alt="" width="40" height="40">
-          <span><strong>Notion Wavelet</strong><small>Gestión para talleres</small></span>
-        </a>
-
-        <button class="nw-navbar__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nw-navbar-menu">
-          <span></span><span></span><span></span>
-        </button>
-
-        <nav class="nw-navbar__menu" id="nw-navbar-menu" aria-label="Navegación principal">
-          <a class="nw-navbar__mobile-home${activeClass(isHome)}" href="index.html"${current(isHome)}>Inicio</a>
-          <a href="${homeLink('funciones')}">Funciones</a>
-          <a href="${homeLink('verifactu')}">VeriFactu</a>
-          <a class="${activeClass(file === 'guia-migracion.html').trim()}" href="guia-migracion.html"${current(file === 'guia-migracion.html')}>Migración</a>
-          <a href="${homeLink('precio')}">Precio</a>
-
-          <div class="nw-navbar__dropdown${activeClass(isHelp)}">
-            <button class="nw-navbar__dropdown-toggle" type="button" aria-expanded="false" aria-controls="nw-help-menu">
-              Ayuda
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 7.5 4.5 4.5 4.5-4.5"/></svg>
-            </button>
-            <div class="nw-navbar__dropdown-menu" id="nw-help-menu">
-              <a href="ayuda.html"${current(file === 'ayuda.html')}><strong>Centro de ayuda</strong><span>Guías y respuestas</span></a>
-              <a href="guia-primeros-pasos.html"${current(file === 'guia-primeros-pasos.html')}><strong>Primeros pasos</strong><span>Configuración inicial</span></a>
-              <a href="guia-verifactu.html"${current(file === 'guia-verifactu.html')}><strong>Guía VeriFactu</strong><span>Dudas sobre la normativa</span></a>
-              <a href="${homeLink('faq-section')}"><strong>Preguntas frecuentes</strong><span>Respuestas rápidas</span></a>
-            </div>
-          </div>
-
-          <a class="${activeClass(file === 'contact.html').trim()}" href="contact.html"${current(file === 'contact.html')}>Contacto</a>
-          <a class="nw-navbar__cta" href="${homeLink('demo')}">Solicitar demo</a>
-        </nav>
-      </div>`;
-
-    const menu = mount.querySelector('.nw-navbar__menu');
-    const toggle = mount.querySelector('.nw-navbar__toggle');
-    const dropdown = mount.querySelector('.nw-navbar__dropdown');
-    const dropdownToggle = mount.querySelector('.nw-navbar__dropdown-toggle');
-    const desktop = window.matchMedia('(min-width: 1201px)');
-
-    const setDropdown = (open) => {
-      dropdown.classList.toggle('is-open', open);
-      dropdownToggle.setAttribute('aria-expanded', String(open));
-    };
-
-    const setMenu = (open) => {
-      menu.classList.toggle('is-open', open);
-      toggle.classList.toggle('is-open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-      document.body.classList.toggle('nw-menu-open', open && !desktop.matches);
-      if (!open) setDropdown(false);
-    };
-
-    toggle.addEventListener('click', () => setMenu(!menu.classList.contains('is-open')));
-    dropdownToggle.addEventListener('click', (event) => {
-      event.stopPropagation();
-      setDropdown(!dropdown.classList.contains('is-open'));
-    });
-
-    mount.addEventListener('click', (event) => {
-      const link = event.target.closest('a');
-      if (link) setMenu(false);
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!dropdown.contains(event.target)) setDropdown(false);
-      if (!mount.contains(event.target) && menu.classList.contains('is-open')) setMenu(false);
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key !== 'Escape') return;
-      if (dropdown.classList.contains('is-open')) {
-        setDropdown(false);
-        dropdownToggle.focus();
-      } else if (menu.classList.contains('is-open')) {
-        setMenu(false);
-        toggle.focus();
-      }
-    });
-
-    const resetForViewport = () => setMenu(false);
-    if (desktop.addEventListener) desktop.addEventListener('change', resetForViewport);
-    else desktop.addListener(resetForViewport);
-
-    const header = document.querySelector('.header');
-    const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 8);
-    updateHeader();
-    window.addEventListener('scroll', updateHeader, { passive: true });
+  const closeMenu = (restoreFocus = false) => {
+    nav.classList.remove('is-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+    document.body.classList.remove('menu-open');
+    if (restoreFocus) toggle.focus();
   };
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initNavbar, { once: true });
-  else initNavbar();
-})();
+  toggle.addEventListener('click', () => {
+    const opening = !nav.classList.contains('is-open');
+    nav.classList.toggle('is-open', opening);
+    toggle.classList.toggle('is-open', opening);
+    toggle.setAttribute('aria-expanded', String(opening));
+    toggle.setAttribute('aria-label', opening ? 'Cerrar menú' : 'Abrir menú');
+    document.body.classList.toggle('menu-open', opening);
+  });
+
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a')) closeMenu();
+  });
+  document.addEventListener('click', event => {
+    if (!container.contains(event.target)) closeMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav.classList.contains('is-open')) closeMenu(true);
+  });
+  window.addEventListener('resize', () => {
+    if (innerWidth > 960) closeMenu();
+  });
+
+  const updateHeader = () => header?.classList.toggle('is-scrolled', scrollY > 8);
+  updateHeader();
+  addEventListener('scroll', updateHeader, { passive: true });
+
+  if (onHome && 'IntersectionObserver' in window) {
+    const sections = links.map(link => document.getElementById(link.dataset.section)).filter(Boolean);
+    const observer = new IntersectionObserver(entries => {
+      const current = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!current) return;
+      links.forEach(link => {
+        const active = link.dataset.section === current.target.id;
+        link.classList.toggle('is-active', active);
+        active ? link.setAttribute('aria-current','location') : link.removeAttribute('aria-current');
+      });
+    }, { rootMargin: '-28% 0px -58% 0px', threshold: [0.05,.2,.5] });
+    sections.forEach(section => observer.observe(section));
+  }
+});
