@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <nav class="nw-shared-footer__links" aria-label="Enlaces del pie">
         <a href="${prefix}privacidad.html">Privacidad</a>
         <a href="${prefix}aviso-legal.html">Aviso legal</a>
+        <a href="${prefix}declaracion-responsable.html">Declaración SIF</a>
       </nav>
       <p class="nw-shared-footer__copyright">© ${year} Notion Wavelet</p>
     </div>`;
